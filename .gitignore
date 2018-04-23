@@ -4,3 +4,7 @@ build/scripts/game.js
 .idea/workspace.xml
 build/scripts/game.js
 .idea/workspace.xml
+*.iml
+*.xml
+.idea/workspace.xml
+.idea/workspace.xml
