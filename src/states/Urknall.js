@@ -8,9 +8,11 @@ class Urknall extends Phaser.State {
 
 
     preload() {
-        this.game.load.image('firstEarth', '../assets/Urknall/littleEarth.png');
+        this.game.load.image('firstEarth', 'assets/Urknall/littleEarth.png');
     }
+
     create() {
+        this.game.load.start();
         let center = { x: this.game.world.centerX, y: this.game.world.centerY }
         let earth = new Earth(this.game, center.x, center.y);
     }
