@@ -1,13 +1,15 @@
 import RainbowText from 'objects/RainbowText';
+import Earth from 'objects/Earth';
 
-class GameState extends Phaser.State {
+class Urknall extends Phaser.State {
 
 	create() {
 		let center = { x: this.game.world.centerX, y: this.game.world.centerY }
-		let text = new RainbowText(this.game, center.x, center.y, "- phaser -\nwith a sprinkle of\nES6 dust!");
+		let earth = new Earth(this.game, center.x, center.y, 0.5);
+
 		text.anchor.set(0.5);
 	}
 
 }
 
-export default GameState;
+export default Urknall;

@@ -1,12 +1,13 @@
 import Urknall from 'states/Urknall';
+import EntstehungPlanet from 'states/EntstehungPlaneten';
 
 class Game extends Phaser.Game {
 
 	constructor() {
-		super(window.innerWidth, window.innerHeight, Phaser.AUTO);
+		super(window.innerWidth, window.innerHeight, Phaser.AUTO, 'content', null);
 
 		this.state.add('Urknall', Urknall, false);
-		//this.state.start('GameState');
+		this.state.start('Urknall');
 	}
 
 }
