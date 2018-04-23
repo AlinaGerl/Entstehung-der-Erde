@@ -49,79 +49,80 @@ new Game();
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+		value: true
 });
 
 var _createClass = function () {
-	function defineProperties(target, props) {
-		for (var i = 0; i < props.length; i++) {
-			var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-		}
-	}return function (Constructor, protoProps, staticProps) {
-		if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	};
+		function defineProperties(target, props) {
+				for (var i = 0; i < props.length; i++) {
+						var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+				}
+		}return function (Constructor, protoProps, staticProps) {
+				if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+		};
 }();
 
 function _classCallCheck(instance, Constructor) {
-	if (!(instance instanceof Constructor)) {
-		throw new TypeError("Cannot call a class as a function");
-	}
+		if (!(instance instanceof Constructor)) {
+				throw new TypeError("Cannot call a class as a function");
+		}
 }
 
 function _possibleConstructorReturn(self, call) {
-	if (!self) {
-		throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	}return call && (typeof call === "object" || typeof call === "function") ? call : self;
+		if (!self) {
+				throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+		}return call && (typeof call === "object" || typeof call === "function") ? call : self;
 }
 
 function _inherits(subClass, superClass) {
-	if (typeof superClass !== "function" && superClass !== null) {
-		throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-	}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+		if (typeof superClass !== "function" && superClass !== null) {
+				throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+		}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
 var RainbowText = function (_Phaser$Text) {
-	_inherits(RainbowText, _Phaser$Text);
+		_inherits(RainbowText, _Phaser$Text);
 
-	function RainbowText(game, x, y, text) {
-		_classCallCheck(this, RainbowText);
+		function RainbowText(game, x, y, text) {
+				_classCallCheck(this, RainbowText);
 
-		var _this = _possibleConstructorReturn(this, (RainbowText.__proto__ || Object.getPrototypeOf(RainbowText)).call(this, game, x, y, text, { font: "45px Arial", fill: "#ff0044", align: "center" }));
+				var _this = _possibleConstructorReturn(this, (RainbowText.__proto__ || Object.getPrototypeOf(RainbowText)).call(this, game, x, y, text, { font: "45px Arial", fill: "#ff0044", align: "center" }));
 
-		_this._speed = 125; //ms
-		_this._colorIndex = 0;
-		_this._colors = ['#ee4035', '#f37736', '#fdf498', '#7bc043', '#0392cf'];
+				_this._speed = 125; //ms
+				_this._colorIndex = 0;
+				_this._colors = ['#ee4035', '#f37736', '#fdf498', '#7bc043', '#0392cf'];
 
-		_this.colorize();
-		_this.startTimer();
-
-		_this.game.stage.addChild(_this);
+				_this.colorize();
+				_this.startTimer();
 
 		return _this;
 	}
 
-	_createClass(RainbowText, [{
-		key: "startTimer",
-		value: function startTimer() {
-			this.game.time.events.loop(this._speed, this.colorize, this).timer.start();
+				return _this;
 		}
-	}, {
-		key: "colorize",
-		value: function colorize() {
 
-			for (var i = 0; i < this.text.length; i++) {
-
-				if (this._colorIndex === this._colors.length) {
-					this._colorIndex = 0;
+		_createClass(RainbowText, [{
+				key: "startTimer",
+				value: function startTimer() {
+						this.game.time.events.loop(this._speed, this.colorize, this).timer.start();
 				}
+		}, {
+				key: "colorize",
+				value: function colorize() {
 
-				this.addColor(this._colors[this._colorIndex], i);
-				this._colorIndex++;
-			}
-		}
-	}]);
+						for (var i = 0; i < this.text.length; i++) {
 
-	return RainbowText;
+								if (this._colorIndex === this._colors.length) {
+										this._colorIndex = 0;
+								}
+
+								this.addColor(this._colors[this._colorIndex], i);
+								this._colorIndex++;
+						}
+				}
+		}]);
+
+		return RainbowText;
 }(Phaser.Text);
 
 exports.default = RainbowText;
