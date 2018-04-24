@@ -20,6 +20,7 @@ class Game extends Phaser.Game {
 
         //global variables
 		this.earthRotate = 0;
+		this.cellCounter = 0;
         this.moonRotate = 0;
 
 		this.state.start('Preloader');

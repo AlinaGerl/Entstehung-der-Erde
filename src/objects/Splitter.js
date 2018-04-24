@@ -14,7 +14,6 @@ class Splitter extends Phaser.Sprite {
         this.scale.x = 0.2;
         this.scale.y = 0.2;
 
-
         this.game.stage.addChild(this);
 
     }
@@ -31,9 +30,6 @@ class Splitter extends Phaser.Sprite {
         this.x += 10;
         this.y += 10;
     }
-
-
-
 
 }
 

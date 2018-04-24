@@ -14,21 +14,10 @@ class Preloader extends Phaser.State {
         this.game.load.image('moon', 'assets/Moon/moon.png');
         this.game.load.image('explodedearth', 'assets/Moon/explodedearth.jpg');
 
+        this.game.load.image('plant', 'assets/Plants/plant.png');
+        this.game.load.image('cells', 'assets/Cell/cell.png');
     }
 
-    // WebFontConfig () {
-    //
-    //     //  'active' means all requested fonts have finished loading
-    //     //  We set a 1 second delay before calling 'createText'.
-    //     //  For some reason if we don't the browser cannot render the text the first time it's created.
-    //     active: function() { game.time.events.add(Phaser.Timer.SECOND, createText, this); },
-    //
-    //     //  The Google Fonts we want to load (specify as many as you like in the array)
-    //     google: {
-    //         families: ['Roboto Mono']
-    //     }
-    //
-    // };
 
     create() {
         this.game.load.start();
