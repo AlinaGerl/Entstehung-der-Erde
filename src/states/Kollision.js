@@ -58,6 +58,7 @@ class Kollision extends Phaser.State {
             console.info('Collap!');
             this.splitter.destroy();
             this.isDestroyed = true;
+            this.game.state.start('Cells');
         }
     }
 

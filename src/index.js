@@ -2,6 +2,8 @@ import GameState from 'states/GameState';
 import Urknall from 'states/Urknall';
 import Preloader from 'states/Preloader';
 import Kollision from 'states/Kollision';
+import Cells from 'states/DuplicateCells';
+import Plants from 'states/DragndropPlants';
 
 class Game extends Phaser.Game {
 
@@ -11,6 +13,8 @@ class Game extends Phaser.Game {
         this.state.add('Preloader', Preloader, false);
         this.state.add('Urknall', Urknall, false);
         this.state.add('Kollision', Kollision, false);
+        this.state.add('Cells', Cells, false);
+        this.state.add('Plants', Plants, false);
 
 		this.earthRotate = 0;
 
