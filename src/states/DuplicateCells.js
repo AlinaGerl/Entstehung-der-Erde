@@ -37,7 +37,7 @@ class DuplicateCells extends Phaser.State {
     nextEvent() {
         this.game.world.removeAll();
         console.log('destroyed');
-        this.game.state.start('DragndropPlants', true, false);
+        this.game.state.start('Plants', true, false);
     }
 
 
