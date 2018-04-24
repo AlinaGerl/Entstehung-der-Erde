@@ -1,0 +1,18 @@
+{
+  "de": {
+
+      "first": "Wo sind wir? Im Nichts. Im Nichts aber trotzdem überall. Lass uns ein Etwas erschaffen. Das erste Etwas, dass es je geben wird",
+      "last": "Wow! Es haben sich aus Gravitation Gase zusammengezogen und eine Explosion verursacht: den Urknall. Somit wurde das Universum erschaffen. Dies bedeutet, dass zum ersten Mal Materie, Raum und Zeit existieren. Siehst du diesen großen Stern dort hinten? Das ist die Sonne."
+
+    "Event4": {
+      "first": "Was ist das? Sieht so aus, als würde ein riesiger Planet auf die Erde zu kommen!",
+      "last": ""
+    }
+  },
+  "en": {
+    "Event1": {
+      "first": "stop the game",
+      "last": "stop the game"
+    }
+  }
+}
