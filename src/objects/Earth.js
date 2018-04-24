@@ -4,15 +4,15 @@
 
 class Earth extends Phaser.Sprite {
 
-    constructor(game, x, y, name) {
+    constructor(game, x, y, name, rotate) {
 
         //game.load.image('firstEarth', '../assets/Urknall/littleEarth.png');
-        super(game, x, y, 'firstEarth');
+        super(game, x, y, name);
         this.anchor.x = 0.5;
         this.anchor.y = 0.5;
         this.scale.x = 0.5;
         this.scale.y = 0.5;
-        this._speed = 125; //ms
+        this.angle = rotate;
         //this._colorIndex = 0;
         //this._colors = ['#ee4035', '#f37736', '#fdf498', '#7bc043', '#0392cf'];
 
@@ -32,7 +32,8 @@ class Earth extends Phaser.Sprite {
 
     update() {
 
-        this.angle -= 0.04;
+        this.angle -= 0.03;
+        this.game.earthRotate = this.angle;
 
     }
 
