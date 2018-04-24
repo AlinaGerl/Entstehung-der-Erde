@@ -12,27 +12,48 @@ class Urknall extends Phaser.State {
 
 
     create() {
-        let center = { x: this.game.world.centerX, y: this.game.world.centerY }
-        this.earth = new Earth(this.game, center.x, center.y, 'firstEarth',this.game.earthRotate);
+
+        this.game.stage.backgroundColor = '#fff';
         let translation = new Translation(this.game);
         this.text = translation.translate("first1");
         this.textbox = new Text(this.game, this.text);
+        this.textbox.addColor('#000', 0);
+        this.SpaceClicked = 0;
+        this.wasKnall = false;
+        this.urknall = null;
 
-        this.splitter = new Splitter(this.game, 70, 50);
+    }
+    update(){
+        let spacebar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+        spacebar.onDown.add(this.click, this);
 
-        this.splitter.inputEnabled = true;
-        this.splitter.input.enableDrag(true);
-        let key1 = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-        key1.onDown.add(this.nextEvent, this);
+        this.game.input.keyboard.addKeyCapture([ Phaser.Keyboard.SPACEBAR ]);
 
+        if (!this.wasKnall && this.SpaceClicked === 20) {
+            this.wasKnall = true;
+            this.textbox.destroy();
+            let urknall = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'urknall');
+            urknall.anchor.x = 0.5; urknall.anchor.y = 0.5; urknall.lifespan = 2000;
+            this.game.time.events.add(Phaser.Timer.SECOND * 2, this.universum, this);
+        }
 
     }
 
+    universum() {
+        this.game.stage.backgroundColor = '#000';
+        let translation = new Translation(this.game);
+        this.text = translation.translate("last1");
+        this.textbox = new Text(this.game, this.text);
+        let enter = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
+        enter.onDown.add(this.nextEvent, this);
+    }
+    click (){
+        this.SpaceClicked++;
+    }
+
     nextEvent() {
-        this.splitter.destroy();
         this.textbox.destroy();
-        this.earth.destroy();
-        this.game.state.start('Kollision');
+        this.game.state.start('Kollision', true, false);
     }
 }
 

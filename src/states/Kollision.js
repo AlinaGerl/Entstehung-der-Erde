@@ -9,6 +9,7 @@ class Kollision extends Phaser.State {
 
 
     create() {
+        this.game.stage.backgroundColor = '#000';
         // earth
         let center = { x: this.game.world.centerX, y: this.game.world.centerY }
         this.earth = new Earth(this.game, center.x, center.y, 'firstEarth', this.game.earthRotate);
@@ -24,7 +25,7 @@ class Kollision extends Phaser.State {
         this.game.time.events.add(Phaser.Timer.SECOND * 5, this.moveButton, this);
 
         //splitter
-        this.splitter = this.game.add.sprite(0, window.innerHeight/2, 'splitter');
+        this.splitter = this.game.add.sprite(this.game.world.width, this.game.world.centerY, 'splitter');
         this.splitter.scale.x = 0.3; this.splitter.scale.y = 0.3;
         this.isDestroyed = false;
 
@@ -32,7 +33,7 @@ class Kollision extends Phaser.State {
         let earthG = this.game.add.group();
         let buttonG = this.game.add.group();
         earthG.add(this.earth);
-        buttonG.add(this.button);
+        buttonG.add(this.splitter);
         earthG.z = 100;
         buttonG.z = 120;
     }
@@ -45,20 +46,21 @@ class Kollision extends Phaser.State {
     }
     listener () {
         this.game.add.tween(this.button).to( { y: this.game.world.height}, 3000, Phaser.Easing.Linear.None, true);
-        this.splitter = this.game.add.sprite(0, window.innerHeight/2, 'splitter');
-        this.splitter.scale.x = 0.3; this.splitter.scale.y = 0.3;
         this.isDestroyed = false;
-        this.game.add.tween(this.splitter).to( { x: this.game.world.centerX , y: this.game.world.centerY}, 3000, Phaser.Easing.Linear.None, true);
+        this.game.add.tween(this.splitter).to( { x: this.game.world.centerX , y: this.game.world.centerY}, 5000, Phaser.Easing.Linear.None, true);
         console.info('Button clicked.');
     }
     update() {
 
-        if (!this.isDestroyed && this.splitter.x == this.game.world.centerX)
+        if (!this.isDestroyed && this.splitter.x == (this.game.world.centerX))
         {
-            console.info('Collap!');
-            this.splitter.destroy();
+
             this.isDestroyed = true;
-            this.game.state.start('Cells');
+            this.earth.destroy();
+            this.textbox.destroy();
+            this.game.world.remove();
+            this.button.destroy();
+            this.game.state.start('Moon', true, false);
         }
     }
 
@@ -67,6 +69,15 @@ class Kollision extends Phaser.State {
         var boundsB = spriteB.getBounds();
 
         return Phaser.Rectangle.intersects(boundsA, boundsB);
+    }
+
+    nextEvent() {
+        // this.earth.destroy();
+        // this.text.destroy();
+        // this.game.world.remove(this.textbox);
+        // this.button.destroy();
+        //this.game.world.removeAll();
+        this.game.state.start('Moon', true, true);
     }
 }
 

@@ -4,6 +4,7 @@ import Preloader from 'states/Preloader';
 import Kollision from 'states/Kollision';
 import Cells from 'states/DuplicateCells';
 import Plants from 'states/DragndropPlants';
+import Moon from 'states/Moon';
 
 class Game extends Phaser.Game {
 
@@ -15,8 +16,11 @@ class Game extends Phaser.Game {
         this.state.add('Kollision', Kollision, false);
         this.state.add('Cells', Cells, false);
         this.state.add('Plants', Plants, false);
+        this.state.add('Moon', Moon, false);
 
+        //global variables
 		this.earthRotate = 0;
+        this.moonRotate = 0;
 
 		this.state.start('Preloader');
 
