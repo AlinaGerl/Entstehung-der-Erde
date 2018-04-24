@@ -9,6 +9,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('firstEarth', 'assets/Urknall/littleEarth.png');
         this.game.load.image('redButton', 'assets/Kollision/Button.jpg');
         this.game.load.json('translation', 'data/languageText.json');
+        this.game.load.image('splitter', 'assets/Urknall/splittler.png');
     }
 
 
