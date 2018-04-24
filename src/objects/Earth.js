@@ -26,6 +26,7 @@ class Earth extends Phaser.Sprite {
 
 
 
+
     startTimer() {
         this.game.time.events.loop(this.rotate).timer.start();
     }
