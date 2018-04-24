@@ -18,10 +18,10 @@ class Urknall extends Phaser.State {
         this.text = translation.translate("first1");
         this.textbox = new Text(this.game, this.text);
 
-        let splitter = new Splitter(this.game, 70, 50);
+        this.splitter = new Splitter(this.game, 70, 50);
 
-        splitter.inputEnabled = true;
-        splitter.input.enableDrag(true);
+        this.splitter.inputEnabled = true;
+        this.splitter.input.enableDrag(true);
         let key1 = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         key1.onDown.add(this.nextEvent, this);
 
@@ -29,6 +29,7 @@ class Urknall extends Phaser.State {
     }
 
     nextEvent() {
+        this.splitter.destroy();
         this.textbox.destroy();
         this.earth.destroy();
         this.game.state.start('Kollision');
