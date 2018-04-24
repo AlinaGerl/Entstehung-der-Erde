@@ -10,6 +10,8 @@ class Preloader extends Phaser.State {
         this.game.load.image('redButton', 'assets/Kollision/Button.png');
         this.game.load.json('translation', 'data/languageText.json');
         this.game.load.image('splitter', 'assets/Urknall/splitter.png');
+        this.game.load.image('plant', 'assets/Plants/plant.png');
+        this.game.load.image('cells', 'assets/Cell/cell.png');
     }
 
 

@@ -5,7 +5,7 @@ class Text extends Phaser.Text {
 
     constructor(game, text) {
 
-        var style = { font: "16px Roboto", fill: "#fff"};
+        var style = { font: "16px Helvetica", fill: "#fff"};
         super(game, Math.round(window.innerWidth/2),Math.round(window.innerHeight/6), text, style);
         this.anchor.x = 0.5;
         this.anchor.y = 0.5;

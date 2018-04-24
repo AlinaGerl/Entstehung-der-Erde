@@ -10,9 +10,8 @@ class Plant extends Phaser.Sprite {
 
         this.anchor.x = 0.5;
         this.anchor.y = 0.5;
-
-        this.scale.x = 0.1;
-        this.scale.y = 0.1;
+        this.scale.x = 0.05;
+        this.scale.y = 0.05;
 
         this.game.stage.addChild(this);
     }

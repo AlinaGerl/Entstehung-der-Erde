@@ -10,7 +10,7 @@ class Kollision extends Phaser.State {
 
     create() {
         // earth
-        let center = { x: this.game.world.centerX, y: this.game.world.centerY }
+        let center = { x: this.game.world.centerX, y: this.game.world.centerY };
         this.earth = new Earth(this.game, center.x, center.y, 'firstEarth', this.game.earthRotate);
 
         //text
@@ -68,6 +68,8 @@ class Kollision extends Phaser.State {
 
         return Phaser.Rectangle.intersects(boundsA, boundsB);
     }
+
+
 }
 
 export default Kollision;

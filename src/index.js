@@ -4,6 +4,8 @@ import Preloader from 'states/Preloader';
 import Kollision from 'states/Kollision';
 import Cells from 'states/DuplicateCells';
 import Plants from 'states/DragndropPlants';
+import DuplicateCells from "./states/DuplicateCells";
+import DragndropPlants from "./states/DragndropPlants";
 
 class Game extends Phaser.Game {
 
@@ -13,10 +15,11 @@ class Game extends Phaser.Game {
         this.state.add('Preloader', Preloader, false);
         this.state.add('Urknall', Urknall, false);
         this.state.add('Kollision', Kollision, false);
-        this.state.add('Cells', Cells, false);
-        this.state.add('Plants', Plants, false);
+        this.state.add('DuplicateCells', DuplicateCells, false);
+        this.state.add('DragndropPlants', DragndropPlants, false);
 
 		this.earthRotate = 0;
+		this.cellCounter = 0;
 
 		this.state.start('Preloader');
 
