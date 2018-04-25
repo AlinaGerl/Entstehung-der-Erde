@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf0e48f9-f4e6-442e-8185-6914322a9ac9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/data/languageText.json" afterPath="$PROJECT_DIR$/build/data/languageText.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/scripts/game.js.map" afterPath="$PROJECT_DIR$/build/scripts/game.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/DragndropPlants.js" afterPath="$PROJECT_DIR$/src/states/DragndropPlants.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Kollision.js" afterPath="$PROJECT_DIR$/src/states/Kollision.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Preloader.js" afterPath="$PROJECT_DIR$/src/states/Preloader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/data/languageText.json" afterPath="$PROJECT_DIR$/static/data/languageText.json" />
-    </list>
+    <list default="true" id="cf0e48f9-f4e6-442e-8185-6914322a9ac9" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -557,7 +549,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49012000" />
+    <option name="totallyTimeSpent" value="49066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
