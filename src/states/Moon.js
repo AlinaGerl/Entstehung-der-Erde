@@ -40,7 +40,7 @@ class Moon extends Phaser.State {
 
         this.game.input.keyboard.addKeyCapture([ Phaser.Keyboard.SPACEBAR ]);
 
-        if (this.SpaceClicked === 30) {
+        if (this.SpaceClicked === 2) {
             let text = this.translation.translate("last5");
             this.textbox.destroy();
             this.textbox = new Text(this.game, text);
