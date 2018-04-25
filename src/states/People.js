@@ -10,7 +10,6 @@ import Text from 'objects/text';
 class People extends Phaser.State {
 
     create() {
-        this.game.stage.backgroundColor = '#031625';
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
 
         //text

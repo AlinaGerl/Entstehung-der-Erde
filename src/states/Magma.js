@@ -21,13 +21,13 @@ class Magma extends Phaser.State {
         console.info(this.game.earthRotate);
 
         //first button
-        this.button01 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'magmaButton');
+            this.button01 = this.game.add.sprite(40, -80, 'magmaButton');
         this.button01.anchor.x = 0.5; this.button01.scale.x = 0.03; this.button01.scale.y = 0.03;
         this.button01.inputEnabled = true;
         this.button01.events.onInputDown.add(this.listener01, this);
 
         //second button
-        this.button02 = this.game.add.sprite(this.game.world.centerX+70, this.game.world.centerY+70, 'magmaButton');
+        this.button02 = this.game.add.sprite(-70, 70, 'magmaButton');
         this.button02.anchor.x = 0.5; this.button02.scale.x = 0.03; this.button02.scale.y = 0.03;
         this.button02.inputEnabled = true;
         this.button02.events.onInputDown.add(this.listener02, this);
@@ -40,12 +40,14 @@ class Magma extends Phaser.State {
 
         // groups for z depth
         let earthG = this.game.add.group();
-        let buttonG = this.game.add.group();
+        this.buttonG = this.game.add.group();
         earthG.add(this.earth);
-        buttonG.add(this.button01);
-        buttonG.add(this.button02);
+        this.buttonG.add(this.button01);
+        this.buttonG.add(this.button02);
         earthG.z = 100;
-        buttonG.z = 120;
+        this.buttonG.z = 120;
+        this.buttonG.x = this.game.world.centerX;
+        this.buttonG.y = this.game.world.centerY;
     }
 
     update() {
