@@ -70,7 +70,7 @@ class Magma extends Phaser.State {
         this.earth.destroy();
         this.button01.destroy();
         this.button02.destroy();
-        //this.game.state.start('', true, false);
+        this.game.state.start('People', true, false);
     }
 
 }

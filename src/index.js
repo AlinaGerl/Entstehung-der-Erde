@@ -6,6 +6,9 @@ import Cells from 'states/DuplicateCells';
 import Plants from 'states/DragndropPlants';
 import Moon from 'states/Moon';
 import Magma from 'states/Magma';
+import People from 'states/People';
+import End from 'states/End';
+
 
 class Game extends Phaser.Game {
 
@@ -19,10 +22,12 @@ class Game extends Phaser.Game {
         this.state.add('Plants', Plants, false);
         this.state.add('Moon', Moon, false);
         this.state.add('Magma', Magma, false);
+        this.state.add('People', People, false);
+        this.state.add('End', End, false);
 
         //global variables
 		this.earthRotate = 0;
-		this.cellCounter = 0;
+		this.counter = 0;
         this.moonRotate = 0;
         this.collided = false;
 

@@ -36,7 +36,7 @@ class DragndropPlants extends Phaser.State {
         let animalsG = this.game.add.group();
         earthG.add(this.earth);
         animalsG.add(this.animals);
-        earthG.z = 100
+        earthG.z = 100;
         animalsG.z = 120;
         // this.plant = new Plant(this.game, 70, 70, 'plant');
         //
@@ -44,6 +44,9 @@ class DragndropPlants extends Phaser.State {
         //
         // this.plant.inputEnabled = true;
         // this.plant.input.enableDrag(true);
+
+        let enter = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
+        enter.onDown.add(this.nextEvent, this);
     }
 
     update(){
@@ -122,8 +125,6 @@ class DragndropPlants extends Phaser.State {
             item.events.onDragStop.add(this.dropHandler, this);
         }
 
-
-
     }
 
     lastText() {
@@ -166,6 +167,10 @@ class DragndropPlants extends Phaser.State {
 
     }
 
+    nextEvent() {
+        this.textbox.destroy();
+        this.game.state.start('Magma', true, false);
+    }
 
 
 }

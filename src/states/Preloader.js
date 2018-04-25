@@ -18,6 +18,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('oceanAnimals', 'assets/Plants/animals.jpg');
         this.game.load.image('cells', 'assets/Cell/cell.png');
         this.game.load.image('magmaButton', 'assets/Magma/magmaButton.png');
+        this.game.load.image('people', 'assets/People/people.png');
     }
 
 
@@ -37,7 +38,7 @@ class Preloader extends Phaser.State {
         };
         WebFont.load(wfconfig);
         //this.game.load.start();
-        this.game.state.start('Plants');
+        this.game.state.start('People');
     }
 
 }

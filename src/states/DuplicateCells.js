@@ -42,7 +42,7 @@ class DuplicateCells extends Phaser.State {
     }
 
     update(){
-        if(this.game.cellCounter === 5) {
+        if(this.game.counter === 5) {
             let text = this.translation.translate("last8");
             this.textbox.destroy();
             this.textbox = new Text(this.game, text);
@@ -54,7 +54,7 @@ class DuplicateCells extends Phaser.State {
         let cell = this.game.add.sprite(this.game.world.randomX, this.game.world.randomY, 'cells');
         cell.scale.x = 0.2;
         cell.scale.y = 0.2;
-        this.game.cellCounter ++;
+        this.game.counter ++;
     }
 
     click(){
