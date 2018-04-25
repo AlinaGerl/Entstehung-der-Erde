@@ -9,6 +9,7 @@ import Magma from 'states/Magma';
 import People from 'states/People';
 import End from 'states/End';
 
+import Dinos from 'states/Dinosaurier';
 
 class Game extends Phaser.Game {
 
@@ -24,10 +25,11 @@ class Game extends Phaser.Game {
         this.state.add('Magma', Magma, false);
         this.state.add('People', People, false);
         this.state.add('End', End, false);
+        this.state.add('Dinos', Dinos, false);
 
         //global variables
 		this.earthRotate = 0;
-		this.counter = 0;
+		this.cellCounter = 0;
         this.moonRotate = 0;
         this.collided = false;
 

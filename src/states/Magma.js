@@ -35,6 +35,8 @@ class Magma extends Phaser.State {
         this.button01Count = false;
         this.button02Count = false;
 
+        this.isEnd = false;
+
 
         // groups for z depth
         let earthG = this.game.add.group();
@@ -47,10 +49,16 @@ class Magma extends Phaser.State {
     }
 
     update() {
+        this.buttonG.angle -= 0.03;
         if(this.button01Count && this.button02Count) {
             let text = this.translation.translate("last11");
             this.textbox.destroy();
             this.textbox = new Text(this.game, text);
+            this.game.time.events.add(Phaser.Timer.SECOND * 1, this.EndScene, this);
+        }
+
+        if (this.isEnd && this.game.input.activePointer.leftButton.isDown) {
+            this.nextEvent();
         }
     }
 
@@ -63,6 +71,10 @@ class Magma extends Phaser.State {
         this.button02.alpha = 0.5;
         this.button02Count = true;
 
+    }
+
+    EndScene() {
+        this.isEnd = true;
     }
 
     nextEvent() {

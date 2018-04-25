@@ -12,7 +12,6 @@ class Urknall extends Phaser.State {
 
 
     create() {
-
         this.game.stage.backgroundColor = '#fff';
         let translation = new Translation(this.game);
         this.text = translation.translate("first1");

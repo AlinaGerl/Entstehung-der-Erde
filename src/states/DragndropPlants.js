@@ -2,7 +2,6 @@
  * Created by alinaisabelle on 23.04.18.
  */
 import Earth from 'objects/Earth';
-import Plant from 'objects/Plant';
 import Translation from 'utils/translate';
 import Text from 'objects/text';
 
@@ -36,7 +35,7 @@ class DragndropPlants extends Phaser.State {
         let animalsG = this.game.add.group();
         earthG.add(this.earth);
         animalsG.add(this.animals);
-        earthG.z = 100;
+        earthG.z = 100
         animalsG.z = 120;
         // this.plant = new Plant(this.game, 70, 70, 'plant');
         //
@@ -44,9 +43,6 @@ class DragndropPlants extends Phaser.State {
         //
         // this.plant.inputEnabled = true;
         // this.plant.input.enableDrag(true);
-
-        let enter = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
-        enter.onDown.add(this.nextEvent, this);
     }
 
     update(){
@@ -65,6 +61,10 @@ class DragndropPlants extends Phaser.State {
             this.lastText();
         }
         if (this.plantsRotate) this.items.angle -= 0.03;
+
+        if (this.isEnd && this.game.input.activePointer.leftButton.isDown) {
+            this.nextEvent();
+        }
         //this.game.physics.arcade.collide(this.earth, this.plant, this.collisionHandler, null, this);
     }
 
@@ -125,12 +125,15 @@ class DragndropPlants extends Phaser.State {
             item.events.onDragStop.add(this.dropHandler, this);
         }
 
+
+
     }
 
     lastText() {
         this.textbox.destroy();
         let text = this.translation.translate("last10");
         this.textbox = new Text(this.game, text);
+        this.isEnd = true;
     }
 
     dropHandler(item, pointer) {
@@ -169,8 +172,10 @@ class DragndropPlants extends Phaser.State {
 
     nextEvent() {
         this.textbox.destroy();
+        this.game.world.removeAll();
         this.game.state.start('Magma', true, false);
     }
+
 
 
 }
