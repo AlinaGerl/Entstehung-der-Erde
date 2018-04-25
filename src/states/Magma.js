@@ -21,13 +21,13 @@ class Magma extends Phaser.State {
         console.info(this.game.earthRotate);
 
         //first button
-        this.button01 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'magmaButton');
+        this.button01 = this.game.add.sprite(30, -30, 'magmaButton');
         this.button01.anchor.x = 0.5; this.button01.scale.x = 0.03; this.button01.scale.y = 0.03;
         this.button01.inputEnabled = true;
         this.button01.events.onInputDown.add(this.listener01, this);
 
         //second button
-        this.button02 = this.game.add.sprite(this.game.world.centerX+70, this.game.world.centerY+70, 'magmaButton');
+        this.button02 = this.game.add.sprite(-70, 70, 'magmaButton');
         this.button02.anchor.x = 0.5; this.button02.scale.x = 0.03; this.button02.scale.y = 0.03;
         this.button02.inputEnabled = true;
         this.button02.events.onInputDown.add(this.listener02, this);
@@ -35,22 +35,32 @@ class Magma extends Phaser.State {
         this.button01Count = false;
         this.button02Count = false;
 
+        this.isEnd = false;
+
 
         // groups for z depth
         let earthG = this.game.add.group();
-        let buttonG = this.game.add.group();
+        this.buttonG = this.game.add.group();
         earthG.add(this.earth);
-        buttonG.add(this.button01);
-        buttonG.add(this.button02);
+        this.buttonG.add(this.button01);
+        this.buttonG.add(this.button02);
         earthG.z = 100;
-        buttonG.z = 120;
+        this.buttonG.z = 120;
+        this.buttonG.x = this.game.world.centerX;
+        this.buttonG.y = this.game.world.centerY;
     }
 
     update() {
+        this.buttonG.angle -= 0.03;
         if(this.button01Count && this.button02Count) {
             let text = this.translation.translate("last11");
             this.textbox.destroy();
             this.textbox = new Text(this.game, text);
+            this.game.time.events.add(Phaser.Timer.SECOND * 1, this.EndScene, this);
+        }
+
+        if (this.isEnd && this.game.input.activePointer.leftButton.isDown) {
+            this.nextEvent();
         }
     }
 
@@ -65,12 +75,16 @@ class Magma extends Phaser.State {
 
     }
 
+    EndScene() {
+        this.isEnd = true;
+    }
+
     nextEvent() {
         this.textbox.destroy();
         this.earth.destroy();
         this.button01.destroy();
         this.button02.destroy();
-        //this.game.state.start('', true, false);
+        this.game.state.start('Dinos');
     }
 
 }

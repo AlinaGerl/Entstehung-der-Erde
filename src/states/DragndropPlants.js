@@ -2,7 +2,6 @@
  * Created by alinaisabelle on 23.04.18.
  */
 import Earth from 'objects/Earth';
-import Plant from 'objects/Plant';
 import Translation from 'utils/translate';
 import Text from 'objects/text';
 
@@ -62,6 +61,10 @@ class DragndropPlants extends Phaser.State {
             this.lastText();
         }
         if (this.plantsRotate) this.items.angle -= 0.03;
+
+        if (this.isEnd && this.game.input.activePointer.leftButton.isDown) {
+            this.nextEvent();
+        }
         //this.game.physics.arcade.collide(this.earth, this.plant, this.collisionHandler, null, this);
     }
 
@@ -130,6 +133,7 @@ class DragndropPlants extends Phaser.State {
         this.textbox.destroy();
         let text = this.translation.translate("last10");
         this.textbox = new Text(this.game, text);
+        this.isEnd = true;
     }
 
     dropHandler(item, pointer) {
@@ -164,6 +168,12 @@ class DragndropPlants extends Phaser.State {
             //this.game.stage.backgroundColor = '#992d2d';
         }
 
+    }
+
+    nextEvent() {
+        this.textbox.destroy();
+        this.game.world.removeAll();
+        this.game.state.start('Magma', true, false);
     }
 
 

@@ -11,7 +11,7 @@ export default class Translation {
     constructor(game, translations) {
         this.game = game;
         this.defaultLanguage = 'de';
-        this.availableLanguages = ['en', 'de'];
+        this.availableLanguages = ['de', 'en'];
         this.translations = this.game.cache.getJSON('translation');
 
         // check for user language
@@ -43,7 +43,6 @@ export default class Translation {
      */
     translate(val) {
         if(this.translations[this.languageCode][val]) {
-            console.info('Got it!');
             return this.translations[this.languageCode][val];
         } else {
             // console.info('could not find translation', val, '-' this.lc);

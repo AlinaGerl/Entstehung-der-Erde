@@ -118,8 +118,8 @@ class DuplicateCells extends Phaser.State {
         cell.scale.y = 0.2;
         this.cellsG.add(cell);
     }
+
     click(){
-        this.cell.alpha = 1;
         let text = this.translation.translate("first8_2");
         this.textbox.destroy();
         this.textbox = new Text(this.game, text);
@@ -128,6 +128,7 @@ class DuplicateCells extends Phaser.State {
     EndScene() {
         this.isEnd = true;
     }
+
     nextEvent() {
         this.cellsG.removeAll();
         this.textbox.destroy();
