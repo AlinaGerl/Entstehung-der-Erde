@@ -18,6 +18,7 @@ class Urknall extends Phaser.State {
         this.text = translation.translate("first1");
         this.textbox = new Text(this.game, this.text);
         this.textbox.addColor('#000', 0);
+        this.textbox.y = this.game.world.centerY-50;
         this.SpaceClicked = 0;
         this.wasKnall = false;
         this.urknall = null;
