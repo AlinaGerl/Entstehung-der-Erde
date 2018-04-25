@@ -37,7 +37,7 @@ class Preloader extends Phaser.State {
         };
         WebFont.load(wfconfig);
         //this.game.load.start();
-        this.game.state.start('Plants');
+        this.game.state.start('Cells');
     }
 
 }
