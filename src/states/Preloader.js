@@ -15,6 +15,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('explodedearth', 'assets/Moon/explodedearth.jpg');
 
         this.game.load.image('plant', 'assets/Plants/plant.png');
+        this.game.load.image('oceanAnimals', 'assets/Plants/animals.jpg');
         this.game.load.image('cells', 'assets/Cell/cell.png');
         this.game.load.image('magmaButton', 'assets/Magma/magmaButton.png');
     }
