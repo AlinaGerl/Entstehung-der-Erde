@@ -8,6 +8,7 @@ import Text from 'objects/text';
 class Dinosaurs extends Phaser.State {
 
     create() {
+
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
@@ -17,10 +18,12 @@ class Dinosaurs extends Phaser.State {
         let text = this.translation.translate("first12");
         this.textbox = new Text(this.game, text);
 
+
+        //booleans for click and collide handlers
         this.firstStage = true;
         this.secondStage = false;
-
-
+        this.isMeteorit = false;
+        this.isExplosion = false;
 
         //enable mouse input
         this.game.input.mouse.capture = true;
@@ -30,47 +33,62 @@ class Dinosaurs extends Phaser.State {
 
 
         //z-depth
-        let earthG = this.game.add.group();
+        this.earthG = this.game.add.group();
         this.DinosG = this.game.add.group();
         this.onEarth = this.game.add.group(); this.onEarth.x = this.game.world.centerX; this.onEarth.y = this.game.world.centerY;
-        earthG.add(this.earth);
-        earthG.z = 100;
-        this.DinosG.z = 120;
-        this.onEarth.z = 130;
+        this.earthG.add(this.earth);
+        this.earthG.z = 100;
+        this.DinosG.z = 100;
         this.game.physics.enable( [ this.earth], Phaser.Physics.ARCADE);
 
         this.dinosReady();
     }
 
     update(){
+
+        //Last text of event
         if (this.dinosCount === 6) {
+            this.dinosCount = 5;
             //this.items.anchor.x = 0.5; this.items.anchor.y = 0.5;
             this.dinosRotate = true;
             this.lastText();
         }
 
+        //if dinos are set, they should rotate with the earth
         if (this.dinosRotate) {
 
+            //group of dinos rotate
             this.DinosG.angle -= 0.03;
 
+            //ever dino rotates, so its always senkrecht to display
             for(var i = 0; i <= this.DinosG.children.length-1; i++) {
                 this.DinosG.children[i].angle += 0.03;
             }
         }
 
 
-
-        if (this.isEnd && this.game.input.activePointer.leftButton.isDown) {
-            this.nextEvent();
+        //Creating meteorit and calling function if dinos are completly set
+        if (this.isMeteorit && this.game.input.activePointer.leftButton.isDown) {
+            this.Meteorit();
+            this.isMeteorit = false;
         }
-        //this.game.physics.arcade.collide(this.earth, this.plant, this.collisionHandler, null, this);
+
+        //weil die erde nun andere physics hat, muss sie extra rotiert werden (jop so ein kak)
+        if (this.isExplosion) {
+            this.earth.body.angle -= 0.03;
+        }
     }
 
     dinosReady() {
+
+        //die gruppe von dinos in die mitte setzen, damit man sie im mittelpunkt rotieren kann
         this.DinosG.x = this.game.world.centerX;
         this.DinosG.y = this.game.world.centerY;
 
         let item;
+
+        //in dieser schleife werden einfach 6 Dinos kreiert und in die welt gezetzt.
+        // sie bekommen auch schon ihre physics und einen drophandler
         for (var i = 0; i < 6; i++)
         {
             // Directly create sprites from the group.
@@ -99,13 +117,16 @@ class Dinosaurs extends Phaser.State {
 
     }
 
+    // hier wird der letzte text vor der meteoriten explosion ausgegeben
     lastText() {
         this.textbox.destroy();
         let text = this.translation.translate("last12");
         this.textbox = new Text(this.game, text);
-        this.isEnd = true;
+        this.isMeteorit = true;
     }
 
+    // after a dino is dropped down, this handler is called
+    // it checks if dinos collide with other dinos or the earth after dropping down
     dropHandler(item, pointer) {
         this.isWrong = false;
         this.game.physics.arcade.collide(this.DinosG.children, item, this.stopCollision, null, this);
@@ -113,25 +134,142 @@ class Dinosaurs extends Phaser.State {
 
     }
 
+    // this is called, when a dino is placed on another dino. It moves the dino to the right side of the display
     stopCollision (obj1, obj2) {
-        this.isWrong = true;
+        this.isWrong = true; //set isWrong false, when a dino is placed on another dino
         //this.plantsCount--;
-        obj2.x = 500;
+        obj2.x = (this.game.world.centerX*2-100);
         obj2.inputEnabled = true;
         obj2.input.enableDrag();
-
     }
 
+    // this is called, when the a dino is placed on the earth
     collisionHandler (obj1, obj2){
-        if (!this.isWrong) {
+        if (!this.isWrong) { //only if its not on another dino, this works
             this.dinosCount++;
             obj2.inputEnabled = false;
             //this.onEarth.add(obj2);
-            //this.game.stage.backgroundColor = '#992d2d';
+        }
+    }
+
+    //this function changes the physics of the earth and creates a meteorite with a mouse spring handler
+    Meteorit() {
+
+        // change physics for meteorite dragging
+        this.game.physics.startSystem(Phaser.Physics.P2JS);
+        this.game.physics.p2.setImpactEvents(true);
+        this.game.physics.p2.restitution = 0.8;
+
+        //text change
+        this.textbox.text = this.translation.translate("first13");
+
+        //creates meteorite
+        this.meteorit = this.game.add.sprite(this.game.world.centerX*1.9, this.game.world.centerY*1.9, 'meteorit');
+        this.meteorit.scale.x = 0.1; this.meteorit.scale.y = 0.1; this.meteorit.anchor.x = 0.5; this.meteorit.anchor.y = 0.5;
+        this.game.physics.p2.enable(this.meteorit, false); //set physics
+        this.meteorit.body.setCircle(40); // this is kinda the rigidbody of the object
+
+        // mouse body
+        // the mouse also needs a body for the mouse spring event
+        this.mouseBody = this.game.add.sprite(0, 0, 'meteorit'); this.mouseBody.alpha = 0; // its like a fake body (invisible)
+        this.game.physics.p2.enable(this.mouseBody, false); //physics
+        this.mouseBody.body.static = true; //static body (it would bounds around)
+        this.mouseBody.body.setCircle(10); //rigidbody
+        this.mouseBody.body.data.shapes[0].sensor = true; // actually no clue
+
+        //line for following
+        this.line = new Phaser.Line(this.meteorit.x, this.meteorit.y, this.mouseBody.x, this.mouseBody.y);
+
+        // mouse spring handlers
+        this.game.input.onDown.add(this.click, this);
+        this.game.input.onUp.add(this.release, this);
+        this.game.input.addMoveCallback(this.move, this);
+
+        //create a new earth with new physics
+        // this is needed for the collision of meteorite and earth
+        this.earth.destroy();
+        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
+        this.game.physics.p2.enable(this.earth, false);
+        this.earth.body.static = true;
+        this.earth.body.setCircle(180);
+        this.earth.body.angle = this.game.earthRotate;
+        this.earthG.add(this.earth);
+
+        // collisionsgroups for the collision of the two objects (i know, so stupid for just 1 object per group but its needed sooo...)
+        var EarthCollisionGroup = this.game.physics.p2.createCollisionGroup();
+        var MeteoritCollisionGroup = this.game.physics.p2.createCollisionGroup();
+
+        // set collisiongroups with objects
+        this.meteorit.body.setCollisionGroup(MeteoritCollisionGroup);
+        this.earth.body.setCollisionGroup(EarthCollisionGroup);
+        this.earth.body.collides([EarthCollisionGroup, MeteoritCollisionGroup]);
+
+        // also neccessary ok
+        this.game.physics.p2.updateBoundsCollisionGroup();
+
+        // collide handler
+        this.meteorit.body.collides(EarthCollisionGroup, this.killDinos, this);
+
+        // boolean for rotation of earth
+        this.isExplosion = true;
+    }
+
+    //click handler for mouse spring
+    click(pointer) {
+
+        var bodies = this.game.physics.p2.hitTest(pointer.position, [ this.meteorit.body ]);
+
+        if (bodies.length)
+        {
+            //  Attach to the first body the mouse hit
+            this.mouseSpring = this.game.physics.p2.createSpring(this.mouseBody, bodies[0], 0, 30, 1);
+            this.line.setTo(this.meteorit.x, this.meteorit.y, this.mouseBody.x, this.mouseBody.y);
+            this.drawLine = true;
         }
 
     }
+    // happens when mouse is released
+    release() {
 
+        //removes spring event
+        this.game.physics.p2.removeSpring(this.mouseSpring);
+        this.drawLine = false;
+
+    }
+
+    // for mouse movement
+    move(pointer, x, y, isDown) {
+
+        this.mouseBody.body.x = x;
+        this.mouseBody.body.y = y;
+        this.line.setTo(this.meteorit.x, this.meteorit.y, this.mouseBody.x, this.mouseBody.y);
+
+    }
+
+    // last sequence, all dinos DIE
+    killDinos(obj1, obj2) {
+        //destroy the text and the meteorite
+        this.textbox.destroy();
+        this.meteorit.destroy();
+
+        //change earth texture
+        this.earth.loadTexture('earth_meteor')
+
+        //gravity for dinos
+        this.game.physics.arcade.gravity.y = 100;
+
+        // let every dino fly down
+        for(var i = 0; i <= this.DinosG.children.length-1; i++) {
+            this.DinosG.children[i].angle = this.game.rnd.integerInRange(0, 200); //gives every dino a different angle for a funny look
+            //this.DinosG.children[i].body.collideWorldBounds = true;
+            //this.DinosG.children[i].body.bounce.y = this.game.rnd.frac();
+        }
+
+        //wait 5 seconds before changing event
+        this.game.time.events.add(Phaser.Timer.SECOND * 5, this.nextEvent, this);
+    }
+
+    // changing state
     nextEvent() {
         this.textbox.destroy();
         this.game.world.removeAll();
