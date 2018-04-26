@@ -135,7 +135,7 @@ class Dinosaurs extends Phaser.State {
     nextEvent() {
         this.textbox.destroy();
         this.game.world.removeAll();
-        this.game.state.start('Magma', true, false);
+        this.game.state.start('People', true, false);
     }
 
 

@@ -36,6 +36,9 @@ class Urknall extends Phaser.State {
             urknall.anchor.x = 0.5; urknall.anchor.y = 0.5; urknall.lifespan = 2000;
             this.game.time.events.add(Phaser.Timer.SECOND * 2, this.universum, this);
         }
+        if (this.wasKnall && this.game.input.activePointer.leftButton.isDown) {
+            this.nextEvent();
+        }
 
     }
 

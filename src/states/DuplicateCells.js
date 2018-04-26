@@ -20,9 +20,6 @@ class DuplicateCells extends Phaser.State {
         let spaceBar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         spaceBar.onDown.add(this.click, this);
 
-        let enter = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
-        enter.onDown.add(this.nextEvent, this);
-
 
         //cell
         this.cell = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'cells');

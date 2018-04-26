@@ -32,6 +32,7 @@ class Game extends Phaser.Game {
 		this.cellCounter = 0;
         this.moonRotate = 0;
         this.collided = false;
+        this.counter = 0;
 
 		this.state.start('Preloader');
 

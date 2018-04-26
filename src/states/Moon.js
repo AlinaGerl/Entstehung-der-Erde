@@ -23,6 +23,7 @@ class Moon extends Phaser.State {
         this.SpaceClicked = 0;
         this.moon = new MoonObject(this.game, 2.3, 2.3, 'moon');
         this.moon.alpha = 0;
+        this.isEnd = false;
 
         // groups for z depth
         let earthG = this.game.add.group();
@@ -40,18 +41,21 @@ class Moon extends Phaser.State {
 
         this.game.input.keyboard.addKeyCapture([ Phaser.Keyboard.SPACEBAR ]);
 
-        if (this.SpaceClicked === 2) {
+        if (this.SpaceClicked === 5) {
             let text = this.translation.translate("last5");
             this.textbox.destroy();
             this.textbox = new Text(this.game, text);
-            let enter = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
-            enter.onDown.add(this.nextEvent, this);
+            this.isEnd = true;
+        }
+
+        if (this.isEnd && this.game.input.activePointer.leftButton.isDown) {
+            this.nextEvent();
         }
 
     }
     click () {
         this.SpaceClicked++;
-        this.moon.alpha += 0.05;
+        this.moon.alpha += 0.2;
     }
 
     nextEvent() {
