@@ -56,7 +56,7 @@ class Urknall extends Phaser.State {
 
     nextEvent() {
         this.textbox.destroy();
-        this.game.state.start('Kollision', true, false);
+        this.game.state.start('PlanetEntstehung', true, false);
     }
 }
 

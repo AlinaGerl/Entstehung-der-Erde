@@ -16,10 +16,13 @@ class Preloader extends Phaser.State {
 
         this.game.load.image('plant', 'assets/Plants/plant.png');
         this.game.load.image('oceanAnimals', 'assets/Plants/animals.jpg');
-        this.game.load.image('cells', 'assets/Cell/cell.png');
+        this.game.load.spritesheet('cellsBig', 'assets/Cell/cellsBig.png', 396, 495, 8);
+        this.game.load.spritesheet('cellsSmall', 'assets/Cell/cellsSmall.png', 317, 343, 8);
+        this.game.load.spritesheet('cellsBig', 'assets/Cell/cellsBig.png', 396, 495, 8);
         this.game.load.image('magmaButton', 'assets/Magma/magmaButton.png');
         this.game.load.image('people', 'assets/People/people.png');
         this.game.load.image('dino', 'assets/Dinos/Dino.png');
+
     }
 
 

@@ -8,8 +8,11 @@ import Moon from 'states/Moon';
 import Magma from 'states/Magma';
 import People from 'states/People';
 import End from 'states/End';
-
 import Dinos from 'states/Dinosaurier';
+import PlanetEntstehung from 'states/PlanetEntstehung';
+import PlanetWachstum from 'states/PlanetWachstum';
+
+
 
 class Game extends Phaser.Game {
 
@@ -26,6 +29,9 @@ class Game extends Phaser.Game {
         this.state.add('People', People, false);
         this.state.add('End', End, false);
         this.state.add('Dinos', Dinos, false);
+        this.state.add('PlanetEntstehung', PlanetEntstehung, false);
+        this.state.add('PlanetWachstum', PlanetWachstum, false);
+
 
         //global variables
 		this.earthRotate = 0;
