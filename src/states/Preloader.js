@@ -20,6 +20,8 @@ class Preloader extends Phaser.State {
         this.game.load.image('magmaButton', 'assets/Magma/magmaButton.png');
         this.game.load.image('people', 'assets/People/people.png');
         this.game.load.image('dino', 'assets/Dinos/Dino.png');
+        this.game.load.image('meteorit', 'assets/Dinos/meteorit.png');
+        this.game.load.image('earth_meteor', 'assets/Dinos/EarthMeteor.jpg');
     }
 
 
@@ -38,8 +40,8 @@ class Preloader extends Phaser.State {
 
         };
         WebFont.load(wfconfig);
-        //this.game.load.start();
-        this.game.state.start('Urknall');
+        //this.game.load.start('Dinos');
+        this.game.state.start('Dinos', true, false);
     }
 
 }

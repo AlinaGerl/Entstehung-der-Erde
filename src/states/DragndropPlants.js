@@ -60,6 +60,7 @@ class DragndropPlants extends Phaser.State {
             this.plantsRotate = true;
             this.lastText();
         }
+
         if (this.plantsRotate) this.items.angle -= 0.03;
 
         if (this.isEnd && this.game.input.activePointer.leftButton.isDown) {
@@ -137,14 +138,6 @@ class DragndropPlants extends Phaser.State {
     }
 
     dropHandler(item, pointer) {
-
-        // if (item.x < 90) {
-        //     item.x = 90;
-        // }
-        // else if (item.x > 400) {
-        //     //  Remove the item from the Group.
-        //     this.items.remove(item);
-        // }
 
         this.isWrong = false;
         this.game.physics.arcade.collide(this.items.children, item, this.stopCollision, null, this);
