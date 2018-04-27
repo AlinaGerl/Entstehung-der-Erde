@@ -12,7 +12,7 @@ class Kollision extends Phaser.State {
         this.game.stage.backgroundColor = '#000';
         // earth
         let center = { x: this.game.world.centerX, y: this.game.world.centerY }
-        this.earth = new Earth(this.game, center.x, center.y, 'firstEarth', this.game.earthRotate);
+        this.earth = new Earth(this.game, center.x, center.y, 'fireball', this.game.earthRotate);
 
         //text
         let translation = new Translation(this.game);
