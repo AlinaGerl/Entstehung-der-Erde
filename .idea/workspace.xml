@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf0e48f9-f4e6-442e-8185-6914322a9ac9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/scripts/game.js.map" afterPath="$PROJECT_DIR$/build/scripts/game.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/End.js" afterPath="$PROJECT_DIR$/src/states/End.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Preloader.js" afterPath="$PROJECT_DIR$/src/states/Preloader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/DuplicateCells.js" afterPath="$PROJECT_DIR$/src/states/DuplicateCells.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,7 +83,6 @@
         <option value="$USER_HOME$/Desktop/Neuer Ordner/phaser-examples-master/examples/animation/frame update.js" />
         <option value="$PROJECT_DIR$/src/states/Animation.js" />
         <option value="$PROJECT_DIR$/src/states/Planetenwachstum.js" />
-        <option value="$PROJECT_DIR$/src/states/DuplicateCells.js" />
         <option value="$PROJECT_DIR$/src/states/PlanetEntstehung.js" />
         <option value="$PROJECT_DIR$/src/states/Urknall.js" />
         <option value="$PROJECT_DIR$/src/states/Wachstum.js" />
@@ -97,6 +94,7 @@
         <option value="$PROJECT_DIR$/src/states/Eiszeit.js" />
         <option value="$PROJECT_DIR$/src/states/Preloader.js" />
         <option value="$PROJECT_DIR$/src/states/End.js" />
+        <option value="$PROJECT_DIR$/src/states/DuplicateCells.js" />
       </list>
     </option>
   </component>
@@ -457,12 +455,12 @@
       <workItem from="1524733245151" duration="21102000" />
       <workItem from="1524762459530" duration="424000" />
       <workItem from="1524815354469" duration="184000" />
-      <workItem from="1524815602498" duration="8848000" />
+      <workItem from="1524815602498" duration="8884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104800000" />
+    <option name="totallyTimeSpent" value="104836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
