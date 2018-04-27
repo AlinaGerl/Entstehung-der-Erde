@@ -63,7 +63,7 @@ class Moon extends Phaser.State {
         this.moon.destroy();
         this.textbox.destroy();
         this.game.world.remove();
-        this.game.state.start('Cells', true, false);
+        this.game.state.start('Regenzeit', true, false);
     }
 }
 

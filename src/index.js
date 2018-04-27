@@ -12,6 +12,7 @@ import Dinos from 'states/Dinosaurier';
 import PlanetEntstehung from 'states/PlanetEntstehung';
 import PlanetWachstum from 'states/PlanetWachstum';
 import Eiszeit from 'states/Eiszeit';
+import Regenzeit from 'states/Regenzeit';
 
 
 
@@ -33,6 +34,7 @@ class Game extends Phaser.Game {
         this.state.add('PlanetEntstehung', PlanetEntstehung, false);
         this.state.add('PlanetWachstum', PlanetWachstum, false);
         this.state.add('Eiszeit', Eiszeit, false);
+        this.state.add('Regenzeit', Regenzeit, false);
 
 
         //global variables

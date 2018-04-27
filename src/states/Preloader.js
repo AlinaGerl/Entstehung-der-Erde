@@ -27,6 +27,8 @@ class Preloader extends Phaser.State {
         this.game.load.spritesheet('cellsSmall', 'assets/Cell/cellsSmall.png', 318, 344, 8);
         this.game.load.image('rodinia', 'assets/Eiszeit/Rodinia.png');
         this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
+        this.game.load.image('waterball', 'assets/Regenzeit/waterball.png');
+        this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
     }
 
 
@@ -46,7 +48,7 @@ class Preloader extends Phaser.State {
         };
         WebFont.load(wfconfig);
         //this.game.load.start();
-        this.game.state.start('End');
+        this.game.state.start('Regenzeit');
     }
 
 }

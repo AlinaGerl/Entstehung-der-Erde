@@ -47,8 +47,7 @@ class Urknall extends Phaser.State {
         let translation = new Translation(this.game);
         this.text = translation.translate("last1");
         this.textbox = new Text(this.game, this.text);
-        let enter = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
-        enter.onDown.add(this.nextEvent, this);
+        this.game.input.onDown.addOnce(this.nextEvent, this);
     }
     click (){
         this.SpaceClicked++;
@@ -56,7 +55,7 @@ class Urknall extends Phaser.State {
 
     nextEvent() {
         this.textbox.destroy();
-        this.game.state.start('PlanetEntstehung', true, false);
+        this.game.state.start('PlanetWachstum', true, false);
     }
 }
 
