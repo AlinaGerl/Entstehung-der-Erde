@@ -68,15 +68,15 @@ class Volcanoes extends Phaser.State {
     }
 
     playAnim01(){
-        this.volcano01.animations.play('walk', 5, true);
+        this.volcano01.animations.play('walk', 20, true);
         this.allPushed++;
     }
     playAnim02(){
-        this.volcano02.animations.play('walk', 5, true);
+        this.volcano02.animations.play('walk', 20, true);
         this.allPushed++;
     }
     playAnim03(){
-        this.volcano03.animations.play('walk', 5, true);
+        this.volcano03.animations.play('walk', 20, true);
         this.allPushed++;
     }
 
