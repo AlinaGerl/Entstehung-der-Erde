@@ -38,7 +38,7 @@ class Dinosaurs extends Phaser.State {
         this.onEarth = this.game.add.group(); this.onEarth.x = this.game.world.centerX; this.onEarth.y = this.game.world.centerY;
         this.earthG.add(this.earth);
         this.earthG.z = 100;
-        this.DinosG.z = 100;
+        this.DinosG.z = 120;
         this.game.physics.enable( [ this.earth], Phaser.Physics.ARCADE);
 
         this.dinosReady();

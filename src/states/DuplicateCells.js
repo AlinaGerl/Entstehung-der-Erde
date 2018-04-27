@@ -201,7 +201,7 @@ class DuplicateCells extends Phaser.State {
         this.cellsG.removeAll();
         this.textbox.destroy();
         this.game.world.removeAll();
-        this.game.state.start('Plants', true, false);
+        this.game.state.start('Eiszeit', true, false);
     }
 
 

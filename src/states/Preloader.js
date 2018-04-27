@@ -22,11 +22,14 @@ class Preloader extends Phaser.State {
         this.game.load.image('dino', 'assets/Dinos/Dino.png');
         this.game.load.image('meteorit', 'assets/Dinos/meteorit.png');
         this.game.load.image('earth_meteor', 'assets/Dinos/EarthMeteor.jpg');
+        this.game.load.image('fireball', 'assets/Wachstum/fireball.png');
         this.game.load.spritesheet('cellsBig', 'assets/Cell/cellsBig.png', 396, 495, 8);
         this.game.load.spritesheet('cellsSmall', 'assets/Cell/cellsSmall.png', 318, 344, 8);
         this.game.load.spritesheet('volcano', 'assets/Volcano/volcano.png', 477, 651, 9);
         this.game.load.spritesheet('seaWeed1', 'assets/Ocean/seaWeed1.png', 120, 346, 14);
         //this.game.load.atlas('seaWeed2', 'assets/sprites/seaWeed2.png', 'assets/sprites/seaWeed2.json');
+        this.game.load.image('rodinia', 'assets/Eiszeit/Rodinia.png');
+        this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
     }
 
 
@@ -46,7 +49,7 @@ class Preloader extends Phaser.State {
         };
         WebFont.load(wfconfig);
         //this.game.load.start();
-        this.game.state.start('Plants');
+        this.game.state.start('Urknall');
     }
 
 }

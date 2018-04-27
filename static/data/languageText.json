@@ -1,29 +1,44 @@
 {
   "de": {
-      "first1": "Wo sind wir? Im Nichts. Im Nichts aber trotzdem überall. Lass uns ein Etwas erschaffen. Das erste Etwas, dass es je geben wird.",
-      "last1": "Wow! Es haben sich aus Gravitation Gase zusammengezogen und eine Explosion verursacht: den Urknall. Somit wurde das Universum erschaffen. Dies bedeutet, dass zum ersten Mal Materie, Raum und Zeit existieren. Siehst du diesen großen Stern dort hinten? Das ist die Sonne.",
-      "first2": "Es fliegen um die Sonne viele Weltallsteine, Gas und Sternenstaub herum. Was glaubst du würde passieren, wenn diese aufeinanderstoßen? Probieren wir es aus.",
+    "first1": "Wo sind wir? Im Nichts. Im Nichts aber trotzdem überall. Lass uns ein Etwas erschaffen. Das erste Etwas, dass es je geben wird.",
+    "last1": "Wow! Es haben sich aus Gravitation Gase zusammengezogen und eine Explosion verursacht: den Urknall. Somit wurde das Universum erschaffen. Dies bedeutet, dass zum ersten Mal Materie, Raum und Zeit existieren. Siehst du diesen großen Stern dort hinten? Das ist die Sonne.",
+
+    "first2": "Es fliegen um die Sonne viele Weltallsteine, Gas und Sternenstaub herum. Was glaubst du würde passieren, wenn diese aufeinanderstoßen? Probieren wir es aus.",
+
     "first3": "Da ist sie, die Erde. Entstanden aus Meteoritensteinen, Gas und Sternenstaub. Sie ist wirklich heiß und genau genommen noch ein riesiger Feuerball. Klein ist sie auch noch, aber das soll sich noch ändern…",
+    "last3": "Die Erde ist nun schon ziemlich groß und durch die Meteoriten sogar noch heißer geworden.",
+
     "first4": "Was ist das? Sieht so aus, als würde ein riesiger Planet auf die Erde zu kommen!",
-      "last4": "",
+
     "first5": "Theia, ein Protoplanet in der Größe des Mars, streifte seitlich an der Erde und Unmengen an Materie des Erdmantels wird in den Orbit geschleudert. Was sich wohl daraus machen lässt?",
     "first7": "Soweit so gut, nun haben wir Wasser auf unserer Erde. Aber hier fehlt noch etwas, oder?",
     "last7": "Geschmolzenes Gestein bricht durch die Erdkruste bis zur Oberfläche des Ozeans und kühlt wieder ab. Nun hat unser blauer Planet seine ersten Landteile.",
     "last5": "Die Splitter haben sich innerhalb von 100 Jahren zusammengefügt und einen eigenen, neuen Weltallkörper erschaffen: den Mond.",
+
     "first8_1": "Warte, da passiert etwas im Wasser! Lass uns einen Blick darauf werfen.",
     "first8_2": "Durch Aminosäuren, die durch Meteoriten auf die Erde gelangt sind, entstand unter Wasser eine unglaubliche Chemiesuppe. In dieser erhitzten Zusammensetzung aus Meerwasser, Mineralien und Gasen findet man die ersten lebenden Zellen.",
     "last8": "Die Zellen haben sich geteilt und es existiert zum ersten Mal die DNA. Die Bakterien bilden mithilfe der Sonnenenergie Glukose und Sauerstoff, die sogenannte Photosynthese.",
+
+    "first9_1": "Durch die Plattenverschiebung bildet sich aus den kleinen Landteilen ein großer Kontinent: Rodinia.",
+    "first9_2": "Doch durch weitere Vulkanausbrüche werden Unmengen an Kohlendioxid in die Atmosphäre geliefert. Dies bewirkt, dass durch CO2 die Sonnenwärme nicht mehr gespeichert wird und die Erde zu Eis gefriert.",
+    "last9": "Doch die Vulkane produzieren weiterhin Kohlendioxid und bilden eine Schicht in der Atmosphäre. Diese speichert die Sonnenwärme und den Planeten nach 15 Millionen Jahren wieder auftauen lässt.",
+
     "first10_1": "In den letzten Millionen Jahren hat sich einiges getan, vielleicht sollten wir wieder mal genauer in den Ozean blicken",
     "first10_2": "Die Bakterien im Wasser haben sich nun zu richtigen Tieren entwickelt. Hier findet man verschiedene Arten von Tieren und Pflanzen.",
     "first10_3": "Durch Sonnenstrahlen und Sauerstoff entsteht eine Ozonschicht, die die Erde vor den Sonnenstrahlen schützt. Dies bedeutet, die Tiere können nun das Land besiedeln. Sie brauchen nur noch eine Motivation.",
     "last10": "Gut gemacht! Nun haben die Tiere eine Motivation ans Land zu kommen und Fische entwickeln Beine um die Nahrung am Land genießen zu können. Essen war wohl schon immer die größte Motivation der Lebewesen.",
+
     "first11": "Die Tiere entwickeln sich auf der Erde sehr gut und wurden inzwischen zu sehr großen Reptilien. Es wird aber langsam etwas voll auf dem Land, lass uns ein bisschen Platz schaffen. Doch irgendetwas passiert hier. Es sieht so aus, als würde hier Magma aus dem Boden kommen.",
     "last11": "Magma ist aus dem Erdboden gequollen und fast alle Tiere auf dem Planeten sind ausgestorben. Doch manche konnten noch überleben.",
+
     "first12": "Einige der Tiere die überlebt haben, entwickeln sich zu ganz besonderen Reptilien: den Dinosauriern!",
     "last12": "Sehr gut! Die Dinosaurier erobern die Welt und leben hier nun glücklich vor sich hin.",
+
     "first13": "Die Dinosaurier lebten sich gut auf der Erde ein und es entstehen viele verschiedene Arten. Es wird Zeit für Neues, findest du nicht auch?",
+
     "first14": "Nun sind die Dinosaurier ausgestorben. Es haben aber Säugetiere, die sich unter der Erde vergraben haben, überlebt und entwickeln sich zu den verschiedensten Tierarten. In Afrika wird aus einem von ihnen etwas ganz Besonderes: Der Mensch. Und er verbreitet sich auf der ganzen Welt…",
     "last14": "Die Menschen leben nun 1,5 Millionen Jahre auf der Erde und erreichen heute eine Weltbevölkerung von über 7 Millionen.  Sie sind die ersten Wesen auf der Welt, die eine höhere Intelligenz aufweisen und haben dadurch hohen Einfluss auf die Erde.",
+
     "end01": "Die Erde existiert heute seit 4,6 Millionen Jahren und seither sind auf ihr sehr viele Geschehnisse passiert. Von Feuer zu Wasser zu Schnee hat sich das Erscheinungsbild der Erde immer wieder verändert, bis sie schließlich zu dem blauen Planeten wurde den wir heute unsere Heimat nennen.",
     "end02": "Durch die Ausdehnung der Sonne wird geschätzt, dass die Erde noch 500 Millionen Jahre so bewohnt werden könnte wie heute. Doch angesichts der Veränderung der Erde durch die Menschen, könnte sich diese Zeit verkürzen. In spätestens 500 Millionen Jahren wird die steigende Temperatur den CO2 Gehalt reduzieren und Pflanzen und Tiere sterben aus. Nach weiteren 1 Milliarden Jahre wird das Oberflächenwasser verschwunden sein und die Temperatur auf 70 Grad steigen.",
     "end03": "Es wird erwartet, dass die Masse der Sonne sich in 7 Milliarden Jahren bis zur Erdbahn erstrecken wird und somit Merkur, Venus und vermutlich auch die Erde verglühen werden.",
