@@ -46,7 +46,7 @@ class Preloader extends Phaser.State {
         };
         WebFont.load(wfconfig);
         //this.game.load.start();
-        this.game.state.start('Eiszeit');
+        this.game.state.start('End');
     }
 
 }

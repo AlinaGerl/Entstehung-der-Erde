@@ -13,55 +13,26 @@ class End extends Phaser.State {
 
         //text
         this.translation = new Translation(this.game);
-        this.text = this.translation.translate("end01");
-        this.textbox = new Text(this.game, this.text);
+        this.textbox = new Text(this.game, this.translation.translate("end01"));
         this.textbox.y = this.game.world.centerY;
-        this.text02 = false;
-        this.text03 = false;
-        this.text04 = false;
 
         this.game.input.mouse.capture = true;
-
-        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.booleanText02, this);
-    }
-
-    update(){
-
-        if(this.text02 && this.game.input.activePointer.leftButton.isDown){
-            let text = this.translation.translate("end02");
-            this.textbox.destroy();
-            this.textbox = new Text(this.game, text);
-            this.textbox.y = this.game.world.centerY;
-            this.text02 = false;
-            this.game.time.events.add(Phaser.Timer.SECOND * 1, this.booleanText03, this);
-
-        } else if(this.text03 && this.game.input.activePointer.leftButton.isDown) {
-            let text = this.translation.translate("end03");
-            this.textbox.destroy();
-            this.textbox = new Text(this.game, text);
-            this.textbox.y = this.game.world.centerY;
-            this.text03 = false;
-            this.game.time.events.add(Phaser.Timer.SECOND * 1, this.booleanText04, this);
-
-        } else if(this.text04 && this.game.input.activePointer.leftButton.isDown){
-            let text = this.translation.translate("end04");
-            this.textbox.destroy();
-            this.textbox = new Text(this.game, text);
-            this.textbox.y = this.game.world.centerY;
-            this.text04 = false;
-    }
+        this.game.input.onDown.addOnce(this.booleanText02, this, 10, null);
     }
 
     booleanText02(){
-        this.text02 = true;
+        this.textbox.text = this.translation.translate("end02");
+        this.game.input.onDown.addOnce(this.booleanText03, this);
     }
 
     booleanText03(){
-        this.text03 = true;
+        this.textbox.text = this.translation.translate("end03");
+        this.game.input.onDown.addOnce(this.booleanText04, this);
+
     }
 
     booleanText04(){
-        this.text04 = true;
+        this.textbox.text = this.translation.translate("end04");
     }
 
 }
