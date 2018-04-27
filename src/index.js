@@ -11,6 +11,7 @@ import End from 'states/End';
 import Dinos from 'states/Dinosaurier';
 import PlanetEntstehung from 'states/PlanetEntstehung';
 import PlanetWachstum from 'states/PlanetWachstum';
+import Volcanoes from 'states/Volcanoes';
 import Eiszeit from 'states/Eiszeit';
 import Regenzeit from 'states/Regenzeit';
 
@@ -33,6 +34,7 @@ class Game extends Phaser.Game {
         this.state.add('Dinos', Dinos, false);
         this.state.add('PlanetEntstehung', PlanetEntstehung, false);
         this.state.add('PlanetWachstum', PlanetWachstum, false);
+        this.state.add('Volcanoes', Volcanoes, false);
         this.state.add('Eiszeit', Eiszeit, false);
         this.state.add('Regenzeit', Regenzeit, false);
 

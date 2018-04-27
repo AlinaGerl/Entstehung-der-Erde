@@ -2,13 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf0e48f9-f4e6-442e-8185-6914322a9ac9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/Ocean/seaAnimal_shell1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/Ocean/seaWeed1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/Ocean/seaWeed2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/Ocean/seaWeed3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/Volcano/volcano.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/assets/Volcano/volcano_test.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/assets/Ocean/seaAnimal_shell1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/assets/Ocean/seaWeed1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/assets/Ocean/seaWeed2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/assets/Ocean/seaWeed3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/assets/Volcano/volcano.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/assets/Volcano/volcano_test.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/states/Volcanoes.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/assets/Animation/cells.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/assets/Animation/cells.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/assets/Cell/cell.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/assets/Cell/cellsBig.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/assets/Cell/cellsSmall.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/assets/Animation/cells.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/assets/Animation/cells.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/assets/Cell/cell.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/assets/Cell/cellsBig.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/assets/Cell/cellsSmall.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/data/languageText.json" afterPath="$PROJECT_DIR$/build/data/languageText.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/scripts/game.js.map" afterPath="$PROJECT_DIR$/build/scripts/game.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Moon.js" afterPath="$PROJECT_DIR$/src/states/Moon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/DragndropPlants.js" afterPath="$PROJECT_DIR$/src/states/DragndropPlants.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/DuplicateCells.js" afterPath="$PROJECT_DIR$/src/states/DuplicateCells.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/People.js" afterPath="$PROJECT_DIR$/src/states/People.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/PlanetEntstehung.js" afterPath="$PROJECT_DIR$/src/states/PlanetEntstehung.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Preloader.js" afterPath="$PROJECT_DIR$/src/states/Preloader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Urknall.js" afterPath="$PROJECT_DIR$/src/states/Urknall.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/data/languageText.json" afterPath="$PROJECT_DIR$/static/data/languageText.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,12 +43,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+            <state relative-caret-position="495">
+              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -36,8 +59,8 @@
       <file leaf-file-name="PlanetWachstum.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/PlanetWachstum.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-939">
-              <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="20" />
+            <state relative-caret-position="60">
+              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -46,8 +69,8 @@
       <file leaf-file-name="PlanetEntstehung.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/PlanetEntstehung.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+            <state relative-caret-position="735">
+              <caret line="52" column="31" lean-forward="false" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -56,7 +79,7 @@
       <file leaf-file-name="Kollision.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/Kollision.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
+            <state relative-caret-position="840">
               <caret line="60" column="26" lean-forward="false" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
               <folding />
             </state>
@@ -76,7 +99,7 @@
       <file leaf-file-name="Urknall.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/Urknall.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
+            <state relative-caret-position="570">
               <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
               <folding />
             </state>
@@ -99,7 +122,7 @@
       <file leaf-file-name="Regenzeit.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/Regenzeit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
+            <state relative-caret-position="1020">
               <caret line="68" column="64" lean-forward="false" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -112,7 +135,7 @@
       <file leaf-file-name="People.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/People.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
+            <state relative-caret-position="885">
               <caret line="63" column="30" lean-forward="true" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
               <folding />
             </state>
@@ -123,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/src/states/Preloader.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="563">
-              <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+              <caret line="50" column="10" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
               <folding>
                 <element signature="n#!!doc;n#Preloader#0" expanded="false" />
               </folding>
@@ -259,6 +282,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -427,7 +451,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,11 +579,12 @@
       <workItem from="1524762459530" duration="424000" />
       <workItem from="1524815354469" duration="184000" />
       <workItem from="1524815602498" duration="12361000" />
+      <workItem from="1524838586396" duration="1000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108313000" />
+    <option name="totallyTimeSpent" value="108314000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -570,7 +594,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24368826" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -583,6 +606,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24368826" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -734,11 +758,7 @@
     <entry file="file://$USER_HOME$/Desktop/Neuer Ordner/phaser-examples-master/examples/animation/local json object.js" />
     <entry file="file://$PROJECT_DIR$/static/assets/Animation/cellJson.json" />
     <entry file="file://$USER_HOME$/Desktop/Neuer Ordner/phaser-examples-master/examples/animation/frame update.js" />
-    <entry file="file://$PROJECT_DIR$/static/assets/Cell/cell.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/Cell/cell.png" />
     <entry file="file://$PROJECT_DIR$/src/objects/Plant.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -753,10 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
           <caret line="166" column="8" lean-forward="false" selection-start-line="166" selection-start-column="8" selection-end-line="169" selection-end-column="86" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#49#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="94" lean-forward="true" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="58" column="21" lean-forward="false" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -796,9 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
           <caret line="199" column="32" lean-forward="false" selection-start-line="199" selection-start-column="32" selection-end-line="199" selection-end-column="32" />
-          <folding>
-            <element signature="e#49#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,8 +822,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        <state relative-caret-position="495">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -833,7 +843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/Urknall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
+        <state relative-caret-position="570">
           <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
           <folding />
         </state>
@@ -841,15 +851,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/PlanetWachstum.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-939">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="60">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/Kollision.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
+        <state relative-caret-position="840">
           <caret line="60" column="26" lean-forward="false" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
           <folding />
         </state>
@@ -865,15 +875,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/PlanetEntstehung.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+        <state relative-caret-position="735">
+          <caret line="52" column="31" lean-forward="false" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/Regenzeit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
+        <state relative-caret-position="1020">
           <caret line="68" column="64" lean-forward="false" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -884,7 +894,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/People.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
+        <state relative-caret-position="885">
           <caret line="63" column="30" lean-forward="true" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
           <folding />
         </state>
@@ -893,7 +903,7 @@
     <entry file="file://$PROJECT_DIR$/src/states/Preloader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
-          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+          <caret line="50" column="10" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
           <folding>
             <element signature="n#!!doc;n#Preloader#0" expanded="false" />
           </folding>
