@@ -17,9 +17,16 @@ class DragndropPlants extends Phaser.State {
         let text = this.translation.translate("first10_1");
         this.textbox = new Text(this.game, text);
 
+        //seaweed
+        this.seaweed = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'seaWeed1');
+        this.seaweed.anchor.x = 0.5;
+        this.seaweed.anchor.y = 0.5;
+        this.seaweed.scale.x = 0.0;
+        this.seaweed.scale.y = 0.0;
 
-        this.animals = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'oceanAnimals');
-        this.animals.scale.x = 0; this.animals.scale.y = 0; this.animals.anchor.y = 0.5; this.animals.anchor.x = 0.5;
+        this.seaweed.animations.add("walk", null, 6, true);
+        this.seaweed.animations.play('walk');
+
         this.firstStage = true;
         this.secondStage = false;
 
@@ -34,8 +41,8 @@ class DragndropPlants extends Phaser.State {
         let earthG = this.game.add.group();
         let animalsG = this.game.add.group();
         earthG.add(this.earth);
-        animalsG.add(this.animals);
-        earthG.z = 100
+        animalsG.add(this.seaweed);
+        earthG.z = 100;
         animalsG.z = 120;
         // this.plant = new Plant(this.game, 70, 70, 'plant');
         //
@@ -72,7 +79,7 @@ class DragndropPlants extends Phaser.State {
     getIntoWater() {
         this.textbox.destroy();
         this.game.add.tween(this.earth.scale).to({ x: 5, y: 5}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.add.tween(this.animals.scale).to({ x: 1, y: 1}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        this.game.add.tween(this.seaweed.scale).to({ x: 1, y: 1}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.firstText, this);
 
     }
@@ -80,7 +87,7 @@ class DragndropPlants extends Phaser.State {
     outOfWater() {
         this.textbox.destroy();
         this.game.add.tween(this.earth.scale).to({ x: 0.5, y: 0.5}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.add.tween(this.animals.scale).to({ x: 0, y: 0}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        this.game.add.tween(this.seaweed.scale).to({ x: 0, y: 0}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.secondText, this);
 
     }
@@ -95,7 +102,7 @@ class DragndropPlants extends Phaser.State {
     secondText() {
         let text = this.translation.translate("first10_3");
         this.textbox = new Text(this.game, text);
-        this.animals.destroy();
+        this.seaweed.destroy();
 
         this.items = this.game.add.group();
         this.items.x = this.game.world.centerX;

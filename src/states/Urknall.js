@@ -30,6 +30,7 @@ class Urknall extends Phaser.State {
         this.game.input.keyboard.addKeyCapture([ Phaser.Keyboard.SPACEBAR ]);
 
         if (!this.wasKnall && this.SpaceClicked === 20) {
+            this.game.stage.backgroundColor = '#000';
             this.wasKnall = true;
             this.textbox.destroy();
             let urknall = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'urknall');
@@ -47,8 +48,6 @@ class Urknall extends Phaser.State {
         let translation = new Translation(this.game);
         this.text = translation.translate("last1");
         this.textbox = new Text(this.game, this.text);
-        let enter = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
-        enter.onDown.add(this.nextEvent, this);
     }
     click (){
         this.SpaceClicked++;

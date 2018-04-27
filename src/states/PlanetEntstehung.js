@@ -10,7 +10,7 @@ class PlanetEntstehung extends Phaser.State {
     create() {
         //text
         this.translation = new Translation(this.game);
-        this.text = this.translation.translate("first3");
+        this.text = this.translation.translate("first2");
         this.textbox = new Text(this.game, this.text);
 
 
@@ -30,7 +30,9 @@ class PlanetEntstehung extends Phaser.State {
     }
 
     changeFrame(){
+        console.log(this.walk.frame);
         this.walk.frame++;
+
         this.play = true;
     }
 

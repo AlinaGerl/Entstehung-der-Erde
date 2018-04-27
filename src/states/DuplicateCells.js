@@ -62,6 +62,7 @@ class DuplicateCells extends Phaser.State {
         this.secondStage = false;
         this.cellCounter = 0;
         this.isEnd = false;
+
         //duplicate on click
         this.cell01.inputEnabled = true;
         this.cell02.inputEnabled = true;

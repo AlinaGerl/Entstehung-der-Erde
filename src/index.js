@@ -11,6 +11,7 @@ import End from 'states/End';
 import Dinos from 'states/Dinosaurier';
 import PlanetEntstehung from 'states/PlanetEntstehung';
 import PlanetWachstum from 'states/PlanetWachstum';
+import Volcanoes from 'states/Volcanoes';
 
 
 
@@ -31,6 +32,7 @@ class Game extends Phaser.Game {
         this.state.add('Dinos', Dinos, false);
         this.state.add('PlanetEntstehung', PlanetEntstehung, false);
         this.state.add('PlanetWachstum', PlanetWachstum, false);
+        this.state.add('Volcanoes', Volcanoes, false);
 
 
         //global variables
@@ -38,7 +40,6 @@ class Game extends Phaser.Game {
 		this.cellCounter = 0;
         this.moonRotate = 0;
         this.collided = false;
-        this.counter = 0;
 
 		this.state.start('Preloader');
 
