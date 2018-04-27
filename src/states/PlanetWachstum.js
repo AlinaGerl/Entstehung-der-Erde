@@ -14,7 +14,7 @@ class PlanetWachstum extends Phaser.State {
         this.game.physics.p2.setImpactEvents(true);
         this.game.physics.p2.restitution = 0.8;
         this.game.physics.p2.updateBoundsCollisionGroup();
-        
+
         //creating the earth like a firebaaaaall with all his physics
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
         this.earth.scale.x = 0.2; this.earth.scale.y = 0.2;
