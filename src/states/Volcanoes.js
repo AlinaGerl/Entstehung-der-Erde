@@ -17,8 +17,14 @@ class Volcanoes extends Phaser.State {
 
         //earth
         let center = {x: this.game.world.centerX, y: this.game.world.centerY};
-        this.earth = new Earth(this.game, center.x, center.y, 'firstEarth', this.game.earthRotate);
+        this.earth = new Earth(this.game, center.x, center.y, 'waterball', this.game.earthRotate);
+        this.earth.scale.x = 0.5; this.earth.scale.y = 0.5;
         console.info(this.game.earthRotate);
+
+        this.earthWithLand = this.game.add.sprite(center.x, center.y, 'firstEarth');
+        this.earthWithLand.scale.x = 0.5; this.earthWithLand.scale.y = 0.5;
+        this.earthWithLand.alpha = 0; this.earthWithLand.angle = this.game.earthRotate;
+        this.earthWithLand.anchor.x = 0.5; this.earthWithLand.anchor.y = 0.5;
 
         //create volcanos
         this.volcano01 = this.game.add.sprite(center.x, center.y, 'volcano');
@@ -81,8 +87,13 @@ class Volcanoes extends Phaser.State {
     }
 
     update(){
-        if(this.allPushed === 3 && this.game.input.activePointer.leftButton.isDown){
-            this.game.time.events.add(Phaser.Timer.SECOND * 3, this.nextEvent, this);
+        this.earthWithLand.angle -= 0.03;
+        if(this.allPushed === 3){
+            this.textbox.text = this.translation.translate("last7");
+            this.game.add.tween(this.earthWithLand).to( { alpha: 1 }, 4000, Phaser.Easing.Linear.None, true, 0);
+            this.game.add.tween(this.earth).to( { alpha: 0 }, 4000, Phaser.Easing.Linear.None, true, 0);
+            this.game.input.onDown.addOnce(this.nextEvent, this);
+            this.allPushed = 0;
         }
     }
 

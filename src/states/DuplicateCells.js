@@ -17,9 +17,6 @@ class DuplicateCells extends Phaser.State {
         this.text = this.translation.translate("first8_1");
         this.textbox = new Text(this.game, this.text);
 
-        let spaceBar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-        spaceBar.onDown.add(this.click, this);
-
 
         //cells
         this.cell01 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'cellsBig');
@@ -106,13 +103,10 @@ class DuplicateCells extends Phaser.State {
         this.walk.enableUpdate = true;
         this.play = false;
 
+        this.game.input.onDown.addOnce(this.getIntoWater, this);
     }
 
     update(){
-        if (this.firstStage && this.game.input.activePointer.leftButton.isDown) {
-            this.firstStage = false;
-            this.getIntoWater();
-        }
         if(this.cellCounter === 5) {
             //damit nicht immer in die if gegangen wird
             this.cellCounter = 4;
@@ -163,6 +157,7 @@ class DuplicateCells extends Phaser.State {
         let text = this.translation.translate("first8_2");
         this.textbox = new Text(this.game, text);
         this.secondStage = true;
+        //this.game.input.onDown.addOnce(this.booleanText03, this);
     }
     onDown (obj) {
         this.addCell();
@@ -179,20 +174,11 @@ class DuplicateCells extends Phaser.State {
         cell.scale.y = 0.2;
         cell.angle = this.angle;
         this.cellsG.add(cell);
-        cell.input.enabled = false;
-
-        this.counter++;
+        
         //start animation
         let walk = cell.animations.add('walk');
         cell.animations.play('walk', 5, true);
     }
-
-    click(){
-        let text = this.translation.translate("first8_2");
-        this.textbox.destroy();
-        this.textbox = new Text(this.game, text);
-    }
-
     EndScene() {
         this.isEnd = true;
     }

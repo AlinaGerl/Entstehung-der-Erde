@@ -47,7 +47,8 @@ class PlanetWachstum extends Phaser.State {
         this.mouseBody.body.setCircle(10); //rigidbody
         this.mouseBody.body.data.shapes[0].sensor = true; // actually no clue
 
-        this.MeteoritenReady();
+        this.game.input.onDown.addOnce(this.MeteoritenReady, this);
+        //this.MeteoritenReady();
     }
 
     update() {

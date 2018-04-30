@@ -32,6 +32,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
         this.game.load.image('waterball', 'assets/Regenzeit/waterball.png');
         this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
+        this.game.load.image('clouds', 'assets/Regenzeit/wolken.png');
     }
 
 
@@ -51,7 +52,7 @@ class Preloader extends Phaser.State {
         };
         WebFont.load(wfconfig);
         //this.game.load.start();
-        this.game.state.start('Regenzeit');
+        this.game.state.start('Urknall');
     }
 
 }
