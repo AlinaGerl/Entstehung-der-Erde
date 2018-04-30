@@ -51,7 +51,7 @@ class Preloader extends Phaser.State {
         };
         WebFont.load(wfconfig);
         //this.game.load.start();
-        this.game.state.start('Urknall');
+        this.game.state.start('Regenzeit');
     }
 
 }

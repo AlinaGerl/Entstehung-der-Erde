@@ -73,6 +73,7 @@ class Regenzeit extends Phaser.State {
     }
 
     nextEvent() {
+        this.moon.destroy();
         this.textbox.destroy();
         this.game.world.removeAll();
         this.game.state.start('Volcanoes', true, false);
