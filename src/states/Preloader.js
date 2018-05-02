@@ -27,7 +27,7 @@ class Preloader extends Phaser.State {
         this.game.load.spritesheet('cellsSmall', 'assets/Cell/cellsSmall.png', 318, 344, 8);
         this.game.load.spritesheet('volcano', 'assets/Volcano/volcano.png', 375, 375, 20);
         this.game.load.spritesheet('seaWeed1', 'assets/Ocean/seaWeed1.png', 120, 346, 14);
-        //this.game.load.atlas('seaWeed2', 'assets/sprites/seaWeed2.png', 'assets/sprites/seaWeed2.json');
+        //this.game.load.atlas('seaWeed2', 'assets/Ocean/seaWeed2.png', 'assets/Ocean/seaWeed2.json');
         this.game.load.image('rodinia', 'assets/Eiszeit/Rodinia.png');
         this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
         this.game.load.image('waterball', 'assets/Regenzeit/waterball.png');

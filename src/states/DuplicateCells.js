@@ -174,6 +174,7 @@ class DuplicateCells extends Phaser.State {
         cell.scale.y = 0.2;
         cell.angle = this.angle;
         this.cellsG.add(cell);
+        cell.input.enabled = false;
         
         //start animation
         let walk = cell.animations.add('walk');

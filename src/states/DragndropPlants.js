@@ -18,7 +18,7 @@ class DragndropPlants extends Phaser.State {
         this.textbox = new Text(this.game, text);
 
         //seaweed
-        this.seaweed = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'seaWeed1');
+        this.seaweed = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'seaWeed2');
         this.seaweed.anchor.x = 0.5;
         this.seaweed.anchor.y = 0.5;
         this.seaweed.scale.x = 0.0;

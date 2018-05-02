@@ -21,7 +21,7 @@ class Magma extends Phaser.State {
         console.info(this.game.earthRotate);
 
         //first button
-            this.button01 = this.game.add.sprite(40, -80, 'magmaButton');
+        this.button01 = this.game.add.sprite(40, -80, 'magmaButton');
         this.button01.anchor.x = 0.5; this.button01.scale.x = 0.03; this.button01.scale.y = 0.03;
         this.button01.inputEnabled = true;
         this.button01.events.onInputDown.add(this.listener01, this);

@@ -27,19 +27,19 @@ class Volcanoes extends Phaser.State {
         this.earthWithLand.anchor.x = 0.5; this.earthWithLand.anchor.y = 0.5;
 
         //create volcanos
-        this.volcano01 = this.game.add.sprite(center.x, center.y, 'volcano');
+        this.volcano01 = this.game.add.sprite(center.x-50, center.y-80, 'volcano');
         this.volcano01.anchor.x = 0.5;
         this.volcano01.anchor.y = 0.5;
         this.volcano01.scale.x = 0.5;
         this.volcano01.scale.y = 0.5;
 
-        this.volcano02 = this.game.add.sprite(center.x+100, center.y+50, 'volcano');
+        this.volcano02 = this.game.add.sprite(center.x+60, center.y-20, 'volcano');
         this.volcano02.anchor.x = 0.5;
         this.volcano02.anchor.y = 0.5;
         this.volcano02.scale.x = 0.5;
         this.volcano02.scale.y = 0.5;
 
-        this.volcano03 = this.game.add.sprite(center.x-70, center.y+60, 'volcano');
+        this.volcano03 = this.game.add.sprite(center.x-50, center.y+100, 'volcano');
         this.volcano03.anchor.x = 0.5;
         this.volcano03.anchor.y = 0.5;
         this.volcano03.scale.x = 0.5;
@@ -99,6 +99,9 @@ class Volcanoes extends Phaser.State {
 
     nextEvent() {
         this.textbox.destroy();
+        this.volcano01.destroy();
+        this.volcano02.destroy();
+        this.volcano03.destroy();
         this.game.world.removeAll();
         this.game.state.start('Cells', true, false);
     }
