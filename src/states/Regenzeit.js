@@ -61,7 +61,7 @@ class Regenzeit extends Phaser.State {
         this.textbox.text = this.translation.translate("last6");
         this.earth.loadTexture('waterball', 0 , false);
         this.rotateSlower = true;
-        this.game.add.tween(this.moon.position).to( { x: 4, y: 4 }, 5000, Phaser.Easing.Linear.None, true, 0);
+        this.game.add.tween(this.moon.anchor).to( { x: 4, y: -4 }, 5000, Phaser.Easing.Linear.None, true, 0);
         this.game.add.tween(this.clouds).to( { alpha: 0 }, 5000, Phaser.Easing.Linear.None, true, 0);
         this.game.input.onDown.addOnce(this.nextEvent, this, 5, null);
 

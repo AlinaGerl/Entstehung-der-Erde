@@ -33,6 +33,8 @@ class Moon extends Phaser.State {
         earthG.add(this.moon);
         earthG.z = 100;
         earthG.z = 110;
+
+        this.game.input.keyboard.start();
     }
 
     update(){
@@ -46,10 +48,7 @@ class Moon extends Phaser.State {
             this.textbox.destroy();
             this.textbox = new Text(this.game, text);
             this.isEnd = true;
-        }
-
-        if (this.isEnd && this.game.input.activePointer.leftButton.isDown) {
-            this.nextEvent();
+            this.game.input.onDown.addOnce(this.nextEvent, this, 10, null);
         }
 
     }

@@ -4,7 +4,7 @@
 import Translation from 'utils/translate';
 import Text from 'objects/text';
 import Earth from 'objects/Earth';
-
+import continueText from 'objects/weiterTxt';
 
 class PlanetWachstum extends Phaser.State {
 
@@ -48,6 +48,7 @@ class PlanetWachstum extends Phaser.State {
         this.mouseBody.body.data.shapes[0].sensor = true; // actually no clue
 
         this.game.input.onDown.addOnce(this.MeteoritenReady, this);
+        this.waitTxt = new continueText(this.game);
         //this.MeteoritenReady();
     }
 
@@ -66,6 +67,7 @@ class PlanetWachstum extends Phaser.State {
 
     MeteoritenReady() {
 
+        this.waitTxt.destroy();
         //die gruppe von dinos in die mitte setzen, damit man sie im mittelpunkt rotieren kann
         // this.MeteroG.x = this.game.world.centerX;
         // this.MeteroG.y = this.game.world.centerY;
@@ -86,8 +88,8 @@ class PlanetWachstum extends Phaser.State {
             item = this.game.add.sprite(90, 300 + 120 * i, 'meteorit', i);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
-            item.scale.x = 0.1;
-            item.scale.y = 0.1;
+            item.scale.x = 0.07;
+            item.scale.y = 0.07;
             item.name = 'block' + i;
             this.game.physics.p2.enable(item, false); //set physics
             item.body.setCircle(40); // this is kinda the rigidbody of the object
@@ -104,8 +106,8 @@ class PlanetWachstum extends Phaser.State {
             item = this.game.add.sprite((this.game.world.centerX*2-90), (300 + 120 * (i-3)), 'meteorit', i);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
-            item.scale.x = 0.1;
-            item.scale.y = 0.1;
+            item.scale.x = 0.07;
+            item.scale.y = 0.07;
             item.name = 'block' + i;
             this.game.physics.p2.enable(item, false); //set physics
             item.body.setCircle(40); // this is kinda the rigidbody of the object
