@@ -16,6 +16,9 @@ class Regenzeit extends Phaser.State {
         let text = this.translation.translate("first6");
         this.textbox = new Text(this.game, text);
 
+        this.game.pointer.setPosition(185);
+        this.game.pointerText.text = "3.8 Mrd";
+
         this.moon = new MoonObject(this.game, 2.3, 2.3, 'moon');
 
         //enable mouse input
@@ -68,10 +71,9 @@ class Regenzeit extends Phaser.State {
     }
 
     nextEvent() {
-        this.moon.destroy();
+        //this.moon.destroy();
         this.textbox.destroy();
-        this.game.world.removeAll();
-        this.game.state.start('Volcanoes', true, false);
+        this.game.state.start('Volcanoes', false, false);
     }
 
 

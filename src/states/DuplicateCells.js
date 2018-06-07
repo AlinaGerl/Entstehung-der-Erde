@@ -16,6 +16,8 @@ class DuplicateCells extends Phaser.State {
         this.translation = new Translation(this.game);
         this.text = this.translation.translate("first8_1");
         this.textbox = new Text(this.game, this.text);
+        this.game.pointer.setPosition(210);
+        this.game.pointerText.text = "3.5 Mrd";
 
         //cells
         this.cell01 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'cellsBig');
@@ -51,6 +53,7 @@ class DuplicateCells extends Phaser.State {
             for(var i = 0; i <= this.cellsG.children.length-1; i++) {
                 this.cellsG.children[i].input.enabled = false;
             }
+
 
             //neuer text
             let text = this.translation.translate("last8");
@@ -154,8 +157,7 @@ class DuplicateCells extends Phaser.State {
     nextEvent() {
         this.cellsG.removeAll();
         this.textbox.destroy();
-        this.game.world.removeAll();
-        this.game.state.start('Eiszeit', true, false);
+        this.game.state.start('Eiszeit', false, false);
     }
 
 

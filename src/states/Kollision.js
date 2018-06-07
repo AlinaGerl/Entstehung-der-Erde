@@ -19,6 +19,14 @@ class Kollision extends Phaser.State {
         this.text = translation.translate("first4");
         this.textbox = new Text(this.game, this.text);
 
+        if (!this.game.pointer.parent)
+        {
+            this.add.existing(this.game.pointer);
+        }
+        if (!this.game.pointerText.parent)
+        {
+            this.add.existing(this.game.pointerText);
+        }
         //button
         this.button = this.game.add.sprite(this.game.world.centerX/2, this.game.world.height, 'redButton');
         this.button.anchor.x = 0.5; this.button.scale.x = 0.7; this.button.scale.y = 0.7;
@@ -60,7 +68,7 @@ class Kollision extends Phaser.State {
             this.textbox.destroy();
             this.game.world.remove();
             this.button.destroy();
-            this.game.state.start('Moon', true, false);
+            this.game.state.start('Moon', false, false);
         }
     }
 
@@ -72,12 +80,12 @@ class Kollision extends Phaser.State {
     }
 
     nextEvent() {
-        // this.earth.destroy();
+        this.earth.destroy();
         // this.text.destroy();
         // this.game.world.remove(this.textbox);
         // this.button.destroy();
         //this.game.world.removeAll();
-        this.game.state.start('Moon', true, true);
+        this.game.state.start('Moon', false, false);
     }
 }
 

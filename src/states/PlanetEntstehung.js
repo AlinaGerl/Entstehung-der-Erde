@@ -12,7 +12,21 @@ class PlanetEntstehung extends Phaser.State {
         this.translation = new Translation(this.game);
         this.text = this.translation.translate("first2");
         this.textbox = new Text(this.game, this.text);
+        this.textbox.alpha = 0;
 
+        if (!this.game.pointer.parent)
+        {
+            this.add.existing(this.game.pointer);
+        }
+        if (!this.game.pointerText.parent)
+        {
+            this.add.existing(this.game.pointerText);
+        }
+        this.game.pointer.y = this.game.world.centerY*2+20;
+        this.game.pointerText.y = this.game.world.centerY*2+65;
+
+        this.moveTimeline();
+        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.setText, this);
 
 
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
@@ -33,12 +47,22 @@ class PlanetEntstehung extends Phaser.State {
         // this.play = false;
     }
 
+    moveTimeline() {
+        this.game.add.tween(this.game.timeline).to( { y: this.game.world.centerY*2-80}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this.game.pointer).to( { y: this.game.world.centerY*2-80}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this.game.pointerText).to( { y: this.game.world.centerY*2-45}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
+    }
+
+    setText() {
+        this.game.add.tween(this.textbox).to( { alpha: 1}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
+    }
     changeFrame(){
         // this.walk.frame++;
         // this.play = true;
 
         this.earth.alpha += 0.1;
         this.EventCounter++;
+        this.game.add.tween(this.textbox).to( { alpha: 0}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
     }
 
     playAnim() {
@@ -54,13 +78,14 @@ class PlanetEntstehung extends Phaser.State {
         // }
 
         if (this.EventCounter === 10) this.nextEvent();
+
     }
 
     nextEvent() {
         this.textbox.destroy();
         this.earth.destroy();
-        this.game.world.removeAll();
-        this.game.state.start('PlanetWachstum', true, false);
+        this.game.state.start('PlanetWachstum', false, false);
+        //this.pointer.destroy();
     }
 
 }
