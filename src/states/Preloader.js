@@ -1,11 +1,16 @@
 /**
  * Created by alinaisabelle on 23.04.18.
  */
+import pointer from 'objects/Pointer';
+import timeline from 'objects/timeline';
+
 class Preloader extends Phaser.State {
 
 
     preload() {
         this.game.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');
+        this.game.load.image('timeline', 'assets/timeline.png');
+        this.game.load.image('pointer', 'assets/pointer.png');
         this.game.load.image('firstEarth', 'assets/Urknall/littleEarth.png');
         this.game.load.image('urknall', 'assets/Urknall/Urknall.jpg');
         this.game.load.image('redButton', 'assets/Kollision/Button.png');
@@ -46,13 +51,25 @@ class Preloader extends Phaser.State {
             },
 
             google: {
-                families: ['Roboto Mono']
+                families: ['Roboto Mono', 'Montserrat']
             }
 
         };
         WebFont.load(wfconfig);
         //this.game.load.start();
-        this.game.state.start('Urknall');
+        this.game.time.events.add(Phaser.Timer.SECOND * 0.5, this.setTimeline, this);
+
+    }
+
+    setTimeline() {
+        this.game.pointer = new pointer(this.game, 66, "4.6 Mrd");
+        this.game.timeline = new timeline(this.game);
+        //this.game.timeline.y = this.game.world.centerY*2+20;
+        if (!this.game.pointerText.parent)
+        {
+            this.add.existing(this.game.pointerText);
+        }
+        this.game.state.start('Volcanoes', false, false);
     }
 
 }

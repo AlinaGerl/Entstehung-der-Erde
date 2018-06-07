@@ -45,6 +45,9 @@ class Game extends Phaser.Game {
         this.moonRotate = 0;
         this.collided = false;
         this.counter = 0;
+        this.pointer = null;
+        this.pointerText = null;
+        this.timeline = null;
 
 		this.state.start('Preloader');
 

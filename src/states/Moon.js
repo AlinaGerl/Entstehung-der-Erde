@@ -18,7 +18,14 @@ class Moon extends Phaser.State {
         this.translation = new Translation(this.game);
         let text = this.translation.translate("first5");
         this.textbox = new Text(this.game, text);
-
+        if (!this.game.pointer.parent)
+        {
+            this.add.existing(this.game.pointer);
+        }
+        if (!this.game.pointerText.parent)
+        {
+            this.add.existing(this.game.pointerText);
+        }
         //moon
         this.SpaceClicked = 0;
         this.moon = new MoonObject(this.game, 2.3, 2.3, 'moon');
@@ -62,7 +69,7 @@ class Moon extends Phaser.State {
         this.moon.destroy();
         this.textbox.destroy();
         this.game.world.remove();
-        this.game.state.start('Regenzeit', true, false);
+        this.game.state.start('Regenzeit', false, false);
     }
 }
 

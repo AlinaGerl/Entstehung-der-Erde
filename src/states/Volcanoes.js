@@ -102,8 +102,7 @@ class Volcanoes extends Phaser.State {
         this.volcano01.destroy();
         this.volcano02.destroy();
         this.volcano03.destroy();
-        this.game.world.removeAll();
-        this.game.state.start('Cells', true, false);
+        this.game.state.start('Cells', false, false);
     }
 
 }

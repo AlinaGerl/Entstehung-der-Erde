@@ -5,6 +5,7 @@ import Translation from 'utils/translate';
 import Text from 'objects/text';
 import Earth from 'objects/Earth';
 import continueText from 'objects/weiterTxt';
+import pointer from 'objects/Pointer';
 
 class PlanetWachstum extends Phaser.State {
 
@@ -14,6 +15,8 @@ class PlanetWachstum extends Phaser.State {
         this.game.physics.p2.setImpactEvents(true);
         this.game.physics.p2.restitution = 0.8;
         this.game.physics.p2.updateBoundsCollisionGroup();
+        this.game.pointer.setPosition(84);
+        this.game.pointerText.text = "4.5 Mrd";
 
         //creating the earth like a firebaaaaall with all his physics
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
@@ -178,9 +181,9 @@ class PlanetWachstum extends Phaser.State {
     //destroy everything and start new state
     nextEvent(){
         this.textbox.destroy();
-        this.game.world.removeAll();
         this.earth.destroy();
-        this.game.state.start('Kollision', true, false);
+        this.mouseBody.destroy();
+        this.game.state.start('Kollision', false, false);
     }
 
 
