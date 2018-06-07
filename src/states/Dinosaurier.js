@@ -18,6 +18,8 @@ class Dinosaurs extends Phaser.State {
         let text = this.translation.translate("first12");
         this.textbox = new Text(this.game, text);
 
+        this.game.pointer.setPosition(710);
+        this.game.pointerText.text = "200 Mil";
 
         //booleans for click and collide handlers
         this.firstStage = true;
@@ -155,6 +157,9 @@ class Dinosaurs extends Phaser.State {
     //this function changes the physics of the earth and creates a meteorite with a mouse spring handler
     Meteorit() {
 
+        this.game.pointer.setPosition(720);
+        this.game.pointerText.text = "65 Mil";
+
         // change physics for meteorite dragging
         this.game.physics.startSystem(Phaser.Physics.P2JS);
         this.game.physics.p2.setImpactEvents(true);
@@ -272,8 +277,9 @@ class Dinosaurs extends Phaser.State {
     // changing state
     nextEvent() {
         this.textbox.destroy();
-        this.game.world.removeAll();
-        this.game.state.start('People', true, false);
+        this.DinosG.destroy();
+        this.earth.destroy();
+        this.game.state.start('People', false, false);
     }
 
 

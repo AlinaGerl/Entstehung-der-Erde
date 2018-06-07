@@ -15,6 +15,8 @@ class Magma extends Phaser.State {
         this.text = this.translation.translate("first11");
         this.textbox = new Text(this.game, this.text);
 
+        this.game.pointer.setPosition(698);
+        this.game.pointerText.text = "250 Mil";
         //earth
         let center = {x: this.game.world.centerX, y: this.game.world.centerY};
         this.earth = new Earth(this.game, center.x, center.y, 'firstEarth', this.game.earthRotate);
@@ -84,7 +86,7 @@ class Magma extends Phaser.State {
         this.earth.destroy();
         this.button01.destroy();
         this.button02.destroy();
-        this.game.state.start('Dinos', true, false);
+        this.game.state.start('Dinos', false, false);
     }
 
 }

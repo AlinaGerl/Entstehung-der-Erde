@@ -14,7 +14,8 @@ class Eiszeit extends Phaser.State {
         this.translation = new Translation(this.game);
         let text = this.translation.translate("first9_1");
         this.textbox = new Text(this.game, text);
-
+        this.game.pointer.setPosition(512);
+        this.game.pointerText.text = "1.5 Mrd";
 
         //enable mouse input
         this.game.input.mouse.capture = true;
@@ -52,12 +53,15 @@ class Eiszeit extends Phaser.State {
         let iceball = this.game.add.sprite(0, 0, 'iceball');
         iceball.alpha = 0.0; iceball.scale.x = 0.55; iceball.scale.y = 0.55; iceball.anchor.x = 0.5; iceball.anchor.y = 0.5;
         this.planetsG.add(iceball);
-
+        this.game.pointer.setPosition(625);
+        this.game.pointerText.text = "750 Mil";
         this.game.add.tween(iceball).to( { alpha: 1 }, 5000, Phaser.Easing.Linear.None, true, 0);
         this.game.input.onDown.addOnce(this.createIceball, this, 5, null);
 
     }
     createIceball() {
+        this.game.pointer.setPosition(633);
+        this.game.pointerText.text = "735 Mil";
         this.textbox.text = this.translation.translate("last9");
         this.planetsG.alpha = 1;
         this.game.add.tween(this.planetsG).to( { alpha: 0 }, 5000, Phaser.Easing.Linear.None, true, 0);
@@ -67,8 +71,9 @@ class Eiszeit extends Phaser.State {
 
     nextEvent() {
         this.textbox.destroy();
-        this.game.world.removeAll();
-        this.game.state.start('Plants', true, false);
+        this.earth.destroy();
+        this.planetsG.destroy();
+        this.game.state.start('Plants', false, false);
     }
 
 

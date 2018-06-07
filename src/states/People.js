@@ -17,6 +17,9 @@ class People extends Phaser.State {
         this.text = this.translation.translate("first14");
         this.textbox = new Text(this.game, this.text);
 
+        this.game.pointer.setPosition(733);
+        this.game.pointerText.text = "1.5 Mil";
+
         //cell
         let center = { x: this.game.world.centerX, y: this.game.world.centerY };
         this.people = this.game.add.sprite(center.x, center.y, 'people');
@@ -43,6 +46,8 @@ class People extends Phaser.State {
 
     update(){
         if(this.peopleCounter === 4) {
+            this.game.pointer.setPosition(740);
+            this.game.pointerText.text = "heute";
             let text = this.translation.translate("last14");
             this.textbox.destroy();
             this.textbox = new Text(this.game, text);
@@ -71,6 +76,8 @@ class People extends Phaser.State {
     nextEvent() {
         this.textbox.destroy();
         this.game.world.removeAll();
+        this.game.timeline.destroy();
+        this.game.pointer.destroy();
         this.game.state.start('End', true, false);
     }
 

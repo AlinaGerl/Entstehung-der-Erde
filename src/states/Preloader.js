@@ -64,12 +64,14 @@ class Preloader extends Phaser.State {
     setTimeline() {
         this.game.pointer = new pointer(this.game, 66, "4.6 Mrd");
         this.game.timeline = new timeline(this.game);
-        //this.game.timeline.y = this.game.world.centerY*2+20;
+        this.game.timeline.y = this.game.world.centerY*2+20;
         if (!this.game.pointerText.parent)
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('Volcanoes', false, false);
+        this.game.pointer.y = this.game.world.centerY*2+20;
+        this.game.pointerText.y = this.game.world.centerY*2+65;
+        this.game.state.start('PlanetEntstehung', false, false);
     }
 
 }

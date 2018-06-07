@@ -17,6 +17,9 @@ class DragndropPlants extends Phaser.State {
         let text = this.translation.translate("first10_1");
         this.textbox = new Text(this.game, text);
 
+        this.game.pointer.setPosition(670);
+        this.game.pointerText.text = "460 Mil";
+
         //seaweed
         this.seaweed = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'seaWeed2');
         this.seaweed.anchor.x = 0.5;
@@ -172,8 +175,8 @@ class DragndropPlants extends Phaser.State {
 
     nextEvent() {
         this.textbox.destroy();
-        this.game.world.removeAll();
-        this.game.state.start('Magma', true, false);
+        this.items.destroy();
+        this.game.state.start('Magma', false, false);
     }
 
 
