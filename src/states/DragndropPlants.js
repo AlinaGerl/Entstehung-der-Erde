@@ -17,15 +17,16 @@ class DragndropPlants extends Phaser.State {
         let text = this.translation.translate("first10_1");
         this.textbox = new Text(this.game, text);
 
-        //seaweed
-        this.seaweed = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'seaWeed2');
-        this.seaweed.anchor.x = 0.5;
-        this.seaweed.anchor.y = 0.5;
-        this.seaweed.scale.x = 0.0;
-        this.seaweed.scale.y = 0.0;
+        this.seaWeed1 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'seaWeed1');
+        this.seaWeed2 = this.game.add.sprite(this.game.world.centerX+200, this.game.world.centerY+200, 'seaWeed2');
+        this.seaWeed3 = this.game.add.sprite(this.game.world.centerX-200, this.game.world.centerY+200, 'seaWeed3');
+        this.shell = this.game.add.sprite(this.game.world.centerX-100, this.game.world.centerY-100, 'shell');
+        this.jellyfish = this.game.add.sprite(this.game.world.centerX+150, this.game.world.centerY-100, 'jellyfish');
+        this.coral = this.game.add.sprite(this.game.world.centerX+200, this.game.world.centerY-300, 'coral');
 
-        this.seaweed.animations.add("walk", null, 6, true);
-        this.seaweed.animations.play('walk');
+        this.objects = [this.seaWeed1, this.seaWeed2, this.seaWeed3, this.shell, this.jellyfish, this.coral];
+
+        this.createObjects();
 
         this.firstStage = true;
         this.secondStage = false;
@@ -37,13 +38,6 @@ class DragndropPlants extends Phaser.State {
         //counts plants on earth
         this.plantsCount = 0;
 
-        //z-depth
-        let earthG = this.game.add.group();
-        let animalsG = this.game.add.group();
-        earthG.add(this.earth);
-        animalsG.add(this.seaweed);
-        earthG.z = 100;
-        animalsG.z = 120;
         // this.plant = new Plant(this.game, 70, 70, 'plant');
         //
         this.game.physics.enable( [ this.earth], Phaser.Physics.ARCADE);
@@ -76,10 +70,37 @@ class DragndropPlants extends Phaser.State {
         //this.game.physics.arcade.collide(this.earth, this.plant, this.collisionHandler, null, this);
     }
 
+    createObjects() {
+        //z-depth
+        let earthG = this.game.add.group();
+        this.animalsG = this.game.add.group();
+        earthG.add(this.earth);
+
+        for (var i = 0; i < 6; i++) {
+            this.objects[i].anchor.x = 0.5;
+            this.objects[i].anchor.y = 0.5;
+            this.objects[i].scale.x = 0.0;
+            this.objects[i].scale.y = 0.0;
+
+            //add animation
+            this.walk = this.objects[i].animations.add('walk');
+            this.objects[i].animations.play('walk', 10, true);
+
+            this.animalsG.add(this.objects[i]);
+        }
+        earthG.z = 100;
+        this.animalsG.z = 120;
+    }
+
     getIntoWater() {
         this.textbox.destroy();
         this.game.add.tween(this.earth.scale).to({ x: 5, y: 5}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.add.tween(this.seaweed.scale).to({ x: 1, y: 1}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        //this.game.add.tween(this.animalsG.scale).to({ x: 1, y: 1}, 3000, Phaser.Easing.Cubic.InOut, true, );
+
+        for (var i = 0; i < 6; i++) {
+            this.game.add.tween(this.objects[i].scale).to({x: 0.35, y: 0.35}, 3000, Phaser.Easing.Cubic.InOut, true,);
+        }
+
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.firstText, this);
 
     }
@@ -87,37 +108,56 @@ class DragndropPlants extends Phaser.State {
     outOfWater() {
         this.textbox.destroy();
         this.game.add.tween(this.earth.scale).to({ x: 0.5, y: 0.5}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.add.tween(this.seaweed.scale).to({ x: 0, y: 0}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.secondText, this);
 
+        for (var i = 0; i < 6; i++) {
+            this.game.add.tween(this.objects[i].scale).to({ x: 0, y: 0}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        }
+
+        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.secondText, this);
     }
 
     firstText() {
         let text = this.translation.translate("first10_2");
         this.textbox = new Text(this.game, text);
         this.secondStage = true;
-
     }
 
     secondText() {
         let text = this.translation.translate("first10_3");
         this.textbox = new Text(this.game, text);
-        this.seaweed.destroy();
+        this.seaWeed1.destroy();
+        this.seaWeed2.destroy();
+        this.seaWeed3.destroy();
+        this.shell.destroy();
+        this.jellyfish.destroy();
 
         this.items = this.game.add.group();
         this.items.x = this.game.world.centerX;
         this.items.y = this.game.world.centerY;
 
+        this.plant1 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 100), 'plant1');
+        this.plant2 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 100 + 90), 'plant2');
+        this.plant3 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 100 + 90 * 2), 'plant3');
+        this.plant4 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 100 + 90 * 3), 'plant1');
+        this.plant5= this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 100 + 90 * 4), 'plant2');
+        this.plants = [this.plant1, this.plant2, this.plant3, this.plant4, this.plant5];
+
+
         let item;
-        for (var i = 0; i < 6; i++)
+        for (var i = 0; i < 5; i++)
         {
             // Directly create sprites from the group.
-            item = this.items.create((-this.game.world.centerX+90), (-this.game.world.centerY + 100 + 90 * i), 'plant', i);
+            item = this.plants[i];
+            this.items.add(item);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
-            item.scale.x = 0.03;
-            item.scale.y = 0.03;
+            item.scale.x = 0.2;
+            item.scale.y = 0.2;
             item.name = 'block' + i;
+
+            //add animation
+            this.walk = item.animations.add('walk');
+            item.animations.play('walk', 18, true);
 
             // Enable input detection, then it's possible be dragged.
             item.inputEnabled = true;
@@ -132,9 +172,6 @@ class DragndropPlants extends Phaser.State {
             this.game.physics.enable( [ item ], Phaser.Physics.ARCADE);
             item.events.onDragStop.add(this.dropHandler, this);
         }
-
-
-
     }
 
     lastText() {
@@ -145,11 +182,9 @@ class DragndropPlants extends Phaser.State {
     }
 
     dropHandler(item, pointer) {
-
         this.isWrong = false;
         this.game.physics.arcade.collide(this.items.children, item, this.stopCollision, null, this);
         this.game.physics.arcade.collide(this.earth, item, this.collisionHandler, null, this);
-
     }
 
     stopCollision (obj1, obj2) {
@@ -158,7 +193,6 @@ class DragndropPlants extends Phaser.State {
         obj2.x = 500;
         obj2.inputEnabled = true;
         obj2.input.enableDrag();
-
     }
 
     collisionHandler (obj1, obj2) {
@@ -167,7 +201,6 @@ class DragndropPlants extends Phaser.State {
             obj2.inputEnabled = false;
             //this.game.stage.backgroundColor = '#992d2d';
         }
-
     }
 
     nextEvent() {
@@ -175,8 +208,6 @@ class DragndropPlants extends Phaser.State {
         this.game.world.removeAll();
         this.game.state.start('Magma', true, false);
     }
-
-
 
 }
 
