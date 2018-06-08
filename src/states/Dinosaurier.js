@@ -33,7 +33,6 @@ class Dinosaurs extends Phaser.State {
         //counts plants on earth
         this.dinosCount = 0;
 
-
         //z-depth
         this.earthG = this.game.add.group();
         this.DinosG = this.game.add.group();
@@ -82,28 +81,36 @@ class Dinosaurs extends Phaser.State {
     }
 
     dinosReady() {
-
         //die gruppe von dinos in die mitte setzen, damit man sie im mittelpunkt rotieren kann
         this.DinosG.x = this.game.world.centerX;
         this.DinosG.y = this.game.world.centerY;
+
+        this.dino1 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200), 'dino1');
+        this.dino2 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80), 'dino2');
+        this.dino3 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80 * 2), 'dino3');
+        this.dino4 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80 * 3), 'dino1');
+        this.dino5 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80 * 4), 'dino2');
+        this.dino6 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80 * 5), 'dino3');
+        this.dinos = [this.dino1, this.dino2, this.dino3, this.dino4, this.dino5, this.dino6];
 
         let item;
 
         //in dieser schleife werden einfach 6 Dinos kreiert und in die welt gezetzt.
         // sie bekommen auch schon ihre physics und einen drophandler
-        for (var i = 0; i < 6; i++)
-        {
+        for (var i = 0; i < 6; i++) {
+
             // Directly create sprites from the group.
-            item = this.DinosG.create((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80 * i), 'dino', i);
+            item = this.dinos[i];
+            this.DinosG.add(item);
+
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
-            item.scale.x = 0.1;
-            item.scale.y = 0.1;
+            item.scale.x = 0.2;
+            item.scale.y = 0.2;
             item.name = 'block' + i;
 
             // Enable input detection, then it's possible be dragged.
             item.inputEnabled = true;
-
             // Make this item draggable.
             item.input.enableDrag();
 
@@ -111,12 +118,13 @@ class Dinosaurs extends Phaser.State {
             //item.input.enableSnap(50, 50, false, true);
 
             // Add a handler to remove it using different options when dropped.
-            this.game.physics.enable( [ item ], Phaser.Physics.ARCADE);
+            this.game.physics.enable([item], Phaser.Physics.ARCADE);
             item.events.onDragStop.add(this.dropHandler, this);
+
+            //add animation
+            this.walk = item.animations.add('walk');
+            item.animations.play('walk', 20, true);
         }
-
-
-
     }
 
     // hier wird der letzte text vor der meteoriten explosion ausgegeben
@@ -235,11 +243,9 @@ class Dinosaurs extends Phaser.State {
     }
     // happens when mouse is released
     release() {
-
         //removes spring event
         this.game.physics.p2.removeSpring(this.mouseSpring);
         this.drawLine = false;
-
     }
 
     // for mouse movement
@@ -258,7 +264,7 @@ class Dinosaurs extends Phaser.State {
         this.meteorit.destroy();
 
         //change earth texture
-        this.earth.loadTexture('earth_meteor')
+        this.earth.loadTexture('earth_meteor');
 
         //gravity for dinos
         this.game.physics.arcade.gravity.y = 100;

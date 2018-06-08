@@ -21,39 +21,14 @@ class DuplicateCells extends Phaser.State {
 
         //cells
         this.cell01 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'cellsBig');
-        this.cell01.anchor.x = 0.5;
-        this.cell01.anchor.y = 0.5;
-        this.cell01.scale.x = 0;
-        this.cell01.scale.y = 0;
-        this.cell01.angle = 20;
-
         this.cell02 = this.game.add.sprite(this.game.world.centerX+200, this.game.world.centerY+190, 'cellsBig');
-        this.cell02.anchor.x = 0.5;
-        this.cell02.anchor.y = 0.5;
-        this.cell02.scale.x = 0;
-        this.cell02.scale.y = 0;
-        this.cell02.angle = 50;
-
         this.cell03 = this.game.add.sprite(this.game.world.centerX+500, this.game.world.centerY-100, 'cellsBig');
-        this.cell03.anchor.x = 0.5;
-        this.cell03.anchor.y = 0.5;
-        this.cell03.scale.x = 0;
-        this.cell03.scale.y = 0;
-        this.cell03.angle = 80;
-
         this.cell04 = this.game.add.sprite(this.game.world.centerX-300, this.game.world.centerY+80, 'cellsBig');
-        this.cell04.anchor.x = 0.5;
-        this.cell04.anchor.y = 0.5;
-        this.cell04.scale.x = 0;
-        this.cell04.scale.y = 0;
-        this.cell01.angle = -30;
-
         this.cell05 = this.game.add.sprite(this.game.world.centerX-400, this.game.world.centerY-100, 'cellsBig');
-        this.cell05.anchor.x = 0.5;
-        this.cell05.anchor.y = 0.5;
-        this.cell05.scale.x = 0;
-        this.cell05.scale.y = 0;
-        this.cell01.angle = -20;
+
+        this.objects = [this.cell01, this.cell02, this.cell03, this.cell04, this.cell05];
+
+        this.createObjects();
 
         //for order of events
         this.firstStage = true;
@@ -61,49 +36,11 @@ class DuplicateCells extends Phaser.State {
         this.cellCounter = 0;
         this.isEnd = false;
 
-        //duplicate on click
-        this.cell01.inputEnabled = true;
-        this.cell02.inputEnabled = true;
-        this.cell03.inputEnabled = true;
-        this.cell04.inputEnabled = true;
-        this.cell05.inputEnabled = true;
-
         this.game.input.mouse.capture = true;
-
-        //z-depth
-        let earthG = this.game.add.group();
-        this.cellsG = this.game.add.group();
-        earthG.add(this.earth);
-        this.cellsG.add(this.cell01);
-        this.cellsG.add(this.cell02);
-        this.cellsG.add(this.cell03);
-        this.cellsG.add(this.cell04);
-        this.cellsG.add(this.cell05);
-        earthG.z = 100;
-        this.cellsG.z = 120;
-
-        this.cellsG.x = 0.5; this.cellsG.y = 0.5;
-        this.cellsG.inputEnableChildren = true;
-        this.cellsG.onChildInputDown.add(this.onDown, this);
-
-        //start animation for big cells
-        this.walk = this.cell01.animations.add('walk');
-        this.walk = this.cell02.animations.add('walk');
-        this.walk = this.cell03.animations.add('walk');
-        this.walk = this.cell04.animations.add('walk');
-        this.walk = this.cell05.animations.add('walk');
-        this.cell01.animations.play('walk', 5, true);
-        this.cell02.animations.play('walk', 5, true);
-        this.cell03.animations.play('walk', 5, true);
-        this.cell04.animations.play('walk', 5, true);
-        this.cell05.animations.play('walk', 5, true);
 
         //change angle of cells
         this.angle = 0;
-
-        this.walk.enableUpdate = true;
         this.play = false;
-
         this.game.input.onDown.addOnce(this.getIntoWater, this);
     }
 
@@ -132,6 +69,38 @@ class DuplicateCells extends Phaser.State {
             this.isEnd = true;
         }
     }
+
+    createObjects() {
+        //z-depth
+        let earthG = this.game.add.group();
+        this.cellsG = this.game.add.group();
+        earthG.add(this.earth);
+        this.cellsG.add(this.cell05);
+
+        for (var i = 0; i < 5; i++) {
+            this.objects[i].anchor.x = 0.5;
+            this.objects[i].anchor.y = 0.5;
+            this.objects[i].scale.x = 0.0;
+            this.objects[i].scale.y = 0.0;
+            this.cell01.angle = this.game.rnd.integer();
+
+            this.walk = this.objects[i].animations.add('walk');
+            this.objects[i].animations.play('walk', 10, true);
+
+            this.walk.enableUpdate = true;
+            this.cellsG.add(this.objects[i]);
+
+            //duplicate on click
+            this.objects[i].inputEnabled = true;
+        }
+
+        this.cellsG.x = 0.5; this.cellsG.y = 0.5;
+        this.cellsG.inputEnableChildren = true;
+        this.cellsG.onChildInputDown.add(this.onDown, this);
+        earthG.z = 100;
+        this.cellsG.z = 120;
+    }
+
     getIntoWater() {
         this.textbox.destroy();
         this.game.add.tween(this.earth.scale).to({ x: 7, y: 7}, 3000, Phaser.Easing.Cubic.InOut, true, );

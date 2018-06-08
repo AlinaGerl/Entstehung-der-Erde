@@ -29,8 +29,8 @@ class People extends Phaser.State {
         this.people.scale.y = 0.05;
 
         //duplicate with v
+        this.ctrl = this.game.input.keyboard.addKey(Phaser.Keyboard.CONTROL);
         this.v = this.game.input.keyboard.addKey(Phaser.Keyboard.V);
-        this.v.onDown.add(this.pressV, this);
         this.enoughPeople = false;
 
         let earthG = this.game.add.group();
@@ -41,10 +41,20 @@ class People extends Phaser.State {
         peopleG.z = 120;
 
         this.peopleCounter = 0;
+        this.peopleCheck = true;
         this.game.input.mouse.capture = true;
+
+
     }
 
     update(){
+
+        if(this.ctrl.isDown && this.v.isDown && this.peopleCheck) {
+            this.Vpressed();
+            this.game.time.events.add(Phaser.Timer.SECOND * 0.5, this.setTrue, this);
+        }
+
+
         if(this.peopleCounter === 4) {
             this.game.pointer.setPosition(740);
             this.game.pointerText.text = "heute";
@@ -58,18 +68,25 @@ class People extends Phaser.State {
         if(this.game.input.activePointer.leftButton.isDown && this.enoughPeople == true) {
             this.nextEvent();
         }
+
     }
 
-    pressV () {
+    Vpressed () {
         let x = this.game.rnd.integerInRange(this.game.world.centerX+150, this.game.world.centerX-150);
         let y = this.game.rnd.integerInRange(this.game.world.centerY+150, this.game.world.centerY-150);
 
         if(this.enoughPeople == false) {
-        let people = this.game.add.sprite(x, y, 'people');
-        people.scale.x = 0.05;
-        people.scale.y = 0.05;
-        this.peopleCounter ++;
+            let people = this.game.add.sprite(x, y, 'people');
+            people.scale.x = 0.05;
+            people.scale.y = 0.05;
+            this.peopleCounter++;
+            this.peopleCheck = false;
         }
+
+    }
+
+    setTrue() {
+        this.peopleCheck = true;
 
     }
 

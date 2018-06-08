@@ -18,20 +18,31 @@ class Preloader extends Phaser.State {
         this.game.load.image('splitter', 'assets/Urknall/splitter.png');
         this.game.load.image('moon', 'assets/Moon/moon.png');
         this.game.load.image('explodedearth', 'assets/Moon/explodedearth.jpg');
-
-        this.game.load.image('plant', 'assets/Plants/plant.png');
+        //this.game.load.image('plant', 'assets/Plants/plant.png');
+        this.game.load.spritesheet('plant1', 'assets/Plants/plant1.png', 1280, 720, 18);
+        this.game.load.spritesheet('plant2', 'assets/Plants/plant2.png', 1280, 720, 22);
+        this.game.load.spritesheet('plant3', 'assets/Plants/plant3.png', 1280, 720, 16);
         this.game.load.image('oceanAnimals', 'assets/Plants/animals.jpg');
         this.game.load.image('cellsBig', 'assets/Cell/cellsBig.png');
         this.game.load.image('magmaButton', 'assets/Magma/magmaButton.png');
         this.game.load.image('people', 'assets/People/people.png');
-        this.game.load.image('dino', 'assets/Dinos/Dino.png');
+        //this.game.load.image('dino', 'assets/Dinos/Dino.png');
+        this.game.load.spritesheet('dino1', 'assets/Dinos/reptile1.png', 1280, 720, 20);
+        this.game.load.spritesheet('dino2', 'assets/Dinos/reptile2.png', 1280, 720, 20);
+        this.game.load.spritesheet('dino3', 'assets/Dinos/reptile3.png', 1280, 720, 20);
         this.game.load.image('meteorit', 'assets/Dinos/meteorit.png');
         this.game.load.image('earth_meteor', 'assets/Dinos/EarthMeteor.jpg');
         this.game.load.image('fireball', 'assets/Wachstum/fireball.png');
-        this.game.load.spritesheet('cellsBig', 'assets/Cell/cellsBig.png', 396, 495, 8);
-        this.game.load.spritesheet('cellsSmall', 'assets/Cell/cellsSmall.png', 318, 344, 8);
+        this.game.load.spritesheet('cellsBig', 'assets/Cell/cellBig.png', 1280, 720, 8);
+        this.game.load.spritesheet('cellsSmall', 'assets/Cell/cellSmall.png', 1280, 720, 8);
         this.game.load.spritesheet('volcano', 'assets/Volcano/volcano.png', 375, 375, 20);
-        this.game.load.spritesheet('seaWeed1', 'assets/Ocean/seaWeed1.png', 120, 346, 14);
+        this.game.load.spritesheet('seaWeed1', 'assets/Ocean/seaWeed1.png', 1280, 720, 14);
+        this.game.load.spritesheet('seaWeed2', 'assets/Ocean/seaWeed2.png', 1280, 720, 14);
+        this.game.load.spritesheet('seaWeed3', 'assets/Ocean/seaWeed3.png', 1280, 720, 14);
+        this.game.load.spritesheet('coral', 'assets/Ocean/coral.png', 1280, 720, 18);
+        this.game.load.spritesheet('jellyfish', 'assets/Ocean/jellyfish.png', 1280, 720, 14);
+        this.game.load.spritesheet('shell', 'assets/Ocean/seaAnimal_shell.png', 1280, 720, 10);
+
         //this.game.load.atlas('seaWeed2', 'assets/Ocean/seaWeed2.png', 'assets/Ocean/seaWeed2.json');
         this.game.load.image('rodinia', 'assets/Eiszeit/Rodinia.png');
         this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
