@@ -33,8 +33,8 @@ class Urknall extends Phaser.State {
 
         if (!this.wasKnall && this.SpaceClicked > 10) {
             this.wasKnall = true;
-            //this.game.input.keyboard.stop();
-            this.game.textbox.alpha = 0;
+            this.game.input.keyboard.stop();
+            this.textbox.destroy();
             let urknall = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'urknall');
             urknall.anchor.x = 0.5; urknall.anchor.y = 0.5; urknall.lifespan = 2000;
             this.game.time.events.add(Phaser.Timer.SECOND * 2, this.universum, this);
@@ -52,11 +52,17 @@ class Urknall extends Phaser.State {
         this.game.textbox.addColor('#fff', 0);
 
 
+        //this.game.stage.backgroundColor = '#000';
+        this.background = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background');
+        this.background.anchor.x = 0.5; this.background.anchor.y = 0.5;
+        this.background.scale.x = 2.5; this.background.scale.y = 2.5;
         this.waitTxt = new continueText(this.game);
+
         this.game.input.onDown.addOnce(this.nextEvent, this);
     }
     click (){
         this.SpaceClicked++;
+        console.log(this.SpaceClicked);
     }
 
     nextEvent() {

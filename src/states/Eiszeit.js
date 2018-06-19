@@ -50,7 +50,7 @@ class Eiszeit extends Phaser.State {
         this.rodinia.destroy();
         this.earth.scale.x = 0.7; this.earth.scale.y = 0.7;
         let iceball = this.game.add.sprite(0, 0, 'iceball');
-        iceball.alpha = 0.0; iceball.scale.x = 0.75; iceball.scale.y = 0.75; iceball.anchor.x = 0.5; iceball.anchor.y = 0.5;
+        iceball.alpha = 0.0; iceball.scale.x = 0.55; iceball.scale.y = 0.55; iceball.anchor.x = 0.5; iceball.anchor.y = 0.5;
         this.planetsG.add(iceball);
         this.game.pointer.setPosition(625);
         this.game.pointerText.text = "750 Mil";
@@ -71,6 +71,7 @@ class Eiszeit extends Phaser.State {
     }
 
     nextEvent() {
+        this.textbox.destroy();
         this.earth.destroy();
         this.planetsG.destroy();
         this.game.state.start('Plants', false, false);

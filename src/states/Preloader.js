@@ -3,8 +3,6 @@
  */
 import pointer from 'objects/Pointer';
 import timeline from 'objects/timeline';
-import Translation from 'utils/translate';
-import Text from 'objects/text';
 
 class Preloader extends Phaser.State {
 
@@ -14,6 +12,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('timeline', 'assets/timeline.png');
         this.game.load.image('pointer', 'assets/pointer.png');
         this.game.load.image('firstEarth', 'assets/Urknall/littleEarth.png');
+        this.game.load.image('background', 'assets/background.jpg');
         this.game.load.image('urknall', 'assets/Urknall/Urknall.jpg');
         this.game.load.image('redButton', 'assets/Kollision/Button.png');
         this.game.load.json('translation', 'data/languageText.json');
@@ -83,8 +82,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-
-        this.game.state.start('Dinos', false, false);
+        this.game.state.start('PlanetEntstehung', false, false);
     }
 
 }
