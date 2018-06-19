@@ -60,6 +60,7 @@ class PlanetEntstehung extends Phaser.State {
         // this.walk.frame++;
         // this.play = true;
 
+        console.log(this.EventCounter);
         this.earth.alpha += 0.1;
         this.EventCounter++;
         this.game.add.tween(this.textbox).to( { alpha: 0}, 1000, Phaser.Easing.Cubic.InOut, true, 0);

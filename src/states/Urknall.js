@@ -43,7 +43,10 @@ class Urknall extends Phaser.State {
         this.SpaceClicked++;
     }
     universum() {
-        this.game.stage.backgroundColor = '#000';
+        //this.game.stage.backgroundColor = '#000';
+        this.background = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background');
+        this.background.anchor.x = 0.5; this.background.anchor.y = 0.5;
+        this.background.scale.x = 2.5; this.background.scale.y = 2.5;
         let translation = new Translation(this.game);
         this.text = translation.translate("last1");
         this.textbox = new Text(this.game, this.text);

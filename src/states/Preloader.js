@@ -12,6 +12,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('timeline', 'assets/timeline.png');
         this.game.load.image('pointer', 'assets/pointer.png');
         this.game.load.image('firstEarth', 'assets/Urknall/littleEarth.png');
+        this.game.load.image('background', 'assets/background.jpg');
         this.game.load.image('urknall', 'assets/Urknall/Urknall.jpg');
         this.game.load.image('redButton', 'assets/Kollision/Button.png');
         this.game.load.json('translation', 'data/languageText.json');
@@ -45,8 +46,8 @@ class Preloader extends Phaser.State {
 
         //this.game.load.atlas('seaWeed2', 'assets/Ocean/seaWeed2.png', 'assets/Ocean/seaWeed2.json');
         this.game.load.image('rodinia', 'assets/Eiszeit/Rodinia.png');
-        this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
-        this.game.load.image('waterball', 'assets/Regenzeit/waterball.png');
+        this.game.load.image('iceball', 'assets/Eiszeit/earth_ice.png');
+        this.game.load.image('waterball', 'assets/Regenzeit/earth_water.png');
         this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
         this.game.load.image('clouds', 'assets/Regenzeit/wolken.png');
     }
@@ -82,7 +83,7 @@ class Preloader extends Phaser.State {
         }
         this.game.pointer.y = this.game.world.centerY*2+20;
         this.game.pointerText.y = this.game.world.centerY*2+65;
-        this.game.state.start('PlanetEntstehung', false, false);
+        this.game.state.start('Urknall', false, false);
     }
 
 }
