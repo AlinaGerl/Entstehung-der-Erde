@@ -50,7 +50,8 @@ class Eiszeit extends Phaser.State {
         this.rodinia.destroy();
         this.earth.scale.x = 0.7; this.earth.scale.y = 0.7;
         let iceball = this.game.add.sprite(0, 0, 'iceball');
-        iceball.alpha = 0.0; iceball.scale.x = 0.55; iceball.scale.y = 0.55; iceball.anchor.x = 0.5; iceball.anchor.y = 0.5;
+        iceball.alpha = 0.0; iceball.scale.x = 0.7; iceball.scale.y = 0.7; iceball.anchor.x = 0.5; iceball.anchor.y = 0.5;
+        iceball.angle = this.game.earthRotate;
         this.planetsG.add(iceball);
         this.game.pointer.setPosition(625);
         this.game.pointerText.text = "750 Mil";
@@ -64,6 +65,8 @@ class Eiszeit extends Phaser.State {
         this.game.pointerText.text = "735 Mil";
         this.game.textbox.changeText(this.game, this.game.translation.translate("last9"));
         this.planetsG.alpha = 1;
+        this.earth.loadTexture('EchsenPlanet', 0 , false);
+        this.earth.scale.x = 0.45; this.earth.scale.y = 0.45;
         this.game.add.tween(this.planetsG).to( { alpha: 0 }, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.add.tween(this.earth).to( { alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.input.onDown.addOnce(this.nextEvent, this, 5, null);
@@ -71,7 +74,6 @@ class Eiszeit extends Phaser.State {
     }
 
     nextEvent() {
-        this.textbox.destroy();
         this.earth.destroy();
         this.planetsG.destroy();
         this.game.state.start('Plants', false, false);

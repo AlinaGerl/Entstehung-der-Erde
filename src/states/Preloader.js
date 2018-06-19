@@ -3,8 +3,6 @@
  */
 import pointer from 'objects/Pointer';
 import timeline from 'objects/timeline';
-import Translation from 'utils/translate';
-import Text from 'objects/text';
 
 class Preloader extends Phaser.State {
 
@@ -28,8 +26,10 @@ class Preloader extends Phaser.State {
         this.game.load.image('oceanAnimals', 'assets/Plants/animals.jpg');
         //this.game.load.image('cellsBig', 'assets/Cell/cellsBig.png');
         this.game.load.image('magmaButton', 'assets/Magma/magmaButton.png');
+        this.game.load.image('magmaPlanet', 'assets/Magma/MagmaPlanet.png');
+
         this.game.load.image('people', 'assets/People/people.png');
-        //this.game.load.image('dino', 'assets/Dinos/Dino.png');
+        this.game.load.image('DinoEarth', 'assets/Dinos/DinoPlanet.png');
         this.game.load.spritesheet('dino1', 'assets/Dinos/reptile1.png', 1280, 720, 20);
         this.game.load.spritesheet('dino2', 'assets/Dinos/reptile2.png', 1280, 720, 20);
         this.game.load.spritesheet('dino3', 'assets/Dinos/reptile3.png', 1280, 720, 20);
@@ -49,6 +49,7 @@ class Preloader extends Phaser.State {
         //this.game.load.atlas('seaWeed2', 'assets/Ocean/seaWeed2.png', 'assets/Ocean/seaWeed2.json');
         this.game.load.image('rodinia', 'assets/Eiszeit/Rodinia.png');
         this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
+        this.game.load.image('EchsenPlanet', 'assets/Eiszeit/EchsenPlanet.png');
         this.game.load.image('waterball', 'assets/Regenzeit/waterball.png');
         this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
         this.game.load.spritesheet('clouds', 'assets/Regenzeit/wolken.png', 1920, 1080, 76);
@@ -86,7 +87,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('Plants', false, false);
+        this.game.state.start('PlanetEntstehung', false, false);
     }
 
 }

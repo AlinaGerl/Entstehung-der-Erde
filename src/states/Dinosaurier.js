@@ -11,8 +11,12 @@ class Dinosaurs extends Phaser.State {
 
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
-        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
+        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'magmaPlanet', this.game.earthRotate);
+        this.earth.scale.x = 0.45; this.earth.scale.y = 0.45;
 
+        this.dinoWorld = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'DinoEarth');
+        this.dinoWorld.alpha = 0.0; this.dinoWorld.scale.x = 0.45; this.dinoWorld.scale.y = 0.45; this.dinoWorld.anchor.x = 0.5; this.dinoWorld.anchor.y = 0.5;
+        this.dinoWorld.angle = this.game.earthRotate;
         //text
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first12"));
 
@@ -45,6 +49,7 @@ class Dinosaurs extends Phaser.State {
 
     update(){
 
+        this.dinoWorld.angle -= 0.03;
         //Last text of event
         if (this.dinosCount === 6) {
             this.dinosCount = 5;
@@ -79,7 +84,12 @@ class Dinosaurs extends Phaser.State {
     }
 
     dinosReady() {
+
+        this.game.add.tween(this.earth).to( { alpha: 0}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this.dinoWorld).to( { alpha: 1}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
         //die gruppe von dinos in die mitte setzen, damit man sie im mittelpunkt rotieren kann
+
+
         this.DinosG.x = this.game.world.centerX;
         this.DinosG.y = this.game.world.centerY;
 
@@ -266,7 +276,7 @@ class Dinosaurs extends Phaser.State {
         this.meteorit.destroy();
 
         //change earth texture
-        this.earth.loadTexture('earth_meteor');
+        //this.earth.loadTexture('earth_meteor');
 
         //gravity for dinos
         // let every dino fly down

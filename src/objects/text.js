@@ -38,8 +38,8 @@ class Text extends Phaser.Text {
         this.game.add.tween(this).to( { alpha: 1}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
     }
     changeNewState(game, text){
+        game.add.tween(game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
         game.time.events.add(Phaser.Timer.SECOND * 3, function() {
-                game.add.tween(game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
                 game.time.events.add(Phaser.Timer.SECOND * 0.8, function() {
                         game.textbox.text = text;
                         game.add.tween(game.textbox).to( { alpha: 1}, 800, Phaser.Easing.Cubic.InOut, true);
