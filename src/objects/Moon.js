@@ -11,8 +11,8 @@ class MoonObject extends Phaser.Sprite {
         this.anchor.x = x;
         this.anchor.y = -y;
 
-        this.scale.x = 0.1;
-        this.scale.y = 0.1;
+        this.scale.x = 0.4;
+        this.scale.y = 0.4;
         this.angle = this.game.moonRotate;
 
         this.game.stage.addChild(this);

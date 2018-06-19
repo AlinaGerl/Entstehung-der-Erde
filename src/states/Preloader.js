@@ -3,6 +3,8 @@
  */
 import pointer from 'objects/Pointer';
 import timeline from 'objects/timeline';
+import Translation from 'utils/translate';
+import Text from 'objects/text';
 
 class Preloader extends Phaser.State {
 
@@ -13,11 +15,11 @@ class Preloader extends Phaser.State {
         this.game.load.image('pointer', 'assets/pointer.png');
         this.game.load.image('firstEarth', 'assets/Urknall/littleEarth.png');
         this.game.load.image('background', 'assets/background.jpg');
-        this.game.load.image('urknall', 'assets/Urknall/Urknall.jpg');
+        //this.game.load.image('urknall', 'assets/Urknall/Urknall.jpg');
         this.game.load.image('redButton', 'assets/Kollision/Button.png');
         this.game.load.json('translation', 'data/languageText.json');
         this.game.load.image('splitter', 'assets/Urknall/splitter.png');
-        this.game.load.image('moon', 'assets/Moon/moon.png');
+        this.game.load.image('moon', 'assets/Moon/Mond.png');
         this.game.load.image('explodedearth', 'assets/Moon/explodedearth.jpg');
         //this.game.load.image('plant', 'assets/Plants/plant.png');
         this.game.load.spritesheet('plant1', 'assets/Plants/plant1.png', 1280, 720, 18);
@@ -49,7 +51,9 @@ class Preloader extends Phaser.State {
         this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
         this.game.load.image('waterball', 'assets/Regenzeit/waterball.png');
         this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
-        this.game.load.image('clouds', 'assets/Regenzeit/wolken.png');
+        this.game.load.spritesheet('clouds', 'assets/Regenzeit/wolken.png', 1920, 1080, 76);
+        this.game.load.spritesheet('urknall', 'assets/Urknall/Urknall.png', 1920, 1080, 76);
+
     }
 
 
@@ -82,7 +86,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('PlanetEntstehung', false, false);
+        this.game.state.start('Plants', false, false);
     }
 
 }

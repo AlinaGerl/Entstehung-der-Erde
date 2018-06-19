@@ -17,7 +17,7 @@ class Regenzeit extends Phaser.State {
         this.game.pointer.setPosition(185);
         this.game.pointerText.text = "3.8 Mrd";
 
-        this.moon = new MoonObject(this.game, 2.3, 2.3, 'moon');
+        this.moon = new MoonObject(this.game, 1.8, 1.8, 'moon');
 
         //enable mouse input
         this.game.input.mouse.capture = true;
@@ -44,15 +44,21 @@ class Regenzeit extends Phaser.State {
 
         this.clouds = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'clouds');
 
-        this.clouds.alpha = 0; this.clouds.anchor.x = 0.5;  this.clouds.anchor.y = 0.5;
+        //this.clouds.alpha = 0;
+        this.clouds.anchor.x = 0.5;  this.clouds.anchor.y = 0.5;
         this.clouds.scale.x = 0.5;  this.clouds.scale.y = 0.5;
-        this.game.add.tween(this.clouds).to( { alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 0);
+       //this.game.add.tween(this.clouds).to( { alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 0);
+
+        this.walk = this.clouds.animations.add('walk');
+        this.walk.enableUpdate = true;
+
+        this.clouds.animations.play('walk', 75, true);
     }
 
     update(){
 
         this.waterball.angle -= 0.03;
-        this.clouds.angle -= 0.03;
+        //this.clouds.angle -= 0.03;
 
         //if (this.rotateSlower) this.earth.angle -= 0.2;
 

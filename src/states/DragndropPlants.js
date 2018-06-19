@@ -177,9 +177,6 @@ class DragndropPlants extends Phaser.State {
             this.game.physics.enable( [ item ], Phaser.Physics.ARCADE);
             item.events.onDragStop.add(this.dropHandler, this);
         }
-
-
-
     }
 
     lastText() {

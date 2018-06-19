@@ -26,7 +26,7 @@ class Moon extends Phaser.State {
         }
         //moon
         this.SpaceClicked = 0;
-        this.moon = new MoonObject(this.game, 2.3, 2.3, 'moon');
+        this.moon = new MoonObject(this.game, 1.8, 1.8, 'moon');
         this.moon.alpha = 0;
         this.isEnd = false;
 

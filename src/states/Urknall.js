@@ -15,7 +15,6 @@ class Urknall extends Phaser.State {
 
         this.SpaceClicked = 0;
         this.wasKnall = false;
-        this.urknall = null;
 
         this.game.pointer.y = this.game.world.centerY*2+20;
         this.game.pointerText.y = this.game.world.centerY*2+65;
@@ -28,22 +27,52 @@ class Urknall extends Phaser.State {
             this.click();
         });
 
+        this.urknall = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'urknall');
+        this.urknall.anchor.x = 0.5; this.urknall.anchor.y = 0.5; //this.urknall.lifespan = 1500;
+
+        this.walk = this.urknall.animations.add('walk');
+
+
+        this.game.time.events.add(Phaser.Timer.SECOND * 5, function() { this.walk.enableUpdate = true; }, this);
+
+        this.play = false;
+
+
     }
     update(){
 
-        if (!this.wasKnall && this.SpaceClicked > 10) {
+        this.game.time.events.add(Phaser.Timer.SECOND * 5, function() { this.game.textbox.alpha = 0; }, this);
+
+        if(!this.wasKnall && this.walk.frame === 75) {
+            this.game.input.keyboard.stop();
+            this.play = false;
+            this.urknall.destroy();
             this.wasKnall = true;
             this.game.input.keyboard.stop();
-            this.textbox.destroy();
-            let urknall = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'urknall');
-            urknall.anchor.x = 0.5; urknall.anchor.y = 0.5; urknall.lifespan = 2000;
-            this.game.time.events.add(Phaser.Timer.SECOND * 2, this.universum, this);
+            this.game.textbox.alpha = 0;
+
+            this.universum();
+            //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.universum, this);
         }
 
+
+    }
+
+    changeFrame() {
+        this.walk.frame++;
+        this.play = true;
+    }
+
+    playAnim() {
+        if(this.play) {
+            this.urknall.animations.play('walk', 75, true);
+            this.play = false;
+        }
     }
 
     AddClick() {
         this.SpaceClicked++;
+
     }
     universum() {
         this.game.stage.backgroundColor = '#000';
@@ -52,10 +81,10 @@ class Urknall extends Phaser.State {
         this.game.textbox.addColor('#fff', 0);
 
 
-        //this.game.stage.backgroundColor = '#000';
-        this.background = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background');
+        this.game.stage.backgroundColor = '#051023';
+        /*this.background = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background');
         this.background.anchor.x = 0.5; this.background.anchor.y = 0.5;
-        this.background.scale.x = 2.5; this.background.scale.y = 2.5;
+        this.background.scale.x = 2.5; this.background.scale.y = 2.5;*/
         this.waitTxt = new continueText(this.game);
 
         this.game.input.onDown.addOnce(this.nextEvent, this);
@@ -63,6 +92,7 @@ class Urknall extends Phaser.State {
     click (){
         this.SpaceClicked++;
         console.log(this.SpaceClicked);
+        this.changeFrame();
     }
 
     nextEvent() {
