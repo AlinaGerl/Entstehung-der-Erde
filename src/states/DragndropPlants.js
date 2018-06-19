@@ -13,9 +13,7 @@ class DragndropPlants extends Phaser.State {
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
 
         //text
-        this.translation = new Translation(this.game);
-        let text = this.translation.translate("first10_1");
-        this.textbox = new Text(this.game, text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first10_1"));
 
         this.game.pointer.setPosition(670);
         this.game.pointerText.text = "460 Mil";
@@ -102,12 +100,11 @@ class DragndropPlants extends Phaser.State {
     }
 
     getIntoWater() {
-        this.textbox.destroy();
         this.game.add.tween(this.earth.scale).to({ x: 5, y: 5}, 3000, Phaser.Easing.Cubic.InOut, true, );
         //this.game.add.tween(this.animalsG.scale).to({ x: 1, y: 1}, 3000, Phaser.Easing.Cubic.InOut, true, );
 
         for (var i = 0; i < 6; i++) {
-            this.game.add.tween(this.objects[i].scale).to({x: 0.35, y: 0.35}, 3000, Phaser.Easing.Cubic.InOut, true,);
+            this.game.add.tween(this.objects[i].scale).to({x: 0.35, y: 0.35}, 3000, Phaser.Easing.Cubic.InOut, true);
         }
 
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.firstText, this);
@@ -115,7 +112,6 @@ class DragndropPlants extends Phaser.State {
     }
 
     outOfWater() {
-        this.textbox.destroy();
         this.game.add.tween(this.earth.scale).to({ x: 0.5, y: 0.5}, 3000, Phaser.Easing.Cubic.InOut, true, );
 
         for (var i = 0; i < 6; i++) {
@@ -127,15 +123,13 @@ class DragndropPlants extends Phaser.State {
     }
 
     firstText() {
-        let text = this.translation.translate("first10_2");
-        this.textbox = new Text(this.game, text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first10_2"));
         this.secondStage = true;
 
     }
 
     secondText() {
-        let text = this.translation.translate("first10_3");
-        this.textbox = new Text(this.game, text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first10_3"));
         this.seaWeed1.destroy();
         this.seaWeed2.destroy();
         this.seaWeed3.destroy();
@@ -189,9 +183,7 @@ class DragndropPlants extends Phaser.State {
     }
 
     lastText() {
-        this.textbox.destroy();
-        let text = this.translation.translate("last10");
-        this.textbox = new Text(this.game, text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("last10"));
         this.isEnd = true;
     }
 
@@ -222,7 +214,6 @@ class DragndropPlants extends Phaser.State {
     }
 
     nextEvent() {
-        this.textbox.destroy();
         this.items.destroy();
         this.game.state.start('Magma', false, false);
     }

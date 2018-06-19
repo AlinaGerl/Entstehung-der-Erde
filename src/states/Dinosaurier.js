@@ -14,9 +14,7 @@ class Dinosaurs extends Phaser.State {
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
 
         //text
-        this.translation = new Translation(this.game);
-        let text = this.translation.translate("first12");
-        this.textbox = new Text(this.game, text);
+        this.game.textbox.changeNewState(this.game, this.game.translation.translate("first12"));
 
         this.game.pointer.setPosition(710);
         this.game.pointerText.text = "200 Mil";
@@ -42,7 +40,7 @@ class Dinosaurs extends Phaser.State {
         this.DinosG.z = 120;
         this.game.physics.enable( [ this.earth], Phaser.Physics.ARCADE);
 
-        this.dinosReady();
+        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.dinosReady, this);
     }
 
     update(){
@@ -85,12 +83,12 @@ class Dinosaurs extends Phaser.State {
         this.DinosG.x = this.game.world.centerX;
         this.DinosG.y = this.game.world.centerY;
 
-        this.dino1 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200), 'dino1');
-        this.dino2 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80), 'dino2');
-        this.dino3 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80 * 2), 'dino3');
-        this.dino4 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80 * 3), 'dino1');
-        this.dino5 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80 * 4), 'dino2');
-        this.dino6 = this.game.add.sprite((-this.game.world.centerX+90), (-this.game.world.centerY + 200 + 80 * 5), 'dino3');
+        this.dino1 = this.game.add.sprite((-this.game.world.centerX-90), (-this.game.world.centerY + 200), 'dino1');
+        this.dino2 = this.game.add.sprite((-this.game.world.centerX-90), (-this.game.world.centerY + 200 + 150), 'dino2');
+        this.dino3 = this.game.add.sprite((-this.game.world.centerX-90), (-this.game.world.centerY + 200 + 150 * 2), 'dino3');
+        this.dino4 = this.game.add.sprite((this.game.world.centerX+90), (-this.game.world.centerY + 200), 'dino1');
+        this.dino5 = this.game.add.sprite((this.game.world.centerX+90), (-this.game.world.centerY + 200 + 150), 'dino2');
+        this.dino6 = this.game.add.sprite((this.game.world.centerX+90), (-this.game.world.centerY + 200 + 150 * 2), 'dino3');
         this.dinos = [this.dino1, this.dino2, this.dino3, this.dino4, this.dino5, this.dino6];
 
         let item;
@@ -125,13 +123,18 @@ class Dinosaurs extends Phaser.State {
             this.walk = item.animations.add('walk');
             item.animations.play('walk', 20, true);
         }
+        for (var i = 0; i < 3; i++)
+        {
+            // Directly create sprites from the group.
+            this.game.add.tween(this.dinos[i]).to( { x: -this.game.world.centerX+110}, 2000, Phaser.Easing.Cubic.InOut, true, 500*i);
+            this.game.add.tween(this.dinos[i+3]).to( { x: this.game.world.centerX+2-110}, 2000, Phaser.Easing.Cubic.InOut, true, 500*i);
+            //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.getPhysics(this.MeteroG.children[i]), this);
+        }
     }
 
     // hier wird der letzte text vor der meteoriten explosion ausgegeben
     lastText() {
-        this.textbox.destroy();
-        let text = this.translation.translate("last12");
-        this.textbox = new Text(this.game, text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("last12"));
         this.isMeteorit = true;
     }
 
@@ -139,7 +142,7 @@ class Dinosaurs extends Phaser.State {
     // it checks if dinos collide with other dinos or the earth after dropping down
     dropHandler(item, pointer) {
         this.isWrong = false;
-        this.game.physics.arcade.collide(this.DinosG.children, item, this.stopCollision, null, this);
+        //this.game.physics.arcade.collide(this.DinosG.children, item, this.stopCollision, null, this);
         this.game.physics.arcade.collide(this.earth, item, this.collisionHandler, null, this);
 
     }
@@ -171,10 +174,10 @@ class Dinosaurs extends Phaser.State {
         // change physics for meteorite dragging
         this.game.physics.startSystem(Phaser.Physics.P2JS);
         this.game.physics.p2.setImpactEvents(true);
-        this.game.physics.p2.restitution = 0.8;
+        this.game.physics.p2.restitution = 0.1;
 
         //text change
-        this.textbox.text = this.translation.translate("first13");
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first13"));
 
         //creates meteorite
         this.meteorit = this.game.add.sprite(this.game.world.centerX*1.9, this.game.world.centerY*1.9, 'meteorit');
@@ -188,7 +191,7 @@ class Dinosaurs extends Phaser.State {
         this.game.physics.p2.enable(this.mouseBody, false); //physics
         this.mouseBody.body.static = true; //static body (it would bounds around)
         this.mouseBody.body.setCircle(10); //rigidbody
-        this.mouseBody.body.data.shapes[0].sensor = true; // actually no clue
+        //this.mouseBody.body.data.shapes[0].sensor = true; // actually no clue
 
         //line for following
         this.line = new Phaser.Line(this.meteorit.x, this.meteorit.y, this.mouseBody.x, this.mouseBody.y);
@@ -260,29 +263,26 @@ class Dinosaurs extends Phaser.State {
     // last sequence, all dinos DIE
     killDinos(obj1, obj2) {
         //destroy the text and the meteorite
-        this.textbox.destroy();
         this.meteorit.destroy();
 
         //change earth texture
         this.earth.loadTexture('earth_meteor');
 
         //gravity for dinos
-        this.game.physics.arcade.gravity.y = 100;
-
         // let every dino fly down
         for(var i = 0; i <= this.DinosG.children.length-1; i++) {
-            this.DinosG.children[i].angle = this.game.rnd.integerInRange(0, 200); //gives every dino a different angle for a funny look
+
+            this.DinosG.children[i].angle = this.game.rnd.integerInRange(0, 360); //gives every dino a different angle for a funny look
             //this.DinosG.children[i].body.collideWorldBounds = true;
             //this.DinosG.children[i].body.bounce.y = this.game.rnd.frac();
         }
 
         //wait 5 seconds before changing event
-        this.game.time.events.add(Phaser.Timer.SECOND * 5, this.nextEvent, this);
+        this.game.time.events.add(Phaser.Timer.SECOND * 6, this.nextEvent, this);
     }
 
     // changing state
     nextEvent() {
-        this.textbox.destroy();
         this.DinosG.destroy();
         this.earth.destroy();
         this.game.state.start('People', false, false);

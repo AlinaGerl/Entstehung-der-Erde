@@ -15,9 +15,7 @@ class Kollision extends Phaser.State {
         this.earth = new Earth(this.game, center.x, center.y, 'fireball', this.game.earthRotate);
 
         //text
-        let translation = new Translation(this.game);
-        this.text = translation.translate("first4");
-        this.textbox = new Text(this.game, this.text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first4"));
 
         if (!this.game.pointer.parent)
         {
@@ -28,7 +26,7 @@ class Kollision extends Phaser.State {
             this.add.existing(this.game.pointerText);
         }
         //button
-        this.button = this.game.add.sprite(this.game.world.centerX/2, this.game.world.height, 'redButton');
+        this.button = this.game.add.sprite(-200, this.game.world.height-300, 'redButton');
         this.button.anchor.x = 0.5; this.button.scale.x = 0.7; this.button.scale.y = 0.7;
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.moveButton, this);
 
@@ -48,7 +46,7 @@ class Kollision extends Phaser.State {
 
     moveButton() {
         //this.game.physics.arcade.enable([ this.button ], Phaser.Physics.ARCADE);
-        this.game.add.tween(this.button).to( { y: window.innerHeight/6*4}, 2000, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.button).to( { x: 200}, 2000, Phaser.Easing.Cubic.InOut, true);
         this.button.inputEnabled = true;
         this.button.events.onInputDown.add(this.listener, this);
     }
@@ -65,7 +63,6 @@ class Kollision extends Phaser.State {
 
             this.isDestroyed = true;
             this.earth.destroy();
-            this.textbox.destroy();
             this.game.world.remove();
             this.button.destroy();
             this.game.state.start('Moon', false, false);

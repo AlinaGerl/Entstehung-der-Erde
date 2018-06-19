@@ -3,6 +3,8 @@
  */
 import pointer from 'objects/Pointer';
 import timeline from 'objects/timeline';
+import Translation from 'utils/translate';
+import Text from 'objects/text';
 
 class Preloader extends Phaser.State {
 
@@ -23,7 +25,7 @@ class Preloader extends Phaser.State {
         this.game.load.spritesheet('plant2', 'assets/Plants/plant2.png', 1280, 720, 22);
         this.game.load.spritesheet('plant3', 'assets/Plants/plant3.png', 1280, 720, 16);
         this.game.load.image('oceanAnimals', 'assets/Plants/animals.jpg');
-        this.game.load.image('cellsBig', 'assets/Cell/cellsBig.png');
+        //this.game.load.image('cellsBig', 'assets/Cell/cellsBig.png');
         this.game.load.image('magmaButton', 'assets/Magma/magmaButton.png');
         this.game.load.image('people', 'assets/People/people.png');
         //this.game.load.image('dino', 'assets/Dinos/Dino.png');
@@ -75,14 +77,14 @@ class Preloader extends Phaser.State {
     setTimeline() {
         this.game.pointer = new pointer(this.game, 66, "4.6 Mrd");
         this.game.timeline = new timeline(this.game);
-        this.game.timeline.y = this.game.world.centerY*2+20;
+        this.game.translation = new Translation(this.game);
+        this.game.textbox = new Text(this.game, this.game.translation.translate("first1"));
         if (!this.game.pointerText.parent)
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.pointer.y = this.game.world.centerY*2+20;
-        this.game.pointerText.y = this.game.world.centerY*2+65;
-        this.game.state.start('PlanetEntstehung', false, false);
+
+        this.game.state.start('Dinos', false, false);
     }
 
 }

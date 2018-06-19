@@ -11,14 +11,12 @@ class Volcanoes extends Phaser.State {
     create() {
 
         //text
-        this.translation = new Translation(this.game);
-        this.text = this.translation.translate("first7");
-        this.textbox = new Text(this.game, this.text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first7"));
 
         //earth
         let center = {x: this.game.world.centerX, y: this.game.world.centerY};
         this.earth = new Earth(this.game, center.x, center.y, 'waterball', this.game.earthRotate);
-        this.earth.scale.x = 0.5; this.earth.scale.y = 0.5;
+        this.earth.scale.x = 0.7; this.earth.scale.y = 0.7;
         console.info(this.game.earthRotate);
 
         this.earthWithLand = this.game.add.sprite(center.x, center.y, 'firstEarth');
@@ -89,7 +87,7 @@ class Volcanoes extends Phaser.State {
     update(){
         this.earthWithLand.angle -= 0.03;
         if(this.allPushed === 3){
-            this.textbox.text = this.translation.translate("last7");
+            this.game.textbox.changeText(this.game, this.game.translation.translate("last7"));
             this.game.add.tween(this.earthWithLand).to( { alpha: 1 }, 4000, Phaser.Easing.Linear.None, true, 0);
             this.game.add.tween(this.earth).to( { alpha: 0 }, 4000, Phaser.Easing.Linear.None, true, 0);
             this.game.input.onDown.addOnce(this.nextEvent, this);
@@ -98,7 +96,6 @@ class Volcanoes extends Phaser.State {
     }
 
     nextEvent() {
-        this.textbox.destroy();
         this.volcano01.destroy();
         this.volcano02.destroy();
         this.volcano03.destroy();

@@ -15,9 +15,7 @@ class Moon extends Phaser.State {
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'explodedearth', this.game.earthRotate);
 
         //text
-        this.translation = new Translation(this.game);
-        let text = this.translation.translate("first5");
-        this.textbox = new Text(this.game, text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first5"));
         if (!this.game.pointer.parent)
         {
             this.add.existing(this.game.pointer);
@@ -35,7 +33,6 @@ class Moon extends Phaser.State {
         // groups for z depth
         let earthG = this.game.add.group();
         let textG = this.game.add.group();
-        textG.add(this.textbox);
         earthG.add(this.earth);
         earthG.add(this.moon);
         earthG.z = 100;
@@ -51,9 +48,7 @@ class Moon extends Phaser.State {
         this.game.input.keyboard.addKeyCapture([ Phaser.Keyboard.SPACEBAR ]);
 
         if (this.SpaceClicked === 5) {
-            let text = this.translation.translate("last5");
-            this.textbox.destroy();
-            this.textbox = new Text(this.game, text);
+            this.game.textbox.changeText(this.game, this.game.translation.translate("last5"));
             this.isEnd = true;
             this.game.input.onDown.addOnce(this.nextEvent, this, 10, null);
         }
@@ -67,7 +62,6 @@ class Moon extends Phaser.State {
     nextEvent() {
         this.earth.destroy();
         this.moon.destroy();
-        this.textbox.destroy();
         this.game.world.remove();
         this.game.state.start('Regenzeit', false, false);
     }

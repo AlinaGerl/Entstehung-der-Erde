@@ -13,7 +13,7 @@ class PlanetWachstum extends Phaser.State {
         //physics for game
         this.game.physics.startSystem(Phaser.Physics.P2JS);
         this.game.physics.p2.setImpactEvents(true);
-        this.game.physics.p2.restitution = 0.8;
+        this.game.physics.p2.restitution = 0.5;
         this.game.physics.p2.updateBoundsCollisionGroup();
         this.game.pointer.setPosition(84);
         this.game.pointerText.text = "4.5 Mrd";
@@ -28,9 +28,7 @@ class PlanetWachstum extends Phaser.State {
 
 
         //text
-        this.translation = new Translation(this.game);
-        this.text = this.translation.translate("first3");
-        this.textbox = new Text(this.game, this.text);
+        this.game.textbox.changeNewState(this.game, this.game.translation.translate("first3"));
 
         // counter for meteorite counter for ending the game and the isEnd boolean
         this.MeteroCounter = 0;
@@ -60,11 +58,8 @@ class PlanetWachstum extends Phaser.State {
         this.earth.body.angle -= 0.03;
         this.game.earthRotate -= 0.03;
 
-        if (this.MeteroCounter === 6) this.game.time.events.add(Phaser.Timer.SECOND * 1, this.setSecondText, this);
+        if (this.MeteroCounter === 6) this.setSecondText();
 
-        if (this.isEnd && this.game.input.activePointer.leftButton.isDown) {
-            this.nextEvent();
-        }
 
     }
 
@@ -76,8 +71,8 @@ class PlanetWachstum extends Phaser.State {
         // this.MeteroG.y = this.game.world.centerY;
 
         // collisionsgroups for the collision of the two objects (i know, so stupid for just 1 object per group but its needed sooo...)
-        var EarthCollisionGroup = this.game.physics.p2.createCollisionGroup();
-        var MeteoritCollisionGroup = this.game.physics.p2.createCollisionGroup();
+        this.EarthCollisionGroup = this.game.physics.p2.createCollisionGroup();
+        this.MeteoritCollisionGroup = this.game.physics.p2.createCollisionGroup();
 
         let item;
 
@@ -88,39 +83,42 @@ class PlanetWachstum extends Phaser.State {
         for (var i = 0; i < 3; i++)
         {
             // Directly create sprites from the group.
-            item = this.game.add.sprite(90, 300 + 120 * i, 'meteorit', i);
+            item = this.game.add.sprite(-90, 250 + 120 * i, 'meteorit', i);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
             item.scale.x = 0.07;
             item.scale.y = 0.07;
             item.name = 'block' + i;
-            this.game.physics.p2.enable(item, false); //set physics
-            item.body.setCircle(40); // this is kinda the rigidbody of the object
-            item.body.setCollisionGroup(MeteoritCollisionGroup);
-            item.body.collides(EarthCollisionGroup, this.earthGrow, this);
             this.MeteroG.add(item);
-            item.inputEnabled = true;
-            item.events.onInputDown.add(this.onclick, this);
+
         }
         //die rechten meteoriten
         for (var i = 3; i < 6; i++)
         {
             // Directly create sprites from the group.
-            item = this.game.add.sprite((this.game.world.centerX*2-90), (300 + 120 * (i-3)), 'meteorit', i);
+            item = this.game.add.sprite((this.game.world.centerX*2+90), (250 + 120 * (i-3)), 'meteorit', i);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
             item.scale.x = 0.07;
             item.scale.y = 0.07;
             item.name = 'block' + i;
-            this.game.physics.p2.enable(item, false); //set physics
-            item.body.setCircle(40); // this is kinda the rigidbody of the object
-            item.body.setCollisionGroup(MeteoritCollisionGroup);
-            item.body.collides(EarthCollisionGroup, this.earthGrow, this);
-            item.inputEnabled = true;
-            item.events.onInputDown.add(this.onclick, this);
+            // this.game.physics.p2.enable(item, false); //set physics
+            // item.body.setCircle(40); // this is kinda the rigidbody of the object
+            // item.body.setCollisionGroup(MeteoritCollisionGroup);
+            // item.body.collides(EarthCollisionGroup, this.earthGrow, this);
+            // item.inputEnabled = true;
+            // item.events.onInputDown.add(this.onclick, this);
             this.MeteroG.add(item);
 
         }
+        for (var i = 0; i < 3; i++)
+        {
+            // Directly create sprites from the group.
+            this.game.add.tween(this.MeteroG.children[i]).to( { x: 90}, 2000, Phaser.Easing.Cubic.InOut, true, 500*i);
+            this.game.add.tween(this.MeteroG.children[i+3]).to( { x: this.game.world.centerX*2-90}, 2000, Phaser.Easing.Cubic.InOut, true, 500*i);
+            //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.getPhysics(this.MeteroG.children[i]), this);
+        }
+        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.getPhysics, this);
 
         // mouse spring handlers
         //this.game.input.onDown.add(this.click, this);
@@ -128,8 +126,8 @@ class PlanetWachstum extends Phaser.State {
         this.game.input.addMoveCallback(this.move, this);
 
         // set collisiongroups with objects
-        this.earth.body.setCollisionGroup(EarthCollisionGroup);
-        this.earth.body.collides([EarthCollisionGroup, MeteoritCollisionGroup]);
+        this.earth.body.setCollisionGroup(this.EarthCollisionGroup);
+        this.earth.body.collides([this.EarthCollisionGroup, this.MeteoritCollisionGroup]);
 
         // also neccessary ok
         //this.game.physics.p2.updateBoundsCollisionGroup();
@@ -140,6 +138,17 @@ class PlanetWachstum extends Phaser.State {
         this.isExplosion = true;
 
 
+
+    }
+    getPhysics(item) {
+        for (var i = 0; i < 6; i++) {
+            this.game.physics.p2.enable(this.MeteroG.children[i], false); //set physics
+            this.MeteroG.children[i].body.setCircle(40); // this is kinda the rigidbody of the object
+            this.MeteroG.children[i].body.setCollisionGroup(this.MeteoritCollisionGroup);
+            this.MeteroG.children[i].body.collides(this.EarthCollisionGroup, this.earthGrow, this);
+            this.MeteroG.children[i].inputEnabled = true;
+            this.MeteroG.children[i].events.onInputDown.add(this.onclick, this);
+        }
 
     }
     //click creating mousepringer
@@ -174,15 +183,17 @@ class PlanetWachstum extends Phaser.State {
 
     //Endtext
     setSecondText() {
-        this.textbox.text = this.translation.translate("last3");
-        this.isEnd = true;
-
+        this.game.input.deleteMoveCallback(this.move, this);
+        this.mouseBody.destroy();
+        this.game.physics.p2.clear();
+        this.game.add.tween(this.game.textbox).to({ alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("last3"));
+        this.game.input.onDown.addOnce(this.nextEvent, this);
     }
     //destroy everything and start new state
     nextEvent(){
-        this.textbox.destroy();
         this.earth.destroy();
-        this.mouseBody.destroy();
+        //this.mouseBody.destroy();
         this.game.state.start('Kollision', false, false);
     }
 

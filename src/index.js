@@ -48,6 +48,9 @@ class Game extends Phaser.Game {
         this.pointer = null;
         this.pointerText = null;
         this.timeline = null;
+        this.translation = null;
+        this.textbox = null;
+        this.earth = null;
 
 		this.state.start('Preloader');
 

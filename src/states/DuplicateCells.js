@@ -13,9 +13,7 @@ class DuplicateCells extends Phaser.State {
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
 
         //text
-        this.translation = new Translation(this.game);
-        this.text = this.translation.translate("first8_1");
-        this.textbox = new Text(this.game, this.text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first8_1"));
         this.game.pointer.setPosition(210);
         this.game.pointerText.text = "3.5 Mrd";
 
@@ -56,9 +54,7 @@ class DuplicateCells extends Phaser.State {
 
 
             //neuer text
-            let text = this.translation.translate("last8");
-            this.textbox.destroy();
-            this.textbox = new Text(this.game, text);
+            this.game.textbox.changeText(this.game, this.game.translation.translate("last8"));
 
             // short wait for user before he continues
             this.game.time.events.add(Phaser.Timer.SECOND * 3, this.EndScene, this);
@@ -102,7 +98,6 @@ class DuplicateCells extends Phaser.State {
     }
 
     getIntoWater() {
-        this.textbox.destroy();
         this.game.add.tween(this.earth.scale).to({ x: 7, y: 7}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cell01.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cell02.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
@@ -115,7 +110,6 @@ class DuplicateCells extends Phaser.State {
     }
 
     outOfWater() {
-        this.textbox.destroy();
         this.game.add.tween(this.earth.scale).to({ x: 0.5, y: 0.5}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cellsG.scale).to({ x: 0, y: 0}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cellsG.position).to({ x: this.game.world.centerX, y: this.game.world.centerY}, 3000, Phaser.Easing.Cubic.InOut, true,);
@@ -124,8 +118,7 @@ class DuplicateCells extends Phaser.State {
     }
 
     firstText() {
-        let text = this.translation.translate("first8_2");
-        this.textbox = new Text(this.game, text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first8_2"));
         this.secondStage = true;
         //this.game.input.onDown.addOnce(this.booleanText03, this);
     }
@@ -156,7 +149,6 @@ class DuplicateCells extends Phaser.State {
 
     nextEvent() {
         this.cellsG.removeAll();
-        this.textbox.destroy();
         this.game.state.start('Eiszeit', false, false);
     }
 

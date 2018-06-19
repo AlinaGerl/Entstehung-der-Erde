@@ -9,19 +9,7 @@ class PlanetEntstehung extends Phaser.State {
 
     create() {
         //text
-        this.translation = new Translation(this.game);
-        this.text = this.translation.translate("first2");
-        this.textbox = new Text(this.game, this.text);
-        this.textbox.alpha = 0;
 
-        if (!this.game.pointer.parent)
-        {
-            this.add.existing(this.game.pointer);
-        }
-        if (!this.game.pointerText.parent)
-        {
-            this.add.existing(this.game.pointerText);
-        }
         this.game.pointer.y = this.game.world.centerY*2+20;
         this.game.pointerText.y = this.game.world.centerY*2+65;
 
@@ -54,7 +42,8 @@ class PlanetEntstehung extends Phaser.State {
     }
 
     setText() {
-        this.game.add.tween(this.textbox).to( { alpha: 1}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first2"));
+        this.game.textbox.alpha = 0;
     }
     changeFrame(){
         // this.walk.frame++;
@@ -62,7 +51,7 @@ class PlanetEntstehung extends Phaser.State {
 
         this.earth.alpha += 0.1;
         this.EventCounter++;
-        this.game.add.tween(this.textbox).to( { alpha: 0}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this.game.textbox).to( { alpha: 0}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
     }
 
     playAnim() {
@@ -82,7 +71,6 @@ class PlanetEntstehung extends Phaser.State {
     }
 
     nextEvent() {
-        this.textbox.destroy();
         this.earth.destroy();
         this.game.state.start('PlanetWachstum', false, false);
         //this.pointer.destroy();

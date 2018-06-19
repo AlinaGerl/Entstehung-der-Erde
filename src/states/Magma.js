@@ -11,9 +11,7 @@ class Magma extends Phaser.State {
     create() {
 
         //text
-        this.translation = new Translation(this.game);
-        this.text = this.translation.translate("first11");
-        this.textbox = new Text(this.game, this.text);
+        this.game.textbox.changeText(this.game, this.game.translation.translate("first11"));
 
         this.game.pointer.setPosition(698);
         this.game.pointerText.text = "250 Mil";
@@ -55,9 +53,7 @@ class Magma extends Phaser.State {
     update() {
         this.buttonG.angle -= 0.03;
         if(this.button01Count && this.button02Count) {
-            let text = this.translation.translate("last11");
-            this.textbox.destroy();
-            this.textbox = new Text(this.game, text);
+            this.game.textbox.changeText(this.game, this.game.translation.translate("last11"));
             this.game.time.events.add(Phaser.Timer.SECOND * 1, this.EndScene, this);
         }
 
@@ -82,7 +78,6 @@ class Magma extends Phaser.State {
     }
 
     nextEvent() {
-        this.textbox.destroy();
         this.earth.destroy();
         this.button01.destroy();
         this.button02.destroy();
