@@ -29,19 +29,30 @@ class Urknall extends Phaser.State {
 
         this.urknall = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'urknall');
         this.urknall.anchor.x = 0.5; this.urknall.anchor.y = 0.5; //this.urknall.lifespan = 1500;
+        this.urknall.scale.x = 0.8; this.urknall.scale.y = 0.8;
+        this.urknall.alpha = 0;
 
         this.walk = this.urknall.animations.add('walk');
-
-
-        this.game.time.events.add(Phaser.Timer.SECOND * 5, function() { this.walk.enableUpdate = true; }, this);
-
         this.play = false;
 
-
+        this.background = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background');
+        //this.background.alpha = 0;
+        this.background.anchor.x = 0.5; this.background.anchor.y = 0.5;
+        this.background.scale.x = 0.0; this.background.scale.y = 0.0;
+        /*this.background.width = 0.0; this.background.height = 0.0;
+        this.h = this.game.height;
+        this.w = this.game.width;
+        */
     }
     update(){
 
-        this.game.time.events.add(Phaser.Timer.SECOND * 5, function() { this.game.textbox.alpha = 0; }, this);
+        //this.game.time.events.add(Phaser.Timer.SECOND * 5, function() { this.game.textbox.alpha = 0; }, this);
+
+        if( this.SpaceClicked === 1) {
+            this.urknall.alpha = 1;
+            this.game.add.tween(this.game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
+            //this.game.textbox.alpha = 0;
+        }
 
         if(!this.wasKnall && this.walk.frame === 75) {
             this.game.input.keyboard.stop();
@@ -49,7 +60,8 @@ class Urknall extends Phaser.State {
             this.urknall.destroy();
             this.wasKnall = true;
             this.game.input.keyboard.stop();
-            this.game.textbox.alpha = 0;
+            //this.game.textbox.alpha = 0;
+
 
             this.universum();
             //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.universum, this);
@@ -59,8 +71,8 @@ class Urknall extends Phaser.State {
     }
 
     changeFrame() {
-        this.walk.frame++;
-        this.play = true;
+            this.walk.frame++;
+            this.play = true;
     }
 
     playAnim() {
@@ -82,9 +94,13 @@ class Urknall extends Phaser.State {
 
 
         this.game.stage.backgroundColor = '#051023';
-        /*this.background = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background');
-        this.background.anchor.x = 0.5; this.background.anchor.y = 0.5;
-        this.background.scale.x = 2.5; this.background.scale.y = 2.5;*/
+
+        this.game.add.tween(this.background.scale).to( { x: 0.75, y: 0.75}, 2000, Phaser.Easing.Cubic.InOut, true);
+
+        //this.game.add.tween(this.background).to( { height: this.h}, 2000, Phaser.Easing.Cubic.InOut, true);
+        //console.log(this.h, this.w);
+        //this.background.scale.x = 1.0; this.background.scale.y = 1.0;
+        //this.game.add.tween(this.background).to( { alpha: 1}, 800, Phaser.Easing.Cubic.InOut, true);
         this.waitTxt = new continueText(this.game);
 
         this.game.input.onDown.addOnce(this.nextEvent, this);
@@ -96,7 +112,7 @@ class Urknall extends Phaser.State {
     }
 
     nextEvent() {
-        this.game.add.tween(this.game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
+        //this.game.add.tween(this.game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
         this.game.time.events.add(Phaser.Timer.SECOND * 0.8, function() {
                 this.waitTxt.destroy();
                 this.game.state.start('PlanetEntstehung', false, false);

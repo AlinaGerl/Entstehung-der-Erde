@@ -14,7 +14,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('timeline', 'assets/timeline.png');
         this.game.load.image('pointer', 'assets/pointer.png');
         this.game.load.image('firstEarth', 'assets/Urknall/littleEarth.png');
-        this.game.load.image('background', 'assets/background.jpg');
+        this.game.load.image('background', 'assets/background_scaled.png');
         //this.game.load.image('urknall', 'assets/Urknall/Urknall.jpg');
         this.game.load.image('redButton', 'assets/Kollision/Button.png');
         this.game.load.json('translation', 'data/languageText.json');
@@ -38,7 +38,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('fireball', 'assets/Wachstum/fireball.png');
         this.game.load.spritesheet('cellsBig', 'assets/Cell/cellBig.png', 1280, 720, 8);
         this.game.load.spritesheet('cellsSmall', 'assets/Cell/cellSmall.png', 1280, 720, 8);
-        this.game.load.spritesheet('volcano', 'assets/Volcano/volcano.png', 375, 375, 20);
+        this.game.load.spritesheet('volcano', 'assets/Volcano/vulkan.png', 375, 375, 20);
         this.game.load.spritesheet('seaWeed1', 'assets/Ocean/seaWeed1.png', 1280, 720, 14);
         this.game.load.spritesheet('seaWeed2', 'assets/Ocean/seaWeed2.png', 1280, 720, 14);
         this.game.load.spritesheet('seaWeed3', 'assets/Ocean/seaWeed3.png', 1280, 720, 14);
@@ -86,7 +86,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('Plants', false, false);
+        this.game.state.start('Volcanoes', false, false);
     }
 
 }
