@@ -42,7 +42,7 @@ class PlanetEntstehung extends Phaser.State {
     }
 
     setText() {
-        this.game.textbox.changeText(this.game, this.game.translation.translate("first2"));
+        this.game.textbox.changeNewState(this.game, this.game.translation.translate("first2"));
         this.game.textbox.alpha = 0;
     }
     changeFrame(){

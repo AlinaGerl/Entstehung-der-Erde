@@ -3,6 +3,8 @@
  */
 import pointer from 'objects/Pointer';
 import timeline from 'objects/timeline';
+import Translation from 'utils/translate';
+import Text from 'objects/text';
 
 class Preloader extends Phaser.State {
 
@@ -15,8 +17,9 @@ class Preloader extends Phaser.State {
         this.game.load.image('background', 'assets/background.jpg');
         //this.game.load.image('urknall', 'assets/Urknall/Urknall.jpg');
         this.game.load.image('redButton', 'assets/Kollision/Button.png');
+        this.game.load.image('ButtonPressed', 'assets/Kollision/ButtonPressed.png');
         this.game.load.json('translation', 'data/languageText.json');
-        this.game.load.image('splitter', 'assets/Urknall/splitter.png');
+        this.game.load.image('Thaia', 'assets/Kollision/theia.png');
         this.game.load.image('moon', 'assets/Moon/Mond.png');
         this.game.load.image('explodedearth', 'assets/Moon/explodedearth.jpg');
         //this.game.load.image('plant', 'assets/Plants/plant.png');
@@ -68,7 +71,8 @@ class Preloader extends Phaser.State {
             },
 
             google: {
-                families: ['Roboto Mono', 'Montserrat']
+                families: ['Roboto Mono', 'Montserrat', 'Indie Flower', 'Handlee', 'Patrick Hand SC', 'Nanum Pen Script',
+                    'Gaegu', 'Itim', 'Pangolin', 'Short Stack','Dekko']
             }
 
         };
@@ -79,6 +83,7 @@ class Preloader extends Phaser.State {
     }
 
     setTimeline() {
+        this.game.stage.backgroundColor = '#051023';
         this.game.pointer = new pointer(this.game, 66, "4.6 Mrd");
         this.game.timeline = new timeline(this.game);
         this.game.translation = new Translation(this.game);
@@ -87,7 +92,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('PlanetEntstehung', false, false);
+        this.game.state.start('Volcanoes', false, false);
     }
 
 }

@@ -12,7 +12,7 @@ class Regenzeit extends Phaser.State {
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
         this.earth.scale.x = 0.5; this.earth.scale.y = 0.5;
         //text
-        this.game.textbox.changeText(this.game, this.game.translation.translate("first6"));
+        this.game.textbox.changeNewState(this.game, this.game.translation.translate("first6"));
 
         this.game.pointer.setPosition(185);
         this.game.pointerText.text = "3.8 Mrd";
@@ -34,8 +34,8 @@ class Regenzeit extends Phaser.State {
         this.planetsG.x = this.game.world.centerX; this.planetsG.y = this.game.world.centerY;
 
         this.waterball = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'waterball');
-        this.waterball.alpha = 0.0; this.waterball.scale.x = 0.7;
-        this.waterball.scale.y = 0.7; this.waterball.anchor.x = 0.5; this.waterball.anchor.y = 0.5;
+        this.waterball.alpha = 0.0; this.waterball.scale.x = 0.9;
+        this.waterball.scale.y = 0.9; this.waterball.anchor.x = 0.5; this.waterball.anchor.y = 0.5;
         this.game.add.tween(this.waterball).to( { alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.add.tween(this.earth).to( { alpha: 0 }, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.input.onDown.addOnce(this.deleteClouds, this, 10, null);
@@ -43,6 +43,7 @@ class Regenzeit extends Phaser.State {
         this.rotateSlower = false;
 
         this.clouds = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'clouds');
+        this.clouds.alpha = 0;
 
         //this.clouds.alpha = 0;
         this.clouds.anchor.x = 0.5;  this.clouds.anchor.y = 0.5;

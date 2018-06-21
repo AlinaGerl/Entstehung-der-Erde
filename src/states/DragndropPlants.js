@@ -10,10 +10,10 @@ class DragndropPlants extends Phaser.State {
     create() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
-        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
+        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'EchsenPlanet', this.game.earthRotate);
 
         //text
-        this.game.textbox.changeText(this.game, this.game.translation.translate("first10_1"));
+        this.game.textbox.changeNewState(this.game, this.game.translation.translate("first10_1"));
 
         this.game.pointer.setPosition(670);
         this.game.pointerText.text = "460 Mil";
@@ -100,7 +100,8 @@ class DragndropPlants extends Phaser.State {
     }
 
     getIntoWater() {
-        this.game.add.tween(this.earth.scale).to({ x: 5, y: 5}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        this.game.add.tween(this.earth.scale).to({ x: 6.5, y: 6.5}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        this.game.add.tween(this.earth.anchor).to({ x: 0.7, y: 0.4}, 3000, Phaser.Easing.Cubic.InOut, true, );
         //this.game.add.tween(this.animalsG.scale).to({ x: 1, y: 1}, 3000, Phaser.Easing.Cubic.InOut, true, );
 
         for (var i = 0; i < 6; i++) {
@@ -113,6 +114,7 @@ class DragndropPlants extends Phaser.State {
 
     outOfWater() {
         this.game.add.tween(this.earth.scale).to({ x: 0.5, y: 0.5}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        this.game.add.tween(this.earth.anchor).to({ x: 0.5, y: 0.5}, 3000, Phaser.Easing.Cubic.InOut, true, );
 
         for (var i = 0; i < 6; i++) {
             this.game.add.tween(this.objects[i].scale).to({ x: 0, y: 0}, 3000, Phaser.Easing.Cubic.InOut, true, );
