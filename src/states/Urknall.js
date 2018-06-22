@@ -8,8 +8,6 @@ import continueText from 'objects/weiterTxt';
 
 class Urknall extends Phaser.State {
 
-
-
     create() {
         this.game.stage.backgroundColor = '#fff';
 
@@ -39,10 +37,6 @@ class Urknall extends Phaser.State {
         //this.background.alpha = 0;
         this.background.anchor.x = 0.5; this.background.anchor.y = 0.5;
         this.background.scale.x = 0.0; this.background.scale.y = 0.0;
-        /*this.background.width = 0.0; this.background.height = 0.0;
-        this.h = this.game.height;
-        this.w = this.game.width;
-        */
     }
     update(){
 
@@ -66,8 +60,6 @@ class Urknall extends Phaser.State {
             this.universum();
             //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.universum, this);
         }
-
-
     }
 
     changeFrame() {
@@ -94,15 +86,9 @@ class Urknall extends Phaser.State {
 
 
         this.game.stage.backgroundColor = '#051023';
-
         this.game.add.tween(this.background.scale).to( { x: 0.75, y: 0.75}, 2000, Phaser.Easing.Cubic.InOut, true);
 
-        //this.game.add.tween(this.background).to( { height: this.h}, 2000, Phaser.Easing.Cubic.InOut, true);
-        //console.log(this.h, this.w);
-        //this.background.scale.x = 1.0; this.background.scale.y = 1.0;
-        //this.game.add.tween(this.background).to( { alpha: 1}, 800, Phaser.Easing.Cubic.InOut, true);
         this.waitTxt = new continueText(this.game);
-
         this.game.input.onDown.addOnce(this.nextEvent, this);
     }
     click (){

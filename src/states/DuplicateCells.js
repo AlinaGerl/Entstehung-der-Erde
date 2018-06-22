@@ -13,7 +13,7 @@ class DuplicateCells extends Phaser.State {
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
 
         //text
-        this.game.textbox.changeText(this.game, this.game.translation.translate("first8_1"));
+        this.game.textbox.changeNewState(this.game, this.game.translation.translate("first8_1"));
         this.game.pointer.setPosition(210);
         this.game.pointerText.text = "3.5 Mrd";
 

@@ -11,8 +11,12 @@ class Dinosaurs extends Phaser.State {
 
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
-        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
+        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'magmaPlanet', this.game.earthRotate);
+        this.earth.scale.x = 0.45; this.earth.scale.y = 0.45;
 
+        this.dinoWorld = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'DinoEarth');
+        this.dinoWorld.alpha = 0.0; this.dinoWorld.scale.x = 0.45; this.dinoWorld.scale.y = 0.45; this.dinoWorld.anchor.x = 0.5; this.dinoWorld.anchor.y = 0.5;
+        this.dinoWorld.angle = this.game.earthRotate;
         //text
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first12"));
 
@@ -45,25 +49,17 @@ class Dinosaurs extends Phaser.State {
 
     update(){
 
+        this.dinoWorld.angle -= 0.03;
         //Last text of event
         if (this.dinosCount === 6) {
             this.dinosCount = 5;
             //this.items.anchor.x = 0.5; this.items.anchor.y = 0.5;
-            this.dinosRotate = true;
+            //this.dinosRotate = true;
             this.lastText();
         }
 
+        this.DinosG.angle -= 0.03;
         //if dinos are set, they should rotate with the earth
-        if (this.dinosRotate) {
-
-            //group of dinos rotate
-            this.DinosG.angle -= 0.03;
-
-            //ever dino rotates, so its always senkrecht to display
-            for(var i = 0; i <= this.DinosG.children.length-1; i++) {
-                this.DinosG.children[i].angle += 0.03;
-            }
-        }
 
 
         //Creating meteorit and calling function if dinos are completly set
@@ -79,16 +75,21 @@ class Dinosaurs extends Phaser.State {
     }
 
     dinosReady() {
+
+        this.game.add.tween(this.earth).to( { alpha: 0}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this.dinoWorld).to( { alpha: 1}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
         //die gruppe von dinos in die mitte setzen, damit man sie im mittelpunkt rotieren kann
+
+
         this.DinosG.x = this.game.world.centerX;
         this.DinosG.y = this.game.world.centerY;
 
-        this.dino1 = this.game.add.sprite((-this.game.world.centerX-90), (-this.game.world.centerY + 200), 'dino1');
-        this.dino2 = this.game.add.sprite((-this.game.world.centerX-90), (-this.game.world.centerY + 200 + 150), 'dino2');
-        this.dino3 = this.game.add.sprite((-this.game.world.centerX-90), (-this.game.world.centerY + 200 + 150 * 2), 'dino3');
-        this.dino4 = this.game.add.sprite((this.game.world.centerX+90), (-this.game.world.centerY + 200), 'dino1');
-        this.dino5 = this.game.add.sprite((this.game.world.centerX+90), (-this.game.world.centerY + 200 + 150), 'dino2');
-        this.dino6 = this.game.add.sprite((this.game.world.centerX+90), (-this.game.world.centerY + 200 + 150 * 2), 'dino3');
+        this.dino1 = this.game.add.sprite((-90), (this.game.world.centerY - 100), 'dino1');
+        this.dino2 = this.game.add.sprite((-90), (this.game.world.centerY - 100 + 150), 'dino2');
+        this.dino3 = this.game.add.sprite((-90), (this.game.world.centerY - 100 + 150 * 2), 'dino3');
+        this.dino4 = this.game.add.sprite((this.game.world.width+90), (this.game.world.centerY - 100), 'dino1');
+        this.dino5 = this.game.add.sprite((this.game.world.width+90), (this.game.world.centerY - 100 + 150), 'dino2');
+        this.dino6 = this.game.add.sprite((this.game.world.width+90), (this.game.world.centerY - 100 + 150 * 2), 'dino3');
         this.dinos = [this.dino1, this.dino2, this.dino3, this.dino4, this.dino5, this.dino6];
 
         let item;
@@ -99,7 +100,7 @@ class Dinosaurs extends Phaser.State {
 
             // Directly create sprites from the group.
             item = this.dinos[i];
-            this.DinosG.add(item);
+            //this.DinosG.add(item);
 
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
@@ -126,8 +127,8 @@ class Dinosaurs extends Phaser.State {
         for (var i = 0; i < 3; i++)
         {
             // Directly create sprites from the group.
-            this.game.add.tween(this.dinos[i]).to( { x: -this.game.world.centerX+110}, 2000, Phaser.Easing.Cubic.InOut, true, 500*i);
-            this.game.add.tween(this.dinos[i+3]).to( { x: this.game.world.centerX+2-110}, 2000, Phaser.Easing.Cubic.InOut, true, 500*i);
+            this.game.add.tween(this.dinos[i]).to( { x: 110}, 2000, Phaser.Easing.Cubic.InOut, true, 500*i);
+            this.game.add.tween(this.dinos[i+3]).to( { x: this.game.world.width-110}, 2000, Phaser.Easing.Cubic.InOut, true, 500*i);
             //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.getPhysics(this.MeteroG.children[i]), this);
         }
     }
@@ -151,7 +152,9 @@ class Dinosaurs extends Phaser.State {
     stopCollision (obj1, obj2) {
         this.isWrong = true; //set isWrong false, when a dino is placed on another dino
         //this.plantsCount--;
-        obj2.x = (this.game.world.centerX*2-100);
+
+        //obj2.x = (this.game.world.width-100) + (1000);
+
         obj2.inputEnabled = true;
         obj2.input.enableDrag();
     }
@@ -159,8 +162,14 @@ class Dinosaurs extends Phaser.State {
     // this is called, when the a dino is placed on the earth
     collisionHandler (obj1, obj2){
         if (!this.isWrong) { //only if its not on another dino, this works
+
             this.dinosCount++;
+            obj2.x =  Math.cos(((360/8)*this.dinosCount))*180;
+            obj2.y = Math.sin(((360/8)*this.dinosCount))*180;
+            obj2.angle = (360/6 * this.dinosCount)+90;
             obj2.inputEnabled = false;
+            obj2.input.draggable = false;
+            this.DinosG.add(obj2);
             //this.onEarth.add(obj2);
         }
     }
@@ -204,7 +213,9 @@ class Dinosaurs extends Phaser.State {
         //create a new earth with new physics
         // this is needed for the collision of meteorite and earth
         this.earth.destroy();
-        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
+        this.dinoWorld.destroy();
+        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'DinoEarth', this.game.earthRotate);
+        this.earth.scale.x = 0.45; this.earth.scale.y = 0.45;
         this.game.physics.p2.enable(this.earth, false);
         this.earth.body.static = true;
         this.earth.body.setCircle(180);
@@ -266,15 +277,17 @@ class Dinosaurs extends Phaser.State {
         this.meteorit.destroy();
 
         //change earth texture
-        this.earth.loadTexture('earth_meteor');
-
+        //this.earth.loadTexture('earth_meteor');
+        this.game.physics.arcade.gravity.y = 50;
+        this.DinosG.angle = 0;
         //gravity for dinos
+
         // let every dino fly down
         for(var i = 0; i <= this.DinosG.children.length-1; i++) {
 
-            this.DinosG.children[i].angle = this.game.rnd.integerInRange(0, 360); //gives every dino a different angle for a funny look
-            //this.DinosG.children[i].body.collideWorldBounds = true;
-            //this.DinosG.children[i].body.bounce.y = this.game.rnd.frac();
+            this.dinos[i].angle = this.game.rnd.integerInRange(0, 360); //gives every dino a different angle for a funny look
+            //this.dinos[i].body.collideWorldBounds = true;
+            this.dinos[i].body.gravity.y = this.game.rnd.integerInRange(0, 360);
         }
 
         //wait 5 seconds before changing event

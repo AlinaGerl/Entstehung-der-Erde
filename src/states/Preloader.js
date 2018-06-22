@@ -17,8 +17,9 @@ class Preloader extends Phaser.State {
         this.game.load.image('background', 'assets/background_scaled.png');
         //this.game.load.image('urknall', 'assets/Urknall/Urknall.jpg');
         this.game.load.image('redButton', 'assets/Kollision/Button.png');
+        this.game.load.image('ButtonPressed', 'assets/Kollision/ButtonPressed.png');
         this.game.load.json('translation', 'data/languageText.json');
-        this.game.load.image('splitter', 'assets/Urknall/splitter.png');
+        this.game.load.image('Thaia', 'assets/Kollision/theia.png');
         this.game.load.image('moon', 'assets/Moon/Mond.png');
         this.game.load.image('explodedearth', 'assets/Moon/explodedearth.jpg');
         //this.game.load.image('plant', 'assets/Plants/plant.png');
@@ -28,12 +29,19 @@ class Preloader extends Phaser.State {
         this.game.load.image('oceanAnimals', 'assets/Plants/animals.jpg');
         //this.game.load.image('cellsBig', 'assets/Cell/cellsBig.png');
         this.game.load.image('magmaButton', 'assets/Magma/magmaButton.png');
+        this.game.load.image('magmaPlanet', 'assets/Magma/MagmaPlanet.png');
+
         this.game.load.image('people', 'assets/People/people.png');
-        //this.game.load.image('dino', 'assets/Dinos/Dino.png');
+        this.game.load.image('DinoEarth', 'assets/Dinos/DinoPlanet.png');
         this.game.load.spritesheet('dino1', 'assets/Dinos/reptile1.png', 1280, 720, 20);
         this.game.load.spritesheet('dino2', 'assets/Dinos/reptile2.png', 1280, 720, 20);
         this.game.load.spritesheet('dino3', 'assets/Dinos/reptile3.png', 1280, 720, 20);
-        this.game.load.image('meteorit', 'assets/Dinos/meteorit.png');
+        this.game.load.image('meteorit1', 'assets/Wachstum/Meteor_1.png');
+        this.game.load.image('meteorit2', 'assets/Wachstum/Meteor_2.png');
+        this.game.load.image('meteorit3', 'assets/Wachstum/Meteor_3.png');
+        this.game.load.image('meteorit4', 'assets/Wachstum/Meteor_4.png');
+        this.game.load.image('meteorit5', 'assets/Wachstum/Meteor_5.png');
+        this.game.load.image('meteorit6', 'assets/Wachstum/Meteor_6.png');
         this.game.load.image('earth_meteor', 'assets/Dinos/EarthMeteor.jpg');
         this.game.load.image('fireball', 'assets/Wachstum/fireball.png');
         this.game.load.spritesheet('cellsBig', 'assets/Cell/cellBig.png', 1280, 720, 8);
@@ -49,6 +57,7 @@ class Preloader extends Phaser.State {
         //this.game.load.atlas('seaWeed2', 'assets/Ocean/seaWeed2.png', 'assets/Ocean/seaWeed2.json');
         this.game.load.image('rodinia', 'assets/Eiszeit/Rodinia.png');
         this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
+        this.game.load.image('EchsenPlanet', 'assets/Eiszeit/EchsenPlanet.png');
         this.game.load.image('waterball', 'assets/Regenzeit/waterball.png');
         this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
         this.game.load.spritesheet('clouds', 'assets/Regenzeit/wolken.png', 1920, 1080, 76);
@@ -67,7 +76,8 @@ class Preloader extends Phaser.State {
             },
 
             google: {
-                families: ['Roboto Mono', 'Montserrat']
+                families: ['Roboto Mono', 'Montserrat', 'Indie Flower', 'Handlee', 'Patrick Hand SC', 'Nanum Pen Script',
+                    'Gaegu', 'Itim', 'Pangolin', 'Short Stack','Dekko']
             }
 
         };
@@ -78,6 +88,7 @@ class Preloader extends Phaser.State {
     }
 
     setTimeline() {
+        this.game.stage.backgroundColor = '#051023';
         this.game.pointer = new pointer(this.game, 66, "4.6 Mrd");
         this.game.timeline = new timeline(this.game);
         this.game.translation = new Translation(this.game);
@@ -86,7 +97,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('Volcanoes', false, false);
+        this.game.state.start('PlanetWachstum', false, false);
     }
 
 }
