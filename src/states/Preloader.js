@@ -14,7 +14,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('timeline', 'assets/timeline.png');
         this.game.load.image('pointer', 'assets/pointer.png');
         this.game.load.image('firstEarth', 'assets/Urknall/littleEarth.png');
-        this.game.load.image('background', 'assets/background.jpg');
+        this.game.load.image('background', 'assets/background_scaled.png');
         //this.game.load.image('urknall', 'assets/Urknall/Urknall.jpg');
         this.game.load.image('redButton', 'assets/Kollision/Button.png');
         this.game.load.image('ButtonPressed', 'assets/Kollision/ButtonPressed.png');
@@ -37,7 +37,12 @@ class Preloader extends Phaser.State {
         this.game.load.spritesheet('dino1', 'assets/Dinos/reptile1.png', 1280, 720, 20);
         this.game.load.spritesheet('dino2', 'assets/Dinos/reptile2.png', 1280, 720, 20);
         this.game.load.spritesheet('dino3', 'assets/Dinos/reptile3.png', 1280, 720, 20);
-        this.game.load.image('meteorit', 'assets/Dinos/meteorit.png');
+        this.game.load.image('meteorit1', 'assets/Wachstum/Meteor_1.png');
+        this.game.load.image('meteorit2', 'assets/Wachstum/Meteor_2.png');
+        this.game.load.image('meteorit3', 'assets/Wachstum/Meteor_3.png');
+        this.game.load.image('meteorit4', 'assets/Wachstum/Meteor_4.png');
+        this.game.load.image('meteorit5', 'assets/Wachstum/Meteor_5.png');
+        this.game.load.image('meteorit6', 'assets/Wachstum/Meteor_6.png');
         this.game.load.image('earth_meteor', 'assets/Dinos/EarthMeteor.jpg');
         this.game.load.image('fireball', 'assets/Wachstum/fireball.png');
         this.game.load.spritesheet('cellsBig', 'assets/Cell/cellBig.png', 1280, 720, 8);
@@ -100,7 +105,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('Plants', false, false);
+        this.game.state.start('PlanetWachstum', false, false);
     }
 
 }

@@ -18,15 +18,16 @@ class DragndropPlants extends Phaser.State {
         this.game.pointer.setPosition(670);
         this.game.pointerText.text = "460 Mil";
 
-        //seaweed
-        this.seaweed = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'seaWeed2');
-        this.seaweed.anchor.x = 0.5;
-        this.seaweed.anchor.y = 0.5;
-        this.seaweed.scale.x = 0.0;
-        this.seaweed.scale.y = 0.0;
+        //animals and seaplants
+        this.seaweed1 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'seaWeed1');
+        this.seaweed2 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'seaWeed2');
+        this.seaweed3 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'seaWeed3');
+        this.coral = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'coral');
+        this.jellyfish = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'jellyfish');
+        this.shell = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'shell');
 
-        this.seaweed.animations.add("walk", null, 6, true);
-        this.seaweed.animations.play('walk');
+        this.objects = [this.seaweed1, this.seaweed2, this.seaweed3, this.coral, this.jellyfish, this.shell];
+        this.createObjects();
 
         this.firstStage = true;
         this.secondStage = false;
@@ -38,15 +39,7 @@ class DragndropPlants extends Phaser.State {
         //counts plants on earth
         this.plantsCount = 0;
 
-        //z-depth
-        let earthG = this.game.add.group();
-        let animalsG = this.game.add.group();
-        earthG.add(this.earth);
-        animalsG.add(this.seaweed);
-        earthG.z = 100;
-        animalsG.z = 120;
-        // this.plant = new Plant(this.game, 70, 70, 'plant');
-        //
+
         this.game.physics.enable( [ this.earth], Phaser.Physics.ARCADE);
         //
         // this.plant.inputEnabled = true;
@@ -63,7 +56,7 @@ class DragndropPlants extends Phaser.State {
             this.outOfWater();
         }
 
-        if (this.plantsCount === 6) {
+        if (this.plantsCount === 5) {
             //this.items.anchor.x = 0.5; this.items.anchor.y = 0.5;
             this.plantsRotate = true;
             this.lastText();
@@ -132,9 +125,10 @@ class DragndropPlants extends Phaser.State {
 
     secondText() {
         this.game.textbox.changeText(this.game, this.game.translation.translate("first10_3"));
-        this.seaWeed1.destroy();
-        this.seaWeed2.destroy();
-        this.seaWeed3.destroy();
+        this.seaweed1.destroy();
+        this.seaweed2.destroy();
+        this.seaweed3.destroy();
+        this.coral.destroy();
         this.shell.destroy();
         this.jellyfish.destroy();
 
@@ -214,6 +208,7 @@ class DragndropPlants extends Phaser.State {
 
     nextEvent() {
         this.items.destroy();
+        this.earth.destroy();
         this.game.state.start('Magma', false, false);
     }
 

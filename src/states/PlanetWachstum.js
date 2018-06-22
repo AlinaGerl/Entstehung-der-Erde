@@ -26,6 +26,7 @@ class PlanetWachstum extends Phaser.State {
         this.earth.body.setCircle(180);
         this.earth.body.angle = this.game.earthRotate;
 
+        this.meteoriten = ['meteorit1', 'meteorit2', 'meteorit3', 'meteorit4', 'meteorit5', 'meteorit6'];
 
         //text
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first3"));
@@ -42,7 +43,7 @@ class PlanetWachstum extends Phaser.State {
 
         // mouse body
         // the mouse also needs a body for the mouse spring event
-        this.mouseBody = this.game.add.sprite(0, 0, 'meteorit'); this.mouseBody.alpha = 0; // its like a fake body (invisible)
+        this.mouseBody = this.game.add.sprite(0, 0, 'meteorit1'); this.mouseBody.alpha = 0; // its like a fake body (invisible)
         this.game.physics.p2.enable(this.mouseBody, true); //physics
         this.mouseBody.body.static = true; //static body (it would bounds around)
         this.mouseBody.body.setCircle(10); //rigidbody
@@ -78,16 +79,18 @@ class PlanetWachstum extends Phaser.State {
 
         this.game.physics.p2.enable(this.MeteroG, false);
 
+
+       // item = this.game.add.sprite(-90, 250 + 120 * i, 'meteorit1', i);
         //in dieser schleife werden einfach 6 Meteortien kreiert und in die welt gesetzt.
         // sie bekommen auch schon ihre physics und den collide listener
         for (var i = 0; i < 3; i++)
         {
             // Directly create sprites from the group.
-            item = this.game.add.sprite(-90, 250 + 120 * i, 'meteorit', i);
+            item = item = this.game.add.sprite(-90, 250 + 120 * i, this.meteoriten[i], i);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
-            item.scale.x = 0.07;
-            item.scale.y = 0.07;
+            item.scale.x = 0.3;
+            item.scale.y = 0.3;
             item.name = 'block' + i;
             this.MeteroG.add(item);
 
@@ -96,11 +99,11 @@ class PlanetWachstum extends Phaser.State {
         for (var i = 3; i < 6; i++)
         {
             // Directly create sprites from the group.
-            item = this.game.add.sprite((this.game.world.centerX*2+90), (250 + 120 * (i-3)), 'meteorit', i);
+            item = this.game.add.sprite((this.game.world.centerX*2+90), (250 + 120 * (i-3)), this.meteoriten[i], i);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
-            item.scale.x = 0.07;
-            item.scale.y = 0.07;
+            item.scale.x = 0.3;
+            item.scale.y = 0.3;
             item.name = 'block' + i;
             // this.game.physics.p2.enable(item, false); //set physics
             // item.body.setCircle(40); // this is kinda the rigidbody of the object
