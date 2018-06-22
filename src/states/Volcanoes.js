@@ -30,15 +30,16 @@ class Volcanoes extends Phaser.State {
         this.volcanoG = this.game.add.group();
         this.volcanoG.x = this.game.world.centerX;
         this.volcanoG.y = this.game.world.centerY;
-        for (var i = 0; i < 8; i++) {
-            let x = Math.cos(((360/9)*this.volcanoG.children.length+1))*200;
-            let y = Math.sin(((360/9)*this.volcanoG.children.length+1))*200;
+        for (var i = 0; i < 6; i++) {
+            let x = (Math.cos((360/8)*(i+1))*210);
+            let y = (Math.sin((360/8)*(i+1))*210);
+            console.info(" x = " + x+", y: " + y);
             let volcano = this.game.add.sprite(x, y, 'volcano');
-            volcano.angle = (360/8 * this.volcanoG.children.length+1)+90;
+            volcano.angle = (360/6 * (i+1)) +90;
             volcano.scale.x = 0.5;
             volcano.scale.y = 0.5;
             volcano.anchor.x = 0.5;
-            volcano.anchor.y = 0.6;
+            volcano.anchor.y = 0.65;
             volcano.inputEnabled = true;
             volcano.events.onInputDown.add(this.playAnim, this);
             this.walk = volcano.animations.add('walk');
@@ -105,6 +106,8 @@ class Volcanoes extends Phaser.State {
     }
 
     update(){
+
+        this.volcanoG.angle -= 0.03;
         this.earthWithLand.angle -= 0.03;
         if(this.allPushed === 3){
             this.game.textbox.changeText(this.game, this.game.translation.translate("last7"));

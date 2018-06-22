@@ -54,6 +54,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
         this.game.load.image('EchsenPlanet', 'assets/Eiszeit/EchsenPlanet.png');
         this.game.load.image('waterball', 'assets/Regenzeit/waterball.png');
+        this.game.load.image('waterEarth', 'assets/Regenzeit/WaterEarth.png');
         this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
         this.game.load.spritesheet('clouds', 'assets/Regenzeit/wolken.png', 1920, 1080, 76);
         this.game.load.spritesheet('urknall', 'assets/Urknall/Urknall.png', 1920, 1080, 76);
@@ -92,7 +93,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('Volcanoes', false, false);
+        this.game.state.start('Regenzeit', false, false);
     }
 
 }

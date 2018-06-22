@@ -45,15 +45,14 @@ class Regenzeit extends Phaser.State {
         this.clouds = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'clouds');
         this.clouds.alpha = 0;
 
-        //this.clouds.alpha = 0;
         this.clouds.anchor.x = 0.5;  this.clouds.anchor.y = 0.5;
         this.clouds.scale.x = 0.5;  this.clouds.scale.y = 0.5;
-       //this.game.add.tween(this.clouds).to( { alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 0);
 
         this.walk = this.clouds.animations.add('walk');
-        this.walk.enableUpdate = true;
-
+        this.walk.enableUpdate = false;
         this.clouds.animations.play('walk', 75, true);
+
+        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.startClouds, this);
     }
 
     update(){
@@ -65,9 +64,13 @@ class Regenzeit extends Phaser.State {
 
     }
 
+    startClouds(){
+        this.game.add.tween(this.clouds).to( { alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 0);
+    }
+
     deleteClouds() {
         this.game.textbox.changeText(this.game, this.game.translation.translate("last6"));
-        this.earth.loadTexture('waterball', 0 , false);
+        this.earth.loadTexture('waterEarth', 0 , false);
         this.rotateSlower = true;
         this.game.add.tween(this.moon.anchor).to( { x: 4, y: -4 }, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.add.tween(this.clouds).to( { alpha: 0 }, 3000, Phaser.Easing.Linear.None, true, 0);
