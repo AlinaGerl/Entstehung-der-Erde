@@ -2,145 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf0e48f9-f4e6-442e-8185-6914322a9ac9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Dinos/DinoPlanet.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Eiszeit/EchsenPlanet.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Eiszeit/MagmaPlanet.psd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Eiszeit/RodiniaTest.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Kollision/ButtonPressed.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Kollision/Buttonold.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Kollision/theia.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Magma/MagmaPlanet.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Timeline.zip" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Wachstum/fireball2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/pointertest.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/timelineTest.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Dinos/DinoPlanet.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Eiszeit/EchsenPlanet.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Eiszeit/MagmaPlanet.psd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Eiszeit/RodiniaTest.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Kollision/ButtonPressed.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Kollision/Buttonold.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Kollision/theia.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Magma/MagmaPlanet.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Timeline.zip" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Wachstum/fireball2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/pointertest.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/timelineTest.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Eiszeit/Rodinia.png" afterPath="$PROJECT_DIR$/build/assets/Eiszeit/Rodinia.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Kollision/Button.png" afterPath="$PROJECT_DIR$/build/assets/Kollision/Button.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00000.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00001.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00002.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00003.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00004.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00005.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00006.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00007.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00008.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00009.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00010.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00011.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00012.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00013.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00014.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00015.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00016.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00017.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00018.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00019.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00020.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00021.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00022.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00023.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00024.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00025.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00026.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00027.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00028.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00029.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00030.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00031.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00032.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00033.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00034.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00035.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00036.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00037.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00038.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00039.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00040.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00041.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00042.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00043.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00044.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00045.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00046.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00047.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00048.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00049.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00050.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00051.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00052.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00053.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00054.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00055.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00056.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00057.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00058.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00059.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00060.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00061.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00062.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00063.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00064.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00065.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00066.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00067.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00068.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00069.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00070.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00071.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00072.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00073.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00074.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_00075.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Urknall/Meteor_1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Urknall/Meteor_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Urknall/Meteor_3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Urknall/Meteor_4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Urknall/Meteor_5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Urknall/Meteor_6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Wachstum/fireball.png" afterPath="$PROJECT_DIR$/build/assets/Wachstum/fireball.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/pointer.png" afterPath="$PROJECT_DIR$/build/assets/pointer.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/timeline.png" afterPath="$PROJECT_DIR$/build/assets/timeline.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Regenzeit/WaterEarth.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/build/assets/Volcano/volcanoold.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Regenzeit/WaterEarth.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/assets/Volcano/volcanoold.png" />
+      <change beforePath="$PROJECT_DIR$/build/assets/Volcano/volcano.png" afterPath="$PROJECT_DIR$/build/assets/Volcano/volcano.png" />
       <change beforePath="$PROJECT_DIR$/build/scripts/game.js.map" afterPath="$PROJECT_DIR$/build/scripts/game.js.map" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Pointer.js" afterPath="$PROJECT_DIR$/src/objects/Pointer.js" />
-      <change beforePath="$PROJECT_DIR$/src/objects/text.js" afterPath="$PROJECT_DIR$/src/objects/text.js" />
-      <change beforePath="$PROJECT_DIR$/src/states/Dinosaurier.js" afterPath="$PROJECT_DIR$/src/states/Dinosaurier.js" />
-      <change beforePath="$PROJECT_DIR$/src/states/DragndropPlants.js" afterPath="$PROJECT_DIR$/src/states/DragndropPlants.js" />
-      <change beforePath="$PROJECT_DIR$/src/states/DuplicateCells.js" afterPath="$PROJECT_DIR$/src/states/DuplicateCells.js" />
-      <change beforePath="$PROJECT_DIR$/src/states/Eiszeit.js" afterPath="$PROJECT_DIR$/src/states/Eiszeit.js" />
-      <change beforePath="$PROJECT_DIR$/src/states/Kollision.js" afterPath="$PROJECT_DIR$/src/states/Kollision.js" />
-      <change beforePath="$PROJECT_DIR$/src/states/Magma.js" afterPath="$PROJECT_DIR$/src/states/Magma.js" />
-      <change beforePath="$PROJECT_DIR$/src/states/PlanetEntstehung.js" afterPath="$PROJECT_DIR$/src/states/PlanetEntstehung.js" />
-      <change beforePath="$PROJECT_DIR$/src/states/PlanetWachstum.js" afterPath="$PROJECT_DIR$/src/states/PlanetWachstum.js" />
       <change beforePath="$PROJECT_DIR$/src/states/Preloader.js" afterPath="$PROJECT_DIR$/src/states/Preloader.js" />
       <change beforePath="$PROJECT_DIR$/src/states/Regenzeit.js" afterPath="$PROJECT_DIR$/src/states/Regenzeit.js" />
-      <change beforePath="$PROJECT_DIR$/src/states/Urknall.js" afterPath="$PROJECT_DIR$/src/states/Urknall.js" />
       <change beforePath="$PROJECT_DIR$/src/states/Volcanoes.js" afterPath="$PROJECT_DIR$/src/states/Volcanoes.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Eiszeit/Rodinia.png" afterPath="$PROJECT_DIR$/static/assets/Eiszeit/Rodinia.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Kollision/Button.png" afterPath="$PROJECT_DIR$/static/assets/Kollision/Button.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Urknall/Meteor_1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Urknall/Meteor_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Urknall/Meteor_3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Urknall/Meteor_4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Urknall/Meteor_5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Urknall/Meteor_6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Wachstum/fireball.png" afterPath="$PROJECT_DIR$/static/assets/Wachstum/fireball.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/pointer.png" afterPath="$PROJECT_DIR$/static/assets/pointer.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/timeline.png" afterPath="$PROJECT_DIR$/static/assets/timeline.png" />
+      <change beforePath="$PROJECT_DIR$/static/assets/Volcano/volcano.png" afterPath="$PROJECT_DIR$/static/assets/Volcano/volcano.png" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -154,7 +25,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="924">
               <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -166,8 +37,8 @@
       <file leaf-file-name="Preloader.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/states/Preloader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="99" column="45" lean-forward="false" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
+            <state relative-caret-position="619">
+              <caret line="100" column="42" lean-forward="false" selection-start-line="100" selection-start-column="42" selection-end-line="100" selection-end-column="42" />
               <folding>
                 <element signature="e#49#87#0" expanded="true" />
               </folding>
@@ -188,7 +59,7 @@
       <file leaf-file-name="Urknall.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/Urknall.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-336">
+            <state relative-caret-position="189">
               <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="34" />
               <folding>
                 <element signature="e#49#91#0" expanded="true" />
@@ -200,7 +71,7 @@
       <file leaf-file-name="DragndropPlants.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/DragndropPlants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2352">
+            <state relative-caret-position="3045">
               <caret line="147" column="34" lean-forward="false" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="34" />
               <folding>
                 <element signature="e#49#83#0" expanded="true" />
@@ -212,7 +83,7 @@
       <file leaf-file-name="PlanetEntstehung.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/PlanetEntstehung.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
+            <state relative-caret-position="1533">
               <caret line="75" column="45" lean-forward="false" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="45" />
               <folding>
                 <element signature="e#49#91#0" expanded="true" />
@@ -407,6 +278,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -446,8 +319,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -590,11 +461,12 @@
       <workItem from="1529605907802" duration="994000" />
       <workItem from="1529606940181" duration="7936000" />
       <workItem from="1529615480605" duration="6269000" />
+      <workItem from="1529651229410" duration="61000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210049000" />
+    <option name="totallyTimeSpent" value="210110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -834,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="987">
           <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,7 +767,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="924">
           <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -907,7 +777,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/PlanetEntstehung.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
+        <state relative-caret-position="1533">
           <caret line="75" column="45" lean-forward="false" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="45" />
           <folding>
             <element signature="e#49#91#0" expanded="true" />
@@ -917,7 +787,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/DragndropPlants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2352">
+        <state relative-caret-position="3045">
           <caret line="147" column="34" lean-forward="false" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="34" />
           <folding>
             <element signature="e#49#83#0" expanded="true" />
@@ -927,7 +797,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/Urknall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-336">
+        <state relative-caret-position="189">
           <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="34" />
           <folding>
             <element signature="e#49#91#0" expanded="true" />
@@ -945,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/Preloader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="99" column="45" lean-forward="false" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
+        <state relative-caret-position="619">
+          <caret line="100" column="42" lean-forward="false" selection-start-line="100" selection-start-column="42" selection-end-line="100" selection-end-column="42" />
           <folding>
             <element signature="e#49#87#0" expanded="true" />
           </folding>

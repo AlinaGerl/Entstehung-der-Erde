@@ -46,7 +46,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('fireball', 'assets/Wachstum/fireball.png');
         this.game.load.spritesheet('cellsBig', 'assets/Cell/cellBig.png', 1280, 720, 8);
         this.game.load.spritesheet('cellsSmall', 'assets/Cell/cellSmall.png', 1280, 720, 8);
-        this.game.load.spritesheet('volcano', 'assets/Volcano/vulkan.png', 375, 375, 20);
+        this.game.load.spritesheet('volcano', 'assets/Volcano/volcano.png', 375, 375, 20);
         this.game.load.spritesheet('seaWeed1', 'assets/Ocean/seaWeed1.png', 1280, 720, 14);
         this.game.load.spritesheet('seaWeed2', 'assets/Ocean/seaWeed2.png', 1280, 720, 14);
         this.game.load.spritesheet('seaWeed3', 'assets/Ocean/seaWeed3.png', 1280, 720, 14);
@@ -59,6 +59,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('iceball', 'assets/Eiszeit/iceball.png');
         this.game.load.image('EchsenPlanet', 'assets/Eiszeit/EchsenPlanet.png');
         this.game.load.image('waterball', 'assets/Regenzeit/waterball.png');
+        this.game.load.image('waterEarth', 'assets/Regenzeit/WaterEarth.png');
         this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
         this.game.load.spritesheet('clouds', 'assets/Regenzeit/wolken.png', 1920, 1080, 76);
         this.game.load.spritesheet('urknall', 'assets/Urknall/Urknall.png', 1920, 1080, 76);
