@@ -10,8 +10,8 @@ import Text from 'objects/text';
 class DuplicateCells extends Phaser.State {
 
     create() {
-        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
-
+        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'FirstLand', this.game.earthRotate);
+        this.earth.scale.x = 0.55; this.earth.scale.y = 0.55;
         //text
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first8_1"));
         this.game.pointer.setPosition(210);
@@ -98,7 +98,7 @@ class DuplicateCells extends Phaser.State {
     }
 
     getIntoWater() {
-        this.game.add.tween(this.earth.scale).to({ x: 7, y: 7}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        this.game.add.tween(this.earth.scale).to({ x: 9, y: 9}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cell01.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cell02.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cell03.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
@@ -110,7 +110,7 @@ class DuplicateCells extends Phaser.State {
     }
 
     outOfWater() {
-        this.game.add.tween(this.earth.scale).to({ x: 0.5, y: 0.5}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        this.game.add.tween(this.earth.scale).to({ x: 0.55, y: 0.55}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cellsG.scale).to({ x: 0, y: 0}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cellsG.position).to({ x: this.game.world.centerX, y: this.game.world.centerY}, 3000, Phaser.Easing.Cubic.InOut, true,);
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.nextEvent, this);
@@ -149,6 +149,7 @@ class DuplicateCells extends Phaser.State {
 
     nextEvent() {
         this.cellsG.removeAll();
+        this.earth.destroy();
         this.game.state.start('Eiszeit', false, false);
     }
 

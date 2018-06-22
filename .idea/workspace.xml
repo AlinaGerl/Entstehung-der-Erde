@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf0e48f9-f4e6-442e-8185-6914322a9ac9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/Volcano/volcano.png" afterPath="$PROJECT_DIR$/build/assets/Volcano/volcano.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/assets/Volcano/volcano.png" afterPath="$PROJECT_DIR$/static/assets/Volcano/volcano.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/scripts/game.js.map" afterPath="$PROJECT_DIR$/build/scripts/game.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/DuplicateCells.js" afterPath="$PROJECT_DIR$/src/states/DuplicateCells.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Eiszeit.js" afterPath="$PROJECT_DIR$/src/states/Eiszeit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/PlanetWachstum.js" afterPath="$PROJECT_DIR$/src/states/PlanetWachstum.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Preloader.js" afterPath="$PROJECT_DIR$/src/states/Preloader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Regenzeit.js" afterPath="$PROJECT_DIR$/src/states/Regenzeit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/states/Volcanoes.js" afterPath="$PROJECT_DIR$/src/states/Volcanoes.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,104 +18,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlanetEntstehung.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/states/PlanetEntstehung.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dinosaurier.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/states/Dinosaurier.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2235">
-              <caret line="153" column="22" lean-forward="false" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Volcanoes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/states/Volcanoes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
-              <caret line="101" column="5" lean-forward="false" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DragndropPlants.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/states/DragndropPlants.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Preloader.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/states/Preloader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-              <folding>
-                <element signature="e#49#87#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Regenzeit.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/states/Regenzeit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding>
-                <element signature="e#49#83#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DuplicateCells.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/states/DuplicateCells.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="End.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/states/End.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="86" lean-forward="false" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Urknall.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/states/Urknall.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="44" column="8" lean-forward="false" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="110" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -199,21 +101,21 @@
         <option value="$PROJECT_DIR$/src/states/Moon.js" />
         <option value="$PROJECT_DIR$/src/states/People.js" />
         <option value="$PROJECT_DIR$/src/states/End.js" />
-        <option value="$PROJECT_DIR$/src/states/PlanetWachstum.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/states/Magma.js" />
         <option value="$PROJECT_DIR$/src/states/Dinosaurier.js" />
         <option value="$PROJECT_DIR$/src/states/Urknall.js" />
         <option value="$PROJECT_DIR$/src/objects/Pointer.js" />
-        <option value="$PROJECT_DIR$/src/states/DragndropPlants.js" />
         <option value="$PROJECT_DIR$/src/objects/text.js" />
-        <option value="$PROJECT_DIR$/src/states/Eiszeit.js" />
-        <option value="$PROJECT_DIR$/src/states/DuplicateCells.js" />
         <option value="$PROJECT_DIR$/src/states/PlanetEntstehung.js" />
         <option value="$PROJECT_DIR$/src/states/Kollision.js" />
-        <option value="$PROJECT_DIR$/src/states/Volcanoes.js" />
-        <option value="$PROJECT_DIR$/src/states/Preloader.js" />
         <option value="$PROJECT_DIR$/src/states/Regenzeit.js" />
+        <option value="$PROJECT_DIR$/src/states/DragndropPlants.js" />
+        <option value="$PROJECT_DIR$/src/states/Volcanoes.js" />
+        <option value="$PROJECT_DIR$/src/states/DuplicateCells.js" />
+        <option value="$PROJECT_DIR$/src/states/Eiszeit.js" />
+        <option value="$PROJECT_DIR$/src/states/PlanetWachstum.js" />
+        <option value="$PROJECT_DIR$/src/states/Preloader.js" />
       </list>
     </option>
   </component>
@@ -493,12 +395,12 @@
       <workItem from="1528793832715" duration="2514000" />
       <workItem from="1528895809361" duration="27469000" />
       <workItem from="1529438981647" duration="92000" />
-      <workItem from="1529439128482" duration="34594000" />
+      <workItem from="1529439128482" duration="39205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219804000" />
+    <option name="totallyTimeSpent" value="224415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -723,14 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/Earth.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -765,34 +659,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/Eiszeit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="64" column="36" lean-forward="false" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/states/End.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="15" column="86" lean-forward="false" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/PlanetWachstum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1075">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/PlanetEntstehung.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -805,26 +675,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/DuplicateCells.js">
+    <entry file="file://$PROJECT_DIR$/src/states/Urknall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="255">
+          <caret line="44" column="8" lean-forward="false" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="110" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/Volcanoes.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="101" column="5" lean-forward="false" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+        <state relative-caret-position="405">
+          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/DragndropPlants.js">
+    <entry file="file://$PROJECT_DIR$/src/states/PlanetEntstehung.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -837,31 +707,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/Urknall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="44" column="8" lean-forward="false" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/states/Preloader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="52" column="32" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        <state relative-caret-position="1157">
+          <caret line="102" column="38" lean-forward="false" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
           <folding>
             <element signature="e#49#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/DragndropPlants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/states/Regenzeit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
           <folding>
             <element signature="e#49#83#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/Volcanoes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-367">
+          <caret line="66" column="48" lean-forward="false" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/DuplicateCells.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="117" column="5" lean-forward="true" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/Eiszeit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="49" column="60" lean-forward="false" selection-start-line="49" selection-start-column="60" selection-end-line="49" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/PlanetWachstum.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

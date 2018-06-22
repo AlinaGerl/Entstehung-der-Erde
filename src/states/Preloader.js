@@ -27,6 +27,7 @@ class Preloader extends Phaser.State {
         this.game.load.spritesheet('plant2', 'assets/Plants/plant2.png', 1280, 720, 22);
         this.game.load.spritesheet('plant3', 'assets/Plants/plant3.png', 1280, 720, 16);
         this.game.load.image('oceanAnimals', 'assets/Plants/animals.jpg');
+        this.game.load.image('FirstLand', 'assets/Plants/FirstLandEarth.png');
         //this.game.load.image('cellsBig', 'assets/Cell/cellsBig.png');
         this.game.load.image('magmaButton', 'assets/Magma/magmaButton.png');
         this.game.load.image('magmaPlanet', 'assets/Magma/MagmaPlanet.png');
@@ -59,6 +60,12 @@ class Preloader extends Phaser.State {
         this.game.load.spritesheet('clouds', 'assets/Regenzeit/wolken.png', 1920, 1080, 76);
         this.game.load.spritesheet('urknall', 'assets/Urknall/Urknall.png', 1920, 1080, 76);
 
+        this.game.load.image('land1', 'assets/Volcano/Land1.png');
+        this.game.load.image('land2', 'assets/Volcano/Land2.png');
+        this.game.load.image('land3', 'assets/Volcano/Land3.png');
+        this.game.load.image('land4', 'assets/Volcano/Land4.png');
+        this.game.load.image('land5', 'assets/Volcano/Land5.png');
+        this.game.load.image('land6', 'assets/Volcano/Land6.png');
     }
 
 
@@ -93,7 +100,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('Regenzeit', false, false);
+        this.game.state.start('Plants', false, false);
     }
 
 }
