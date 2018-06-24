@@ -26,15 +26,13 @@ class Moon extends Phaser.State {
         }
         //moon
         this.SpaceClicked = 0;
-        this.moon = new MoonObject(this.game, 1.8, 1.8, 'moon');
-        this.moon.alpha = 0;
         this.isEnd = false;
 
         // groups for z depth
         let earthG = this.game.add.group();
         let textG = this.game.add.group();
         earthG.add(this.earth);
-        earthG.add(this.moon);
+        earthG.add(this.game.moon);
         earthG.z = 100;
         earthG.z = 110;
 
@@ -56,12 +54,11 @@ class Moon extends Phaser.State {
     }
     click () {
         this.SpaceClicked++;
-        this.moon.alpha += 0.2;
+        this.game.moon.alpha += 0.2;
     }
 
     nextEvent() {
         this.earth.destroy();
-        this.moon.destroy();
         this.game.world.remove();
         this.game.state.start('Regenzeit', false, false);
     }

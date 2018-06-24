@@ -5,6 +5,7 @@ import pointer from 'objects/Pointer';
 import timeline from 'objects/timeline';
 import Translation from 'utils/translate';
 import Text from 'objects/text';
+import MoonObject from 'objects/Moon';
 
 class Preloader extends Phaser.State {
 
@@ -101,11 +102,14 @@ class Preloader extends Phaser.State {
         this.game.timeline = new timeline(this.game);
         this.game.translation = new Translation(this.game);
         this.game.textbox = new Text(this.game, this.game.translation.translate("first1"));
+
+        this.game.moon = new MoonObject(this.game, 1.8, 1.8, 'moon');
+        this.game.moon.alpha = 0;
         if (!this.game.pointerText.parent)
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('PlanetWachstum', false, false);
+        this.game.state.start('Plants', false, false);
     }
 
 }

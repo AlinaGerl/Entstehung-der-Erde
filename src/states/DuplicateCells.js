@@ -99,6 +99,7 @@ class DuplicateCells extends Phaser.State {
 
     getIntoWater() {
         this.game.add.tween(this.earth.scale).to({ x: 9, y: 9}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        this.game.add.tween(this.game.moon.anchor).to({ x: 5, y: -5}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cell01.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cell02.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cell03.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
@@ -112,6 +113,7 @@ class DuplicateCells extends Phaser.State {
     outOfWater() {
         this.game.add.tween(this.earth.scale).to({ x: 0.55, y: 0.55}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cellsG.scale).to({ x: 0, y: 0}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        this.game.add.tween(this.game.moon.anchor).to({ x: 2.5, y: -2.5}, 3000, Phaser.Easing.Cubic.InOut, true, );
         this.game.add.tween(this.cellsG.position).to({ x: this.game.world.centerX, y: this.game.world.centerY}, 3000, Phaser.Easing.Cubic.InOut, true,);
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.nextEvent, this);
 

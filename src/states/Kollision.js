@@ -52,7 +52,7 @@ class Kollision extends Phaser.State {
     }
     listener () {
         this.button.loadTexture('ButtonPressed', 0 , false);
-        this.game.add.tween(this.button).to( { y: this.game.world.height+700}, 3000, Phaser.Easing.Linear.None, true, 1000);
+        this.game.add.tween(this.button).to( { y: this.game.world.height+700}, 3000, Phaser.Easing.Cubic.InOut, true, 1000);
         this.isDestroyed = false;
         this.game.add.tween(this.splitter).to( { x: this.game.world.centerX-100 }, 5000, Phaser.Easing.Linear.None, true, 3000);
 
