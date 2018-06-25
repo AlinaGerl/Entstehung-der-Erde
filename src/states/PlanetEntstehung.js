@@ -14,25 +14,24 @@ class PlanetEntstehung extends Phaser.State {
         this.game.pointerText.y = this.game.world.centerY*2+65;
 
         this.moveTimeline();
-        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.setText, this);
+        this.setText();
+        //this.game.time.events.add(Phaser.Timer.SECOND * 3, this.setText, this);
 
 
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
         this.earth.scale.x = 0.2; this.earth.scale.y = 0.2; this.earth.alpha = 0;
-        // this.cell = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'cellsBig');
-        // this.cell.scale.x = 0.5;
-        // this.cell.scale.y = 0.5;
-        // this.cell.anchor.x = 0.5;
-        // this.cell.anchor.y = 0.5;
-        //
-        // this.walk = this.cell.animations.add('walk');
+        this.entstehung = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'entstehung');
+        this.entstehung.scale.x = 0.5;
+        this.entstehung.scale.y = 0.5;
+        this.entstehung.anchor.x = 0.5;
+        this.entstehung.anchor.y = 0.5;
 
-        let spaceBar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-        spaceBar.onDown.add(this.changeFrame, this);
-        this.EventCounter = 0;
+        this.walk = this.entstehung.animations.add('walk');
+        //this.EventCounter = 0;
 
-        // this.walk.enableUpdate = true;
-        // this.play = false;
+        this.walk.enableUpdate = true;
+        this.play = false;
+
     }
 
     moveTimeline() {
@@ -44,30 +43,37 @@ class PlanetEntstehung extends Phaser.State {
     setText() {
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first2"));
         this.game.textbox.alpha = 0;
-    }
-    changeFrame(){
-        // this.walk.frame++;
-        // this.play = true;
+        //this.game.time.events.add(Phaser.Timer.SECOND * 3, this.playAnim, this);
 
-        console.log(this.EventCounter);
-        this.earth.alpha += 0.1;
-        this.EventCounter++;
+       this.playAnim();
+    }
+
+    changeFrame(){
+        this.walk.frame++;
+        this.play = true;
+
+        console.log(this.walk.frame);
+        //this.earth.alpha += 0.1;
+        //this.EventCounter++;
         this.game.add.tween(this.game.textbox).to( { alpha: 0}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
     }
 
     playAnim() {
+        let spaceBar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+        spaceBar.onDown.add(this.changeFrame, this);
+
         if(this.play) {
-            this.cell.animations.play('walk', 5, true);
+            this.entstehung.animations.play('walk', 20, true);
             this.play = true;
         }
     }
 
     update(){
-        // if(this.walk.frame === 5) {
-        //     this.nextEvent();
-        // }
+        if(this.walk.frame === 19) {
+           this.nextEvent();
+        }
 
-        if (this.EventCounter === 10) this.nextEvent();
+        //if (this.EventCounter === 10) this.nextEvent();
 
     }
 

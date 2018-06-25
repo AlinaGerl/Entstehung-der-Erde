@@ -48,7 +48,7 @@ class Urknall extends Phaser.State {
             //this.game.textbox.alpha = 0;
         }
 
-        if(!this.wasKnall && this.walk.frame === 75) {
+        if(!this.wasKnall && this.walk.frame === 80) {
             this.game.input.keyboard.stop();
             this.play = false;
             this.urknall.destroy();

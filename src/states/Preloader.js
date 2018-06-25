@@ -20,6 +20,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('ButtonPressed', 'assets/Kollision/ButtonPressed.png');
         this.game.load.json('translation', 'data/languageText.json');
         this.game.load.image('Thaia', 'assets/Kollision/theia.png');
+        this.game.load.spritesheet('entstehung', 'assets/entstehung.png', 96, 96, 20);
         this.game.load.image('moon', 'assets/Moon/Mond.png');
         this.game.load.image('explodedearth', 'assets/Moon/explodedearth.jpg');
         //this.game.load.image('plant', 'assets/Plants/plant.png');
@@ -62,7 +63,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('waterEarth', 'assets/Regenzeit/WaterEarth.png');
         this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
         this.game.load.spritesheet('clouds', 'assets/Regenzeit/wolken.png', 1920, 1080, 76);
-        this.game.load.spritesheet('urknall', 'assets/Urknall/Urknall.png', 1920, 1080, 76);
+        this.game.load.spritesheet('urknall', 'assets/Urknall/Urknall.png', 1920, 1080, 83);
 
     }
 
@@ -98,7 +99,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('PlanetWachstum', false, false);
+        this.game.state.start('PlanetEntstehung', false, false);
     }
 
 }
