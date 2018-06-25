@@ -15,24 +15,23 @@ class Volcanoes extends Phaser.State {
 
         //earth
         let center = {x: this.game.world.centerX, y: this.game.world.centerY};
-        this.earth = new Earth(this.game, center.x, center.y, 'waterball', this.game.earthRotate);
-        this.earth.scale.x = 0.9; this.earth.scale.y = 0.9;
+        this.earth = new Earth(this.game, center.x, center.y, 'waterEarth', this.game.earthRotate);
+        this.earth.scale.x = 0.55; this.earth.scale.y = 0.55;
         //this.earth.alpha = 0;
         let earthG = this.game.add.group();
 
-        this.earthWithLand = this.game.add.sprite(center.x, center.y, 'firstEarth');
-        this.earthWithLand.scale.x = 0.5; this.earthWithLand.scale.y = 0.5;
-        this.earthWithLand.alpha = 0; this.earthWithLand.angle = this.game.earthRotate;
-        this.earthWithLand.anchor.x = 0.5; this.earthWithLand.anchor.y = 0.5;
 
         //create volcanos
+        this.landG = this.game.add.group();
         this.volcanoes = [];
         this.volcanoG = this.game.add.group();
+        this.landG.x = this.game.world.centerX;
+        this.landG.y = this.game.world.centerY;
         this.volcanoG.x = this.game.world.centerX;
         this.volcanoG.y = this.game.world.centerY;
         for (var i = 0; i < 6; i++) {
-            let x = (Math.cos((360/8)*(i+1))*210);
-            let y = (Math.sin((360/8)*(i+1))*210);
+            let x = (Math.cos((360/8)*(i+1))*200);
+            let y = (Math.sin((360/8)*(i+1))*200);
             console.info(" x = " + x+", y: " + y);
             let volcano = this.game.add.sprite(x, y, 'volcano');
             volcano.angle = (360/6 * (i+1)) +90;
@@ -47,36 +46,28 @@ class Volcanoes extends Phaser.State {
             //this.volcanoes.push(volcano);
             this.volcanoG.add(volcano);
         }
-        // this.volcano01 = this.game.add.sprite(center.x-50, center.y-80, 'volcano');
-        // this.volcano01.anchor.x = 0.5;
-        // this.volcano01.anchor.y = 0.5;
-        // this.volcano01.scale.x = 0.5;
-        // this.volcano01.scale.y = 0.5;
-        //
-        // this.volcano02 = this.game.add.sprite(center.x+60, center.y-20, 'volcano');
-        // this.volcano02.anchor.x = 0.5;
-        // this.volcano02.anchor.y = 0.5;
-        // this.volcano02.scale.x = 0.5;
-        // this.volcano02.scale.y = 0.5;
-        //
-        // this.volcano03 = this.game.add.sprite(center.x-50, center.y+100, 'volcano');
-        // this.volcano03.anchor.x = 0.5;
-        // this.volcano03.anchor.y = 0.5;
-        // this.volcano03.scale.x = 0.5;
-        // this.volcano03.scale.y = 0.5;
-        //
-        // this.volcano01.inputEnabled = true;
-        // this.volcano02.inputEnabled = true;
-        // this.volcano03.inputEnabled = true;
-        // this.volcano01.events.onInputDown.add(this.playAnim01, this);
-        // this.volcano02.events.onInputDown.add(this.playAnim02, this);
-        // this.volcano03.events.onInputDown.add(this.playAnim03, this);
 
-        //set animation
-        // this.walk = this.volcano01.animations.add('walk');
-        // this.walk = this.volcano02.animations.add('walk');
-        // this.walk = this.volcano03.animations.add('walk');
-        //this.walk.enableUpdate = true;
+        let land1 = this.game.add.sprite(0, 0, 'land1');
+        let land2 = this.game.add.sprite(0, 0, 'land2');
+        let land3 = this.game.add.sprite(0, 0, 'land3');
+        let land4 = this.game.add.sprite(0, 0, 'land4');
+        let land5 = this.game.add.sprite(0, 0, 'land5');
+        let land6 = this.game.add.sprite(0,0, 'land6');
+        this.landG.add(land1);
+        this.landG.add(land2);
+        this.landG.add(land3);
+        this.landG.add(land4);
+        this.landG.add(land5);
+        this.landG.add(land6);
+        this.landG.angle = this.game.earthRotate;
+
+
+        for (var i = 0; i < 6; i++) {
+        let land = this.landG.children[i];
+        land.scale.x = 0.55; land.scale.y = 0.55;
+        land.anchor.x = 0.5; land.anchor.y = 0.5;
+        land.alpha = 0;
+        }
 
         this.allPushed = 0;
         this.game.input.mouse.capture = true;
@@ -93,6 +84,17 @@ class Volcanoes extends Phaser.State {
     }
 
     playAnim(volcano){
+
+        if (this.allPushed < 6){
+            for (var i = 0; i < 6; i++) {
+                if (this.landG.children[i].alpha == 0) {
+                    this.game.add.tween(this.landG.children[i]).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true, 0);
+                    break;
+                }
+
+            }
+        }
+
         volcano.animations.play('walk', 20, true);
         this.allPushed++;
     }
@@ -107,21 +109,23 @@ class Volcanoes extends Phaser.State {
 
     update(){
 
+        this.landG.angle -= 0.03
         this.volcanoG.angle -= 0.03;
-        this.earthWithLand.angle -= 0.03;
-        if(this.allPushed === 3){
+        if(this.allPushed === 6){
             this.game.textbox.changeText(this.game, this.game.translation.translate("last7"));
-            this.game.add.tween(this.earthWithLand).to( { alpha: 1 }, 4000, Phaser.Easing.Linear.None, true, 0);
-            this.game.add.tween(this.earth).to( { alpha: 0 }, 4000, Phaser.Easing.Linear.None, true, 0);
+            //this.game.add.tween(this.earthWithLand).to( { alpha: 1 }, 4000, Phaser.Easing.Linear.None, true, 0);
+            //this.game.add.tween(this.earth).to( { alpha: 0 }, 4000, Phaser.Easing.Linear.None, true, 0);
+            this.game.add.tween(this.volcanoG).to( { alpha: 0 }, 4000, Phaser.Easing.Linear.None, true, 0);
             this.game.input.onDown.addOnce(this.nextEvent, this);
             this.allPushed = 0;
+            this.game.input.onDown.addOnce(this.nextEvent, this, 10, null);
         }
     }
 
     nextEvent() {
-        this.volcano01.destroy();
-        this.volcano02.destroy();
-        this.volcano03.destroy();
+        this.volcanoG.destroy();
+        this.landG.destroy();
+        this.earth.destroy();
         this.game.state.start('Cells', false, false);
     }
 

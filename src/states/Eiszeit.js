@@ -7,8 +7,8 @@ import Earth from 'objects/Earth';
 class Eiszeit extends Phaser.State {
 
     create() {
-        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'firstEarth', this.game.earthRotate);
-
+        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'FirstLand', this.game.earthRotate);
+        this.earth.scale.x = 0.55; this.earth.scale.y = 0.55;
         //text
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first9_1"));
         this.game.pointer.setPosition(512);
@@ -49,7 +49,7 @@ class Eiszeit extends Phaser.State {
         this.rodinia.destroy();
         this.earth.scale.x = 0.55; this.earth.scale.y = 0.55;
         let iceball = this.game.add.sprite(0, 0, 'iceball');
-        iceball.alpha = 0.0; iceball.scale.x = 0.8; iceball.scale.y = 0.8; iceball.anchor.x = 0.5; iceball.anchor.y = 0.5;
+        iceball.alpha = 0.0; iceball.scale.x = 0.85; iceball.scale.y = 0.85; iceball.anchor.x = 0.5; iceball.anchor.y = 0.5;
         iceball.angle = this.game.earthRotate;
         this.planetsG.add(iceball);
         this.game.pointer.setPosition(625);

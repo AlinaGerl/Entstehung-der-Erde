@@ -86,11 +86,11 @@ class PlanetWachstum extends Phaser.State {
         for (var i = 0; i < 3; i++)
         {
             // Directly create sprites from the group.
-            item = item = this.game.add.sprite(-90, 250 + 120 * i, this.meteoriten[i], i);
+            item = item = this.game.add.sprite(-90, 200 + 120 * i, this.meteoriten[i], i);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
-            item.scale.x = 0.3;
-            item.scale.y = 0.3;
+            item.scale.x = 0.25;
+            item.scale.y = 0.25;
             item.name = 'block' + i;
             this.MeteroG.add(item);
 
@@ -99,11 +99,11 @@ class PlanetWachstum extends Phaser.State {
         for (var i = 3; i < 6; i++)
         {
             // Directly create sprites from the group.
-            item = this.game.add.sprite((this.game.world.centerX*2+90), (250 + 120 * (i-3)), this.meteoriten[i], i);
+            item = this.game.add.sprite((this.game.world.centerX*2+90), (200 + 120 * (i-3)), this.meteoriten[i], i);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
-            item.scale.x = 0.3;
-            item.scale.y = 0.3;
+            item.scale.x = 0.25;
+            item.scale.y = 0.25;
             item.name = 'block' + i;
             // this.game.physics.p2.enable(item, false); //set physics
             // item.body.setCircle(40); // this is kinda the rigidbody of the object
@@ -180,8 +180,8 @@ class PlanetWachstum extends Phaser.State {
     earthGrow(obj1, obj2) {
         this.MeteroCounter++;
         obj1.sprite.destroy();
-        this.earth.scale.x += 0.05;
-        this.earth.scale.y += 0.05;
+        this.game.add.tween(this.earth.scale).to({ x: this.earth.scale.x+0.05, y: this.earth.scale.y+0.05}, 800, Phaser.Easing.Cubic.InOut, true);
+
     }
 
     //Endtext

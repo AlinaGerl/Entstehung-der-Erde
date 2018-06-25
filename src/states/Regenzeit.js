@@ -17,7 +17,6 @@ class Regenzeit extends Phaser.State {
         this.game.pointer.setPosition(185);
         this.game.pointerText.text = "3.8 Mrd";
 
-        this.moon = new MoonObject(this.game, 1.8, 1.8, 'moon');
 
         //enable mouse input
         this.game.input.mouse.capture = true;
@@ -41,7 +40,6 @@ class Regenzeit extends Phaser.State {
         this.game.input.onDown.addOnce(this.deleteClouds, this, 10, null);
         this.waterball.angle = this.game.earthRotate;
         this.rotateSlower = false;
-
         this.clouds = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'clouds');
         this.clouds.alpha = 0;
 
@@ -49,9 +47,8 @@ class Regenzeit extends Phaser.State {
         this.clouds.scale.x = 0.5;  this.clouds.scale.y = 0.5;
 
         this.walk = this.clouds.animations.add('walk');
-        this.walk.enableUpdate = false;
-        this.clouds.animations.play('walk', 75, true);
-
+        this.walk.enableUpdate = true;
+        this.game.add.tween(this.clouds).to( { alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 3000);
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.startClouds, this);
     }
 
@@ -65,14 +62,16 @@ class Regenzeit extends Phaser.State {
     }
 
     startClouds(){
-        this.game.add.tween(this.clouds).to( { alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 0);
+
+
+        //this.game.add.tween(this.clouds).to( { alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 0);
     }
 
     deleteClouds() {
         this.game.textbox.changeText(this.game, this.game.translation.translate("last6"));
         this.earth.loadTexture('waterEarth', 0 , false);
         this.rotateSlower = true;
-        this.game.add.tween(this.moon.anchor).to( { x: 4, y: -4 }, 3000, Phaser.Easing.Linear.None, true, 0);
+        this.game.add.tween(this.game.moon.anchor).to( { x: 2.5, y: -2.5 }, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.add.tween(this.clouds).to( { alpha: 0 }, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.input.onDown.addOnce(this.nextEvent, this, 5, null);
 
