@@ -22,6 +22,10 @@ class Dinosaurs extends Phaser.State {
         this.game.pointer.setPosition(710);
         this.game.pointerText.text = "200 Mil";
 
+        this.explosion = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'explosion');
+        this.explosion.anchor.x = 0.5;  this.explosion.anchor.y = 0.5;
+        this.explosion.alpha = 0;
+
         //booleans for click and collide handlers
         this.firstStage = true;
         this.secondStage = false;
@@ -37,10 +41,14 @@ class Dinosaurs extends Phaser.State {
         //z-depth
         this.earthG = this.game.add.group();
         this.DinosG = this.game.add.group();
+        this.ExplosionG = this.game.add.group();
+
         this.onEarth = this.game.add.group(); this.onEarth.x = this.game.world.centerX; this.onEarth.y = this.game.world.centerY;
         this.earthG.add(this.earth);
+        this.ExplosionG.add(this.explosion);
         this.earthG.z = 100;
         this.DinosG.z = 120;
+        this.ExplosionG.z = 130;
         this.game.physics.enable( [ this.earth], Phaser.Physics.ARCADE);
 
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.dinosReady, this);
@@ -274,23 +282,33 @@ class Dinosaurs extends Phaser.State {
     killDinos(obj1, obj2) {
         //destroy the text and the meteorite
         this.meteorit.destroy();
+        this.explosion.alpha = 1;
+        this.explosion.animations.add('walk');
+        this.explosion.play('walk', 15, true);
+        this.game.time.events.add(Phaser.Timer.SECOND * 1, function () {
+            this.earth.loadTexture('HeutePlanet');
+            this.game.textbox.alpha = 0;
+            }, this);
 
-        //change earth texture
-        //this.earth.loadTexture('earth_meteor');
-        this.game.physics.arcade.gravity.y = 50;
-        this.DinosG.angle = 0;
-        //gravity for dinos
-
-        // let every dino fly down
-        for(var i = 0; i <= this.DinosG.children.length-1; i++) {
-
-            this.dinos[i].angle = this.game.rnd.integerInRange(0, 360); //gives every dino a different angle for a funny look
-            //this.dinos[i].body.collideWorldBounds = true;
-            this.dinos[i].body.gravity.y = this.game.rnd.integerInRange(0, 360);
-        }
+        //explosion.onLoop.add(function (anim) {anim.animations.stop(null, true);}, this);
+        this.game.time.events.add(Phaser.Timer.SECOND * 2, function () {this.explosion.destroy();}, this);
+        this.DinosG.destroy();
+        // //change earth texture
+        // //this.earth.loadTexture('earth_meteor');
+        // this.game.physics.arcade.gravity.y = 50;
+        // this.DinosG.angle = 0;
+        // //gravity for dinos
+        //
+        // // let every dino fly down
+        // for(var i = 0; i <= this.DinosG.children.length; i++) {
+        //
+        //     this.dinos[i].angle = this.game.rnd.integerInRange(0, 360); //gives every dino a different angle for a funny look
+        //     //this.dinos[i].body.collideWorldBounds = true;
+        //     this.dinos[i].body.gravity.y = this.game.rnd.integerInRange(0, 360);
+        // }
 
         //wait 5 seconds before changing event
-        this.game.time.events.add(Phaser.Timer.SECOND * 6, this.nextEvent, this);
+        this.game.time.events.add(Phaser.Timer.SECOND * 4, this.nextEvent, this);
     }
 
     // changing state

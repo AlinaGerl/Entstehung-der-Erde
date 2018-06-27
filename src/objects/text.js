@@ -5,8 +5,8 @@ class Text extends Phaser.Text {
 
     constructor(game, text) {
 
-        var style = { font: "20px Patrick Hand", fill: "#fff", align: "center", wordWrap: true, wordWrapWidth: 1000};
-        super(game, Math.round(window.innerWidth/2),Math.round(window.innerHeight/7-40), text, style);
+        var style = {font: "18px Patrick Hand", fill: "#fff", align: "center", wordWrap: true, wordWrapWidth: 1000};
+        super(game, Math.round(window.innerWidth / 2), Math.round(window.innerHeight / 7 - 40), text, style);
         this.anchor.x = 0.5;
         this.anchor.y = 0.5;
         this.alpha = 0;
@@ -17,48 +17,62 @@ class Text extends Phaser.Text {
     }
 
     delete(game) {
-        game.add.tween(this).to( { alpha: 0}, 1000, Phaser.Easing.Cubic.InOut, true);
+        game.add.tween(this).to({alpha: 0}, 1000, Phaser.Easing.Cubic.InOut, true);
         game.time.events.add(Phaser.Timer.SECOND * 1, this.reallyDestroy, this);
     }
 
-    changeText(game, text){
-        game.add.tween(game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
-        game.time.events.add(Phaser.Timer.SECOND * 0.8, function() {
-            game.textbox.text = text;
-        game.add.tween(game.textbox).to( { alpha: 1}, 800, Phaser.Easing.Cubic.InOut, true);
-        }
-        , this);
+    changeText(game, text) {
+        game.add.tween(game.textbox).to({alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
+        game.time.events.add(Phaser.Timer.SECOND * 0.8, function () {
+                game.textbox.text = text;
+                game.add.tween(game.textbox).to({alpha: 1}, 800, Phaser.Easing.Cubic.InOut, true);
+            }
+            , this);
 
     }
 
-    reallyDestroy(){
+    reallyDestroy() {
         this.destroy();
     }
+
     changeAlpha() {
-        this.game.add.tween(this).to( { alpha: 1}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this).to({alpha: 1}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
     }
-    changeNewState(game, text){
-        game.add.tween(game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
-        game.time.events.add(Phaser.Timer.SECOND * 3, function() {
-                game.time.events.add(Phaser.Timer.SECOND * 0.8, function() {
+
+    changeNewState(game, text) {
+        game.add.tween(game.textbox).to({alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
+        game.time.events.add(Phaser.Timer.SECOND * 3, function () {
+                game.time.events.add(Phaser.Timer.SECOND * 0.8, function () {
                         game.textbox.text = text;
-                        game.add.tween(game.textbox).to( { alpha: 1}, 800, Phaser.Easing.Cubic.InOut, true);
+                        game.add.tween(game.textbox).to({alpha: 1}, 800, Phaser.Easing.Cubic.InOut, true);
                     }
                     , this);
             }
             , this);
     }
-    changeSlow(game, text){
-        game.add.tween(game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
-        game.time.events.add(Phaser.Timer.SECOND * 2, function() {
-                game.time.events.add(Phaser.Timer.SECOND * 0.8, function() {
+
+    changeSlow(game, text) {
+        game.add.tween(game.textbox).to({alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
+        game.time.events.add(Phaser.Timer.SECOND * 2, function () {
+                game.time.events.add(Phaser.Timer.SECOND * 0.8, function () {
                         game.textbox.text = text;
-                        game.add.tween(game.textbox).to( { alpha: 1}, 800, Phaser.Easing.Cubic.InOut, true);
+                        game.add.tween(game.textbox).to({alpha: 1}, 800, Phaser.Easing.Cubic.InOut, true);
+                    }
+                    , this);
+            }
+            , this);
+    }
+
+    changeEnd(game, text) {
+        game.add.tween(game.textbox).to({alpha: 0}, 2000, Phaser.Easing.Cubic.InOut, true);
+        game.time.events.add(Phaser.Timer.SECOND * 2, function () {
+                game.time.events.add(Phaser.Timer.SECOND * 1, function () {
+                        game.textbox.text = text;
+                        game.add.tween(game.textbox).to({alpha: 1}, 2000, Phaser.Easing.Cubic.InOut, true);
                     }
                     , this);
             }
             , this);
     }
 }
-
 export default Text;

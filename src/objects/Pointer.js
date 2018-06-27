@@ -11,7 +11,7 @@ class Pointer extends Phaser.Sprite {
         this.anchor.y = 0.4;
         //this.scale.x = 0.8;
         this.alpha = 0.9;
-        let style = { font: "17px Pangolin", fill: "#fff", align: "center"};
+        let style = { font: "18px Patrick Hand", fill: "#fff", align: "center"};
         this.game.pointerText = this.game.make.text(this.game.world.centerX-375+66, this.game.world.centerY*2-45, "4.6 Mrd", style);
         this.game.pointerText.anchor.x = 0.5;
         this.game.stage.addChild(this);

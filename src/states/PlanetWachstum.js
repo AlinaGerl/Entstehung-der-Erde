@@ -188,7 +188,7 @@ class PlanetWachstum extends Phaser.State {
     earthGrow(obj1, obj2) {
         this.MeteroCounter++;
         obj1.sprite.destroy();
-        this.game.add.tween(this.earth.scale).to({ x: this.earth.scale.x+0.1, y: this.earth.scale.y+0.1}, 800, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.earth.scale).to({ x: this.earth.scale.x+0.0833, y: this.earth.scale.y+0.0833}, 800, Phaser.Easing.Cubic.InOut, true);
 
     }
 

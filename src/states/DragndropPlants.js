@@ -10,7 +10,11 @@ class DragndropPlants extends Phaser.State {
     create() {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
-        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'EchsenPlanet', this.game.earthRotate);
+        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'StaubPlanet', this.game.earthRotate);
+
+        this.greenWorld = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'EchsenPlanet');
+        this.greenWorld.alpha = 0; this.greenWorld.scale.x = 0.5; this.greenWorld.scale.y = 0.5; this.greenWorld.anchor.x = 0.5; this.greenWorld.anchor.y = 0.5;
+        this.greenWorld.angle = this.game.earthRotate;
 
         //text
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first10_1"));
@@ -51,7 +55,7 @@ class DragndropPlants extends Phaser.State {
 
     update(){
         this.items.angle -= 0.03;
-
+        this.greenWorld.angle -= 0.03;
         if (this.firstStage && this.game.input.activePointer.leftButton.isDown) {
             this.firstStage = false;
             this.getIntoWater();
@@ -63,6 +67,7 @@ class DragndropPlants extends Phaser.State {
 
         if (this.plantsCount === 6) {
             this.lastText();
+            this.plantsCount = 0;
         }
 
 
@@ -193,9 +198,10 @@ class DragndropPlants extends Phaser.State {
 
     lastText() {
         this.game.textbox.changeText(this.game, this.game.translation.translate("last10"));
-        this.isEnd = true;
-            // Directly create sprites from the group.
-        this.game.add.tween(this.items.children).to( { alpha: 0}, 4000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this.earth).to( { alpha: 0}, 4000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this.greenWorld).to( { alpha: 1}, 4000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this.items).to( { alpha: 0}, 4000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.time.events.add(Phaser.Timer.SECOND * 3.5, function() {this.game.input.onDown.addOnce(this.nextEvent, this)}, this);
             //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.getPhysics(this.MeteroG.children[i]), this);
 
     }
@@ -232,6 +238,7 @@ class DragndropPlants extends Phaser.State {
     nextEvent() {
         this.items.destroy();
         this.earth.destroy();
+        this.greenWorld.destroy();
         this.game.state.start('Magma', false, false);
     }
 

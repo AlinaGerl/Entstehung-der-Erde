@@ -12,7 +12,7 @@ class Kollision extends Phaser.State {
         // earth
         let center = { x: this.game.world.centerX, y: this.game.world.centerY };
         this.earth = new Earth(this.game, center.x, center.y, 'fireball', this.game.earthRotate);
-        this.earth.scale.x = 0.9; this.earth.scale.y = 0.9;
+        this.earth.scale.x = 0.8; this.earth.scale.y = 0.8;
         //text
         this.game.textbox.changeText(this.game, this.game.translation.translate("first4"));
 

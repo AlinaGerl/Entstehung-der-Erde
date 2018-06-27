@@ -22,9 +22,10 @@ class Preloader extends Phaser.State {
         this.game.load.json('translation', 'data/languageText.json');
         this.game.load.image('Thaia', 'assets/Kollision/theia.png');
         this.game.load.image('moon', 'assets/Moon/Mond.png');
-        this.game.load.image('explodedearth', 'assets/Moon/explodedearth.jpg');
+        //this.game.load.image('explodedearth', 'assets/Moon/explodedearth.jpg');
         //this.game.load.image('plant', 'assets/Plants/plant.png');
         this.game.load.spritesheet('plant1', 'assets/Plants/plant1.png', 1280, 720, 18);
+        this.game.load.spritesheet('StaubPlanet', 'assets/Plants/StaubPlanet.png');
         this.game.load.spritesheet('plant2', 'assets/Plants/plant2.png', 1280, 720, 22);
         this.game.load.spritesheet('plant3', 'assets/Plants/plant3.png', 1280, 720, 16);
         this.game.load.image('oceanAnimals', 'assets/Plants/animals.jpg');
@@ -32,14 +33,25 @@ class Preloader extends Phaser.State {
         //this.game.load.image('cellsBig', 'assets/Cell/cellsBig.png');
         this.game.load.image('magmaButton', 'assets/Magma/magmaButton.png');
         this.game.load.image('magmaPlanet', 'assets/Magma/MagmaPlanet.png');
+
         this.game.load.image('sonne', 'assets/Urknall/mini_sun.png');
         this.game.load.image('mini1', 'assets/Urknall/miniPlanet1.png');
         this.game.load.image('mini2', 'assets/Urknall/miniPlanet2.png');
-        this.game.load.image('people', 'assets/People/people.png');
-        this.game.load.image('DinoEarth', 'assets/Dinos/DinoPlanet.png');
+
+        this.game.load.image('people1', 'assets/People/mensch1.png');
+        this.game.load.image('people2', 'assets/People/mensch2.png');
+        this.game.load.image('people3', 'assets/People/mensch3.png');
+        this.game.load.image('people4', 'assets/People/mensch4.png');
+        this.game.load.image('people5', 'assets/People/mensch5.png');
+        this.game.load.image('people6', 'assets/People/mensch6.png');
+        this.game.load.image('HeutePlanet', 'assets/People/TodayPlanet.png');
+
+        this.game.load.image('DinoEarth', 'assets/Dinos/DinoPlanet.png')
         this.game.load.spritesheet('dino1', 'assets/Dinos/reptile1.png', 1280, 720, 20);
         this.game.load.spritesheet('dino2', 'assets/Dinos/reptile2.png', 1280, 720, 20);
         this.game.load.spritesheet('dino3', 'assets/Dinos/reptile3.png', 1280, 720, 20);
+        this.game.load.spritesheet('explosion', 'assets/Dinos/explosion.png', 1920, 1080, 30);
+
         this.game.load.image('meteorit1', 'assets/Wachstum/Meteor_1.png');
         this.game.load.image('meteorit2', 'assets/Wachstum/Meteor_2.png');
         this.game.load.image('meteorit3', 'assets/Wachstum/Meteor_3.png');
@@ -64,7 +76,6 @@ class Preloader extends Phaser.State {
         this.game.load.image('EchsenPlanet', 'assets/Eiszeit/EchsenPlanet.png');
         this.game.load.image('waterball', 'assets/Regenzeit/waterball.png');
         this.game.load.image('waterEarth', 'assets/Regenzeit/WaterEarth.png');
-        this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
         this.game.load.spritesheet('clouds', 'assets/Regenzeit/wolken.png', 1920, 1080, 76);
         this.game.load.spritesheet('urknall', 'assets/Urknall/Urknall.png', 1920, 1080, 83);
         this.game.load.spritesheet('entstehung', 'assets/Urknall/splitter.png', 1920, 1080, 95);
@@ -89,8 +100,7 @@ class Preloader extends Phaser.State {
             },
 
             google: {
-                families: ['Roboto Mono', 'Montserrat', 'Indie Flower', 'Handlee', 'Patrick Hand', 'Nanum Pen Script',
-                    'Gaegu', 'Itim', 'Pangolin', 'Short Stack','Dekko']
+                families: ['Patrick Hand']
             }
 
         };
@@ -116,7 +126,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('Urknall', false, false);
+        this.game.state.start('PlanetWachstum', false, false);
     }
 
 }
