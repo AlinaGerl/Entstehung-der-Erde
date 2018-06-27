@@ -37,10 +37,16 @@ class Urknall extends Phaser.State {
         //this.background.alpha = 0;
         this.background.anchor.x = 0.5; this.background.anchor.y = 0.5;
         this.background.scale.x = 0.0; this.background.scale.y = 0.0;
+
+        //sonne
+        this.sonne = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'sonne');
+        this.sonne.anchor.x = 0.5; this.sonne.anchor.y = 0.5;
+        this.sonne.scale.x = 0.0; this.sonne.scale.y = 0.0;
+
     }
     update(){
 
-        //this.game.time.events.add(Phaser.Timer.SECOND * 5, function() { this.game.textbox.alpha = 0; }, this);
+       //this.game.time.events.add(Phaser.Timer.SECOND * 5, function() { this.game.textbox.alpha = 0; }, this);
 
         if( this.SpaceClicked === 1) {
             this.urknall.alpha = 1;
@@ -48,14 +54,13 @@ class Urknall extends Phaser.State {
             //this.game.textbox.alpha = 0;
         }
 
-        if(!this.wasKnall && this.walk.frame === 80) {
+        if(!this.wasKnall && this.walk.frame === 75) {
             this.game.input.keyboard.stop();
             this.play = false;
             this.urknall.destroy();
             this.wasKnall = true;
             this.game.input.keyboard.stop();
             //this.game.textbox.alpha = 0;
-
 
             this.universum();
             //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.universum, this);
@@ -86,22 +91,38 @@ class Urknall extends Phaser.State {
 
 
         this.game.stage.backgroundColor = '#051023';
-        this.game.add.tween(this.background.scale).to( { x: 0.75, y: 0.75}, 2000, Phaser.Easing.Cubic.InOut, true);
+
+        this.game.add.tween(this.sonne.scale).to( { x: 0.3, y: 0.3}, 4500, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.sonne).to( { x: 300, y: 300}, 4500, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.background.scale).to( { x: 0.7, y: 0.7}, 3000, Phaser.Easing.Cubic.InOut, true);
 
         this.waitTxt = new continueText(this.game);
-        this.game.input.onDown.addOnce(this.nextEvent, this);
+
+        this.game.input.onDown.addOnce(this.changeSun, this);
     }
+
+
     click (){
-        this.SpaceClicked++;
-        console.log(this.SpaceClicked);
-        this.changeFrame();
+        if(this.walk.frame < 75){
+
+            this.SpaceClicked++;
+            console.log(this.SpaceClicked);
+            this.changeFrame();
+        }
+    }
+
+    changeSun() {
+        this.game.add.tween(this.sonne.scale).to( { x: 1, y: 1}, 5000, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.sonne).to( { x: -1000, y: 200}, 5000, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.background.scale).to( { x: 0.8, y: 0.8}, 4000, Phaser.Easing.Cubic.InOut, true);
+        this.game.time.events.add(Phaser.Timer.SECOND * 2, this.nextEvent, this);
     }
 
     nextEvent() {
         //this.game.add.tween(this.game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
         this.game.time.events.add(Phaser.Timer.SECOND * 0.8, function() {
                 this.waitTxt.destroy();
-                this.game.state.start('PlanetWachstum', false, false);
+                this.game.state.start('PlanetEntstehung', false, false);
             }
             , this);
 

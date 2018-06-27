@@ -190,7 +190,7 @@ class Dinosaurs extends Phaser.State {
 
         //creates meteorite
         this.meteorit = this.game.add.sprite(this.game.world.centerX*1.9, this.game.world.centerY*1.9, 'meteorit1');
-        this.meteorit.scale.x = 0.1; this.meteorit.scale.y = 0.1; this.meteorit.anchor.x = 0.5; this.meteorit.anchor.y = 0.5;
+        this.meteorit.scale.x = 0.3; this.meteorit.scale.y = 0.3; this.meteorit.anchor.x = 0.5; this.meteorit.anchor.y = 0.5;
         this.game.physics.p2.enable(this.meteorit, false); //set physics
         this.meteorit.body.setCircle(40); // this is kinda the rigidbody of the object
 
