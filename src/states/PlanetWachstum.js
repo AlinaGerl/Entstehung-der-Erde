@@ -20,7 +20,7 @@ class PlanetWachstum extends Phaser.State {
 
         //creating the earth like a firebaaaaall with all his physics
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
-        this.earth.scale.x = 0.2; this.earth.scale.y = 0.2;
+        this.earth.scale.x = 0.3; this.earth.scale.y = 0.3;
         this.game.physics.p2.enable(this.earth, false);
         this.earth.body.static = true;
         this.earth.body.setCircle(180);
@@ -51,14 +51,22 @@ class PlanetWachstum extends Phaser.State {
 
         this.game.input.onDown.addOnce(this.MeteoritenReady, this);
         this.waitTxt = new continueText(this.game);
-        //this.MeteoritenReady();
+        this.isMeteoritReady = false;
+        this.meteoritRotate = 0.07;
     }
 
     update() {
 
         this.earth.body.angle -= 0.03;
-        this.game.earthRotate -= 0.03;
+        if (this.isMeteoritReady) {
+            if (this.MeteroG.children[0]) this.MeteroG.children[0].body.angle -= this.meteoritRotate;
+            if (this.MeteroG.children[1]) this.MeteroG.children[1].body.angle += this.meteoritRotate;
+            if (this.MeteroG.children[2]) this.MeteroG.children[2].body.angle -= this.meteoritRotate;
+            if (this.MeteroG.children[3]) this.MeteroG.children[3].body.angle += this.meteoritRotate;
+            if (this.MeteroG.children[4]) this.MeteroG.children[4].body.angle -= this.meteoritRotate;
+            if (this.MeteroG.children[5]) this.MeteroG.children[5].body.angle += this.meteoritRotate;
 
+        }
         if (this.MeteroCounter === 6) this.setSecondText();
 
 
@@ -152,11 +160,11 @@ class PlanetWachstum extends Phaser.State {
             this.MeteroG.children[i].inputEnabled = true;
             this.MeteroG.children[i].events.onInputDown.add(this.onclick, this);
         }
+        this.isMeteoritReady = true;
 
     }
     //click creating mousepringer
     onclick(obj) {
-        console.info('bitte bitte');
         this.mouseSpring = this.game.physics.p2.createSpring(this.mouseBody, obj.body, 0, 30, 1);
     }
 
@@ -180,7 +188,7 @@ class PlanetWachstum extends Phaser.State {
     earthGrow(obj1, obj2) {
         this.MeteroCounter++;
         obj1.sprite.destroy();
-        this.game.add.tween(this.earth.scale).to({ x: this.earth.scale.x+0.05, y: this.earth.scale.y+0.05}, 800, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.earth.scale).to({ x: this.earth.scale.x+0.1, y: this.earth.scale.y+0.1}, 800, Phaser.Easing.Cubic.InOut, true);
 
     }
 

@@ -8,7 +8,7 @@ class Eiszeit extends Phaser.State {
 
     create() {
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'FirstLand', this.game.earthRotate);
-        this.earth.scale.x = 0.55; this.earth.scale.y = 0.55;
+        this.earth.scale.x = 0.6; this.earth.scale.y = 0.6;
         //text
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first9_1"));
         this.game.pointer.setPosition(512);
@@ -29,7 +29,8 @@ class Eiszeit extends Phaser.State {
         this.planetsG.x = this.game.world.centerX; this.planetsG.y = this.game.world.centerY;
 
         this.rodinia = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'rodinia');
-        this.rodinia.alpha = 0.0; this.rodinia.scale.x = 0.55; this.rodinia.scale.y = 0.55; this.rodinia.anchor.x = 0.5; this.rodinia.anchor.y = 0.5;
+        this.rodinia.alpha = 0.0; this.rodinia.scale.x = 0.5; this.rodinia.scale.y = 0.5; this.rodinia.anchor.x = 0.5; this.rodinia.anchor.y = 0.5;
+        this.rodinia.angle = this.game.earthRotate;
         this.game.add.tween(this.rodinia).to( { alpha: 1 }, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.input.onDown.addOnce(this.createRodinia, this, 10, null);
         //this.planetsG.add(rodinia);
@@ -47,7 +48,6 @@ class Eiszeit extends Phaser.State {
         this.game.textbox.changeSlow(this.game, this.game.translation.translate("first9_2"));
         this.earth.loadTexture('rodinia', 0 , false);
         this.rodinia.destroy();
-        this.earth.scale.x = 0.55; this.earth.scale.y = 0.55;
         let iceball = this.game.add.sprite(0, 0, 'iceball');
         iceball.alpha = 0.0; iceball.scale.x = 0.85; iceball.scale.y = 0.85; iceball.anchor.x = 0.5; iceball.anchor.y = 0.5;
         iceball.angle = this.game.earthRotate;

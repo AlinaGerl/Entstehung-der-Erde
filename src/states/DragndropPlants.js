@@ -194,10 +194,13 @@ class DragndropPlants extends Phaser.State {
     lastText() {
         this.game.textbox.changeText(this.game, this.game.translation.translate("last10"));
         this.isEnd = true;
+            // Directly create sprites from the group.
+        this.game.add.tween(this.items.children).to( { alpha: 0}, 4000, Phaser.Easing.Cubic.InOut, true, 0);
+            //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.getPhysics(this.MeteroG.children[i]), this);
+
     }
 
     dropHandler(item, pointer) {
-
         this.isWrong = false;
         //this.game.physics.arcade.collide(this.items.children, item, this.stopCollision, null, this);
         this.game.physics.arcade.collide(this.earth, item, this.collisionHandler, null, this);
@@ -215,7 +218,7 @@ class DragndropPlants extends Phaser.State {
     collisionHandler (obj1, obj2) {
         if (!this.isWrong) {
             this.plantsCount++;
-            obj2.x =  Math.cos(((360/8)*this.plantsCount))*210;
+            obj2.x = Math.cos(((360/8)*this.plantsCount))*210;
             obj2.y = Math.sin(((360/8)*this.plantsCount))*210;
             obj2.angle = (360/6 * this.plantsCount)+90;
             obj2.inputEnabled = false;

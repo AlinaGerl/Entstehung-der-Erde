@@ -46,7 +46,6 @@ class Preloader extends Phaser.State {
         this.game.load.image('meteorit6', 'assets/Wachstum/Meteor_6.png');
         this.game.load.image('earth_meteor', 'assets/Dinos/EarthMeteor.jpg');
         this.game.load.image('fireball', 'assets/Wachstum/fireball.png');
-        this.game.load.image('sonne', 'assets/Urknall/mini_sun.png');
         this.game.load.spritesheet('cellsBig', 'assets/Cell/cellBig.png', 1280, 720, 8);
         this.game.load.spritesheet('cellsSmall', 'assets/Cell/cellSmall.png', 1280, 720, 8);
         this.game.load.spritesheet('volcano', 'assets/Volcano/volcano.png', 375, 375, 20);
@@ -100,6 +99,9 @@ class Preloader extends Phaser.State {
 
     setTimeline() {
         this.game.stage.backgroundColor = '#051023';
+        this.game.bg = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background');
+        this.game.bg.anchor.x = 0.5; this.game.bg.anchor.y = 0.5;
+        this.game.bg.scale.x = 0.0; this.game.bg.scale.y = 0.0;
         this.game.pointer = new pointer(this.game, 66, "4.6 Mrd");
         this.game.timeline = new timeline(this.game);
         this.game.translation = new Translation(this.game);
@@ -111,7 +113,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('PlanetEntstehung', false, false);
+        this.game.state.start('Plants', false, false);
     }
 
 }

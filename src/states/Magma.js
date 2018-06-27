@@ -18,7 +18,6 @@ class Magma extends Phaser.State {
         //earth
         let center = {x: this.game.world.centerX, y: this.game.world.centerY};
         this.earth = new Earth(this.game, center.x, center.y, 'EchsenPlanet', this.game.earthRotate);
-        this.earth.scale.x = 0.45; this.earth.scale.y = 0.45;
 
         this.hadClicked = 0;
         // //first button
@@ -52,7 +51,7 @@ class Magma extends Phaser.State {
 
 
         this.magma = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'magmaPlanet');
-        this.magma.alpha = 0.0; this.magma.scale.x = 0.45; this.magma.scale.y = 0.45; this.magma.anchor.x = 0.5; this.magma.anchor.y = 0.5;
+        this.magma.alpha = 0.0; this.magma.scale.x = 0.5; this.magma.scale.y = 0.5; this.magma.anchor.x = 0.5; this.magma.anchor.y = 0.5;
         this.magma.angle = this.game.earthRotate;
 
         this.earth.inputEnabled = true;

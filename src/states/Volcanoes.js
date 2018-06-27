@@ -16,7 +16,7 @@ class Volcanoes extends Phaser.State {
         //earth
         let center = {x: this.game.world.centerX, y: this.game.world.centerY};
         this.earth = new Earth(this.game, center.x, center.y, 'waterEarth', this.game.earthRotate);
-        this.earth.scale.x = 0.55; this.earth.scale.y = 0.55;
+        this.earth.scale.x = 0.55; this.earth.scale.y = 0.55 ;
         //this.earth.alpha = 0;
         let earthG = this.game.add.group();
 
@@ -61,6 +61,8 @@ class Volcanoes extends Phaser.State {
         this.landG.add(land6);
         this.landG.angle = this.game.earthRotate;
 
+        this.volcanoG.alpha = 0;
+        this.game.add.tween(this.volcanoG).to( { alpha: 1 }, 2000, Phaser.Easing.Linear.None, true, 0);
 
         for (var i = 0; i < 6; i++) {
         let land = this.landG.children[i];

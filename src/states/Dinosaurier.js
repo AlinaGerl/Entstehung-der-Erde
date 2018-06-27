@@ -12,10 +12,9 @@ class Dinosaurs extends Phaser.State {
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'magmaPlanet', this.game.earthRotate);
-        this.earth.scale.x = 0.45; this.earth.scale.y = 0.45;
 
         this.dinoWorld = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'DinoEarth');
-        this.dinoWorld.alpha = 0.0; this.dinoWorld.scale.x = 0.45; this.dinoWorld.scale.y = 0.45; this.dinoWorld.anchor.x = 0.5; this.dinoWorld.anchor.y = 0.5;
+        this.dinoWorld.alpha = 0.0; this.dinoWorld.scale.x = 0.5; this.dinoWorld.scale.y = 0.5; this.dinoWorld.anchor.x = 0.5; this.dinoWorld.anchor.y = 0.5;
         this.dinoWorld.angle = this.game.earthRotate;
         //text
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first12"));
@@ -164,8 +163,8 @@ class Dinosaurs extends Phaser.State {
         if (!this.isWrong) { //only if its not on another dino, this works
 
             this.dinosCount++;
-            obj2.x =  Math.cos(((360/8)*this.dinosCount))*180;
-            obj2.y = Math.sin(((360/8)*this.dinosCount))*180;
+            obj2.x =  Math.cos(((360/8)*this.dinosCount))*200;
+            obj2.y = Math.sin(((360/8)*this.dinosCount))*200;
             obj2.angle = (360/6 * this.dinosCount)+90;
             obj2.inputEnabled = false;
             obj2.input.draggable = false;
@@ -190,13 +189,13 @@ class Dinosaurs extends Phaser.State {
 
         //creates meteorite
         this.meteorit = this.game.add.sprite(this.game.world.centerX*1.9, this.game.world.centerY*1.9, 'meteorit1');
-        this.meteorit.scale.x = 0.3; this.meteorit.scale.y = 0.3; this.meteorit.anchor.x = 0.5; this.meteorit.anchor.y = 0.5;
+        this.meteorit.scale.x = 0.1; this.meteorit.scale.y = 0.1; this.meteorit.anchor.x = 0.5; this.meteorit.anchor.y = 0.5;
         this.game.physics.p2.enable(this.meteorit, false); //set physics
         this.meteorit.body.setCircle(40); // this is kinda the rigidbody of the object
 
         // mouse body
         // the mouse also needs a body for the mouse spring event
-        this.mouseBody = this.game.add.sprite(0, 0, 'meteorit1'); this.mouseBody.alpha = 0; // its like a fake body (invisible)
+        this.mouseBody = this.game.add.sprite(0, 0, 'meteorit'); this.mouseBody.alpha = 0; // its like a fake body (invisible)
         this.game.physics.p2.enable(this.mouseBody, false); //physics
         this.mouseBody.body.static = true; //static body (it would bounds around)
         this.mouseBody.body.setCircle(10); //rigidbody
@@ -215,7 +214,7 @@ class Dinosaurs extends Phaser.State {
         this.earth.destroy();
         this.dinoWorld.destroy();
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'DinoEarth', this.game.earthRotate);
-        this.earth.scale.x = 0.45; this.earth.scale.y = 0.45;
+        this.earth.scale.x = 0.5; this.earth.scale.y = 0.5;
         this.game.physics.p2.enable(this.earth, false);
         this.earth.body.static = true;
         this.earth.body.setCircle(180);

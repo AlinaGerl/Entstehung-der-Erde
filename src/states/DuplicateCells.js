@@ -11,7 +11,7 @@ class DuplicateCells extends Phaser.State {
 
     create() {
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'FirstLand', this.game.earthRotate);
-        this.earth.scale.x = 0.55; this.earth.scale.y = 0.55;
+        this.earth.scale.x = 0.55; this.earth.scale.y = 0.55 ;
         //text
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first8_1"));
         this.game.pointer.setPosition(210);
@@ -99,12 +99,12 @@ class DuplicateCells extends Phaser.State {
 
     getIntoWater() {
         this.game.add.tween(this.earth.scale).to({ x: 9, y: 9}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.add.tween(this.game.moon.anchor).to({ x: 5, y: -5}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.add.tween(this.cell01.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.add.tween(this.cell02.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.add.tween(this.cell03.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.add.tween(this.cell04.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
-        this.game.add.tween(this.cell05.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, );
+        this.game.add.tween(this.game.moon.anchor).to({ x: 5, y: -5}, 3000, Phaser.Easing.Cubic.InOut, true, 3000);
+        this.game.add.tween(this.cell01.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, 3000);
+        this.game.add.tween(this.cell02.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, 3000);
+        this.game.add.tween(this.cell03.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, 3000);
+        this.game.add.tween(this.cell04.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, 3000);
+        this.game.add.tween(this.cell05.scale).to({ x: 0.2, y: 0.2}, 3000, Phaser.Easing.Cubic.InOut, true, 3000);
 
         this.game.time.events.add(Phaser.Timer.SECOND * 2.5, this.firstText, this);
 

@@ -26,6 +26,7 @@ class PlanetEntstehung extends Phaser.State {
         this.walk = this.entstehung.animations.add('walk');
         //this.EventCounter = 0;
 
+
         this.walk.enableUpdate = true;
         this.play = false;
 
