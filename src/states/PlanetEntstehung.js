@@ -12,29 +12,33 @@ class PlanetEntstehung extends Phaser.State {
         this.game.pointer.y = this.game.world.centerY*2+20;
         this.game.pointerText.y = this.game.world.centerY*2+65;
 
-        this.moveTimeline();
-        this.setText();
         //this.game.time.events.add(Phaser.Timer.SECOND * 3, this.setText, this);
-
+        this.moveTimeline();
+        //this.setText();
 
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
-        this.earth.scale.x = 0.2; this.earth.scale.y = 0.2; this.earth.alpha = 0;
+        this.earth.scale.x = 0.3; this.earth.scale.y = 0.3; this.earth.alpha = 0;
         this.entstehung = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'entstehung');
-        this.entstehung.alpha = 1;
-        this.entstehung.scale.x = 0.5; this.entstehung.scale.y = 0.5; this.entstehung.anchor.x = 0.5; this.entstehung.anchor.y = 0.5;
+        this.entstehung.scale.x = 1; this.entstehung.scale.y = 1; this.entstehung.anchor.x = 0.5; this.entstehung.anchor.y = 0.5;
+
+        let earthG = this.game.add.group();
+        let entstehungG = this.game.add.group();
+        earthG.add(this.earth);
+        entstehungG.add(this.entstehung);
+        earthG.z = 100;
+        entstehungG.z = 90;
 
         this.walk = this.entstehung.animations.add('walk');
         //this.EventCounter = 0;
-
-
         this.walk.enableUpdate = true;
         this.play = false;
 
         this.game.input.keyboard.start();
         let spacebar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         spacebar.onDown.add(this.changeFrame, this);
+    }
 
-        this.animRun = true;
+    next(){
 
     }
 
@@ -42,17 +46,22 @@ class PlanetEntstehung extends Phaser.State {
         this.game.add.tween(this.game.timeline).to( { y: this.game.world.centerY*2-80}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
         this.game.add.tween(this.game.pointer).to( { y: this.game.world.centerY*2-80}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
         this.game.add.tween(this.game.pointerText).to( { y: this.game.world.centerY*2-45}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
+
+        this.game.time.events.add(Phaser.Timer.SECOND * 2, this.setText, this);
     }
 
     setText() {
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first2"));
         this.game.textbox.alpha = 0;
-
-        //this.game.time.events.add(Phaser.Timer.SECOND * 3, this.playAnim, this);
     }
 
     update(){
-        if(this.walk.frame === 100) {
+        if(this.walk.frame === 80) {
+            this.earth.alpha = 1;
+        }
+        if(this.walk.frame === 94) {
+            this.entstehung.alpha = 0;
+            this.walk.frame = 0;
             this.nextEvent();
         }
 
@@ -66,6 +75,7 @@ class PlanetEntstehung extends Phaser.State {
         this.entstehung.animations.play('walk', this.walk.frame, true);
         this.walk.frame++;
         this.play = false;
+
     }
 
 

@@ -10,7 +10,7 @@ class Kollision extends Phaser.State {
 
     create() {
         // earth
-        let center = { x: this.game.world.centerX, y: this.game.world.centerY }
+        let center = { x: this.game.world.centerX, y: this.game.world.centerY };
         this.earth = new Earth(this.game, center.x, center.y, 'fireball', this.game.earthRotate);
         this.earth.scale.x = 0.9; this.earth.scale.y = 0.9;
         //text
@@ -24,24 +24,35 @@ class Kollision extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
+
+        //video
+        this.video = this.game.add.video('theia');
+        this.videosprite = this.video.addToWorld(this.game.world.centerX, this.game.world.centerY, 0.5, 0.5, 0.8, 0.8);
+        this.videosprite.alpha = 0;
+
         //button
         this.button = this.game.add.sprite(this.game.world.centerX, this.game.world.height+700, 'redButton');
-        this.button.anchor.x = 0.5; this.button.anchor.y = 0.5; this.button.scale.x = 0.6; this.button.scale.y = 0.6;
+        this.button.anchor.x = 0.5; this.button.anchor.y = 0.5; this.button.scale.x = 0.9; this.button.scale.y = 0.9;
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.moveButton, this);
 
         //splitter
         this.splitter = this.game.add.sprite(this.game.world.width, this.game.world.centerY-100, 'Thaia');
-        this.splitter.scale.x = 0.3; this.splitter.scale.y = 0.3;
+        this.splitter.scale.x = 0.0; this.splitter.scale.y = 0.0;
         this.isDestroyed = false;
 
         // groups for z depth
         let earthG = this.game.add.group();
+
+        let videoG = this.game.add.group();
+        videoG.add(this.videosprite);
         let buttonG = this.game.add.group();
         earthG.add(this.earth);
-        buttonG.add(this.splitter);
+        earthG.add(this.splitter);
         buttonG.add(this.button);
+        videoG.z = 90;
         earthG.z = 100;
         buttonG.z = 120;
+
     }
 
     moveButton() {
@@ -52,11 +63,16 @@ class Kollision extends Phaser.State {
     }
     listener () {
         this.button.loadTexture('ButtonPressed', 0 , false);
+
         this.game.add.tween(this.button).to( { y: this.game.world.height+700}, 3000, Phaser.Easing.Cubic.InOut, true, 1000);
         this.isDestroyed = false;
+        this.earth.alpha = 0;
+        this.videosprite.alpha = 1;
+        this.video.play(true);
         this.game.add.tween(this.splitter).to( { x: this.game.world.centerX-100 }, 5000, Phaser.Easing.Linear.None, true, 3000);
 
     }
+
     update() {
 
         if (!this.isDestroyed && this.splitter.x == (this.game.world.centerX-100))
@@ -74,6 +90,12 @@ class Kollision extends Phaser.State {
         var boundsB = spriteB.getBounds();
 
         return Phaser.Rectangle.intersects(boundsA, boundsB);
+    }
+
+    pause() {
+
+        this.video.paused = (this.video.paused) ? false : true;
+
     }
 
     nextEvent() {

@@ -33,6 +33,21 @@ class Urknall extends Phaser.State {
         this.walk = this.urknall.animations.add('walk');
         this.play = false;
 
+        this.background = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background');
+        //this.background.alpha = 0;
+        this.background.anchor.x = 0.5; this.background.anchor.y = 0.5;
+        this.background.scale.x = 0.0; this.background.scale.y = 0.0;
+
+        //sonne
+        this.sonne = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'sonne');
+        this.sonne.anchor.x = 0.5; this.sonne.anchor.y = 0.5; this.sonne.scale.x = 0.0; this.sonne.scale.y = 0.0;
+
+        this.mini1 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'mini1');
+        this.mini1.anchor.x = 0.5; this.mini1.anchor.y = 0.5; this.mini1.scale.x = 0.0; this.mini1.scale.y = 0.0;
+
+        this.mini2 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'mini2');
+        this.mini2.anchor.x = 0.5; this.mini2.anchor.y = 0.5; this.mini2.scale.x = 0.0; this.mini2.scale.y = 0.0;
+
     }
     update(){
 
@@ -52,15 +67,14 @@ class Urknall extends Phaser.State {
             this.game.input.keyboard.stop();
             //this.game.textbox.alpha = 0;
 
-
             this.universum();
             //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.universum, this);
         }
     }
 
     changeFrame() {
-            this.walk.frame++;
-            this.play = true;
+        this.walk.frame++;
+        this.play = true;
     }
 
     playAnim() {
@@ -85,7 +99,14 @@ class Urknall extends Phaser.State {
 
         this.game.add.tween(this.sonne.scale).to( { x: 0.3, y: 0.3}, 4500, Phaser.Easing.Cubic.InOut, true);
         this.game.add.tween(this.sonne).to( { x: 300, y: 300}, 4500, Phaser.Easing.Cubic.InOut, true);
-        this.game.add.tween(this.background.scale).to( { x: 0.7, y: 0.7}, 3000, Phaser.Easing.Cubic.InOut, true);
+
+        this.game.add.tween(this.mini1.scale).to( { x: 0.3, y: 0.3}, 5000, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.mini1).to( { x: 1000, y: -500}, 5000, Phaser.Easing.Cubic.InOut, true);
+
+        this.game.add.tween(this.mini2.scale).to( { x: 0.3, y: 0.3}, 3900, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.mini2).to( { x: 2000, y: 1000}, 3900, Phaser.Easing.Cubic.InOut, true);
+
+        this.game.add.tween(this.background.scale).to( { x: 0.8, y: 0.8}, 3000, Phaser.Easing.Cubic.InOut, true);
 
         this.waitTxt = new continueText(this.game);
 
@@ -105,11 +126,16 @@ class Urknall extends Phaser.State {
     changeSun() {
         this.game.add.tween(this.sonne.scale).to( { x: 1, y: 1}, 5000, Phaser.Easing.Cubic.InOut, true);
         this.game.add.tween(this.sonne).to( { x: -1000, y: 200}, 5000, Phaser.Easing.Cubic.InOut, true);
-        this.game.add.tween(this.game.bg.scale).to( { x: 0.8, y: 0.8}, 4000, Phaser.Easing.Cubic.InOut, true);
+
+        this.game.add.tween(this.background.scale).to( { x: 0.8, y: 0.8}, 4000, Phaser.Easing.Cubic.InOut, true);
         this.game.time.events.add(Phaser.Timer.SECOND * 2, this.nextEvent, this);
     }
 
     nextEvent() {
+        this.sonne.destroy();
+        this.mini1.destroy();
+        this.mini2.destroy();
+        this.walk.destroy();
         //this.game.add.tween(this.game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
         this.game.time.events.add(Phaser.Timer.SECOND * 0.8, function() {
                 this.waitTxt.destroy();
