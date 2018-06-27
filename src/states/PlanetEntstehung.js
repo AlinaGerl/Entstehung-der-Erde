@@ -23,16 +23,10 @@ class PlanetEntstehung extends Phaser.State {
         this.entstehung.alpha = 1;
         this.entstehung.scale.x = 0.5; this.entstehung.scale.y = 0.5; this.entstehung.anchor.x = 0.5; this.entstehung.anchor.y = 0.5;
 
-        this.entstehung2 = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'entstehung2');
-        this.entstehung2.alpha = 0;
-        this.entstehung2.scale.x = 0.5; this.entstehung2.scale.y = 0.5; this.entstehung2.anchor.x = 0.5; this.entstehung2.anchor.y = 0.5;
-
         this.walk = this.entstehung.animations.add('walk');
-        this.walk2 = this.entstehung2.animations.add('walk2');
         //this.EventCounter = 0;
 
         this.walk.enableUpdate = true;
-        this.walk2.enableUpdate = true;
         this.play = false;
 
         this.game.input.keyboard.start();
@@ -58,11 +52,6 @@ class PlanetEntstehung extends Phaser.State {
 
     update(){
         if(this.walk.frame === 100) {
-            this.entstehung2.alpha = 1;
-            this.animRun = false;
-        }
-
-        if(this.walk2.frame === 84) {
             this.nextEvent();
         }
 
@@ -71,25 +60,11 @@ class PlanetEntstehung extends Phaser.State {
     }
 
     changeFrame(){
-        console.log('frame ' + this.walk.frame);
         this.play = true;
-
-        if(this.play) {
-            if(this.animRun) {
-                this.entstehung.animations.play('walk', this.walk.frame, true);
-                this.walk.frame += 3;
-            } else {
-                this.entstehung2.animations.play('walk2', this.walk2.frame, true);
-                this.walk2.frame += 3;
-            }
-            this.play = false;
-        }
-
-
-        //this.earth.alpha += 0.1;
-        //console.log(this.EventCounter);
-        //this.EventCounter++;
-        //this.game.add.tween(this.game.textbox).to( { alpha: 0}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
+        console.log('frame ' + this.walk.frame);
+        this.entstehung.animations.play('walk', this.walk.frame, true);
+        this.walk.frame++;
+        this.play = false;
     }
 
 

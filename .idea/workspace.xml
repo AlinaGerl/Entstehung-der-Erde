@@ -3,455 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cf0e48f9-f4e6-442e-8185-6914322a9ac9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Regenzeit/wolken.png" afterPath="$PROJECT_DIR$/build/assets/Regenzeit/wolken.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall.mov" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00000.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00001.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00002.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00003.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00004.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00005.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00006.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00007.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00008.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00009.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00010.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00011.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00012.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00013.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00014.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00015.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00016.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00017.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00018.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00019.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00020.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00021.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00022.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00023.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00024.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00025.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00026.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00027.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00028.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00029.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00030.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00031.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00032.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00033.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00034.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00035.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00036.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00037.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00038.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00039.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00040.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00041.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00042.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00043.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00044.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00045.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00046.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00047.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00048.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00049.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00050.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00051.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00052.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00053.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00054.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00055.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00056.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00057.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00058.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00059.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00060.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00061.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00062.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00063.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00064.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00065.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00066.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00067.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00068.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00069.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00070.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00071.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00072.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00073.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00074.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00075.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00076.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00077.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00078.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00079.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00080.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/UrknallNew_00081.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00000.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00001.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00002.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00003.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00004.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00005.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00006.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00007.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00008.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00009.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00010.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00011.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00012.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00013.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00014.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00015.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00016.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00017.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00018.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00019.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00020.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00021.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00022.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00023.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00024.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00025.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00026.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00027.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00028.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00029.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00030.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00031.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00032.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00033.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00034.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00035.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00036.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00037.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00038.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00039.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00040.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00041.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00042.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00043.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00044.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00045.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00046.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00047.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00048.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00049.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00050.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00051.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00052.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00053.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00054.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00055.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00056.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00057.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/explosion_sequence/Urknall_overload00058.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0000.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0000.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0001.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0001.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0002.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0002.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0003.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0003.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0004.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0004.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0005.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0005.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0006.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0006.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0007.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0007.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0008.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0008.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0009.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0009.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0010.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0010.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0011.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0011.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0012.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0012.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0013.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0013.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0014.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0014.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0015.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0015.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0016.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0016.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0017.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0017.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0018.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0018.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0019.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0019.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0020.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0020.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0021.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0021.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0022.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0022.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0023.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0023.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0024.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0024.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0025.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0025.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0026.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0026.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0027.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0027.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0028.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0028.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0029.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0029.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0030.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0030.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0031.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0031.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0032.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0032.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0033.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0033.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0034.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0034.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0035.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0035.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0036.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0036.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0037.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0037.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0038.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0038.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0039.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0039.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0040.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0040.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0041.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0041.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0042.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0042.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0043.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0043.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0044.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0044.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0045.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0045.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0046.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0046.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0047.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0047.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0048.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0048.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0049.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0049.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0050.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0050.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0051.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0051.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0052.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0052.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0053.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0053.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0054.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0054.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0055.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0055.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0056.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0056.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0057.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0057.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0058.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0058.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0059.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0059.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0060.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0060.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0061.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0061.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0062.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0062.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0063.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0063.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0064.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0064.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0065.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0065.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0066.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0066.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0067.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0067.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0068.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0068.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0069.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0069.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0070.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0070.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0071.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0071.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0072.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0072.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0073.png" afterPath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0073.png" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0074.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/Spritesheets/wolken/wolken0075.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/entstehung.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/assets/mini_sun.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/build/scripts/game.js.map" afterPath="$PROJECT_DIR$/build/scripts/game.js.map" />
-      <change beforePath="$PROJECT_DIR$/src/states/Dinosaurier.js" afterPath="$PROJECT_DIR$/src/states/Dinosaurier.js" />
       <change beforePath="$PROJECT_DIR$/src/states/PlanetEntstehung.js" afterPath="$PROJECT_DIR$/src/states/PlanetEntstehung.js" />
       <change beforePath="$PROJECT_DIR$/src/states/Preloader.js" afterPath="$PROJECT_DIR$/src/states/Preloader.js" />
-      <change beforePath="$PROJECT_DIR$/src/states/Urknall.js" afterPath="$PROJECT_DIR$/src/states/Urknall.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Regenzeit/wolken.png" afterPath="$PROJECT_DIR$/static/assets/Regenzeit/wolken.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall.mov" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00000.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00001.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00002.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00003.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00004.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00005.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00006.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00007.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00008.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00009.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00010.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00011.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00012.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00013.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00014.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00015.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00016.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00017.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00018.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00019.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00020.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00021.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00022.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00023.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00024.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00025.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00026.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00027.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00028.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00029.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00030.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00031.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00032.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00033.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00034.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00035.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00036.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00037.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00038.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00039.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00040.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00041.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00042.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00043.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00044.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00045.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00046.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00047.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00048.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00049.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00050.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00051.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00052.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00053.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00054.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00055.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00056.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00057.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00058.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00059.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00060.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00061.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00062.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00063.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00064.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00065.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00066.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00067.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00068.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00069.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00070.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00071.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00072.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00073.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00074.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00075.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00076.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00077.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00078.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00079.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00080.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/UrknallNew_00081.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00000.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00001.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00002.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00003.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00004.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00005.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00006.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00007.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00008.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00009.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00010.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00011.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00012.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00013.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00014.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00015.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00016.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00017.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00018.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00019.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00020.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00021.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00022.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00023.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00024.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00025.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00026.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00027.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00028.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00029.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00030.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00031.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00032.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00033.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00034.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00035.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00036.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00037.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00038.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00039.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00040.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00041.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00042.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00043.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00044.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00045.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00046.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00047.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00048.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00049.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00050.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00051.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00052.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00053.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00054.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00055.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00056.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00057.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/explosion_sequence/Urknall_overload00058.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0000.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0000.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0001.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0001.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0002.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0002.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0003.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0003.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0004.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0004.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0005.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0005.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0006.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0006.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0007.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0007.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0008.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0008.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0009.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0009.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0010.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0010.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0011.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0011.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0012.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0012.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0013.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0013.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0014.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0014.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0015.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0015.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0016.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0016.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0017.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0017.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0018.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0018.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0019.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0019.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0020.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0020.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0021.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0021.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0022.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0022.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0023.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0023.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0024.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0024.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0025.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0025.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0026.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0026.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0027.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0027.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0028.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0028.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0029.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0029.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0030.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0030.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0031.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0031.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0032.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0032.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0033.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0033.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0034.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0034.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0035.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0035.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0036.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0036.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0037.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0037.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0038.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0038.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0039.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0039.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0040.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0040.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0041.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0041.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0042.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0042.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0043.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0043.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0044.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0044.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0045.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0045.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0046.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0046.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0047.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0047.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0048.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0048.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0049.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0049.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0050.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0050.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0051.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0051.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0052.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0052.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0053.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0053.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0054.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0054.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0055.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0055.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0056.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0056.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0057.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0057.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0058.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0058.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0059.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0059.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0060.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0060.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0061.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0061.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0062.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0062.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0063.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0063.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0064.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0064.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0065.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0065.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0066.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0066.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0067.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0067.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0068.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0068.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0069.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0069.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0070.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0070.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0071.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0071.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0072.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0072.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0073.png" afterPath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0073.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0074.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/Spritesheets/wolken/wolken0075.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/entstehung.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/assets/mini_sun.png" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -465,8 +19,8 @@
       <file leaf-file-name="Preloader.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/Preloader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1869">
-              <caret line="114" column="47" lean-forward="false" selection-start-line="114" selection-start-column="47" selection-end-line="114" selection-end-column="47" />
+            <state relative-caret-position="378">
+              <caret line="68" column="106" lean-forward="false" selection-start-line="68" selection-start-column="106" selection-end-line="68" selection-end-column="106" />
               <folding>
                 <element signature="e#49#87#0" expanded="true" />
               </folding>
@@ -489,8 +43,8 @@
       <file leaf-file-name="PlanetEntstehung.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/states/PlanetEntstehung.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="77" column="24" lean-forward="false" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+            <state relative-caret-position="651">
+              <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
               <folding>
                 <element signature="e#49#91#0" expanded="true" />
               </folding>
@@ -556,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/src/states/Dinosaurier.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
-              <caret line="279" column="10" lean-forward="true" selection-start-line="279" selection-start-column="10" selection-end-line="279" selection-end-column="49" />
+              <caret line="279" column="10" lean-forward="false" selection-start-line="279" selection-start-column="10" selection-end-line="279" selection-end-column="49" />
               <folding>
                 <element signature="e#49#83#0" expanded="true" />
               </folding>
@@ -615,8 +169,8 @@
       <find>entstehung</find>
       <find>tex</find>
       <find>load</find>
-      <find>textur</find>
       <find>continu</find>
+      <find>textur</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -910,7 +464,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="236482000" />
+    <option name="totallyTimeSpent" value="238499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1238,18 +792,10 @@
     <entry file="file://$PROJECT_DIR$/src/states/Dinosaurier.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
-          <caret line="279" column="10" lean-forward="true" selection-start-line="279" selection-start-column="10" selection-end-line="279" selection-end-column="49" />
+          <caret line="279" column="10" lean-forward="false" selection-start-line="279" selection-start-column="10" selection-end-line="279" selection-end-column="49" />
           <folding>
             <element signature="e#49#83#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/PlanetWachstum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="192" column="22" lean-forward="false" selection-start-line="192" selection-start-column="22" selection-end-line="192" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,18 +811,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/states/Preloader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1869">
-          <caret line="114" column="47" lean-forward="false" selection-start-line="114" selection-start-column="47" selection-end-line="114" selection-end-column="47" />
+        <state relative-caret-position="378">
+          <caret line="68" column="106" lean-forward="false" selection-start-line="68" selection-start-column="106" selection-end-line="68" selection-end-column="106" />
           <folding>
             <element signature="e#49#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/PlanetWachstum.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="192" column="22" lean-forward="false" selection-start-line="192" selection-start-column="22" selection-end-line="192" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/states/PlanetEntstehung.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="77" column="24" lean-forward="false" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+        <state relative-caret-position="651">
+          <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
           <folding>
             <element signature="e#49#91#0" expanded="true" />
           </folding>

@@ -66,8 +66,7 @@ class Preloader extends Phaser.State {
         this.game.load.image('wolke', 'assets/Regenzeit/wolke.png');
         this.game.load.spritesheet('clouds', 'assets/Regenzeit/wolken.png', 1920, 1080, 76);
         this.game.load.spritesheet('urknall', 'assets/Urknall/Urknall.png', 1920, 1080, 83);
-        this.game.load.spritesheet('entstehung', 'assets/Urknall/planetentstehung2.png', 1920, 1080, 100);
-        this.game.load.spritesheet('entstehung2', 'assets/Urknall/planetentstehung2.png', 1920, 1080, 84);
+        this.game.load.spritesheet('entstehung', 'assets/Urknall/planetentstehung1.png', 1920, 1080, 100);
 
         this.game.load.image('land1', 'assets/Volcano/Land1.png');
         this.game.load.image('land2', 'assets/Volcano/Land2.png');
