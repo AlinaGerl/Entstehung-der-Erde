@@ -34,7 +34,7 @@ class Urknall extends Phaser.State {
         this.play = false;
 
         this.background = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background');
-        //this.background.alpha = 0;
+        this.background.alpha = 0;
         this.background.anchor.x = 0.5; this.background.anchor.y = 0.5;
         this.background.scale.x = 0.0; this.background.scale.y = 0.0;
     }

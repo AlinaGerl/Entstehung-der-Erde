@@ -39,6 +39,7 @@ class PlanetEntstehung extends Phaser.State {
         this.game.add.tween(this.game.timeline).to( { y: this.game.world.centerY*2-80}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
         this.game.add.tween(this.game.pointer).to( { y: this.game.world.centerY*2-80}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
         this.game.add.tween(this.game.pointerText).to( { y: this.game.world.centerY*2-45}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.nextEvent, this);
     }
 
     setText() {

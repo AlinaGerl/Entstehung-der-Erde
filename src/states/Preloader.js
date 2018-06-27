@@ -109,7 +109,7 @@ class Preloader extends Phaser.State {
         {
             this.add.existing(this.game.pointerText);
         }
-        this.game.state.start('Plants', false, false);
+        this.game.state.start('Urknall', false, false);
     }
 
 }
