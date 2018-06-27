@@ -9,7 +9,7 @@ import continueText from 'objects/weiterTxt';
 class Urknall extends Phaser.State {
 
     create() {
-        this.game.stage.backgroundColor = '#fff';
+        this.game.stage.backgroundColor = '#fff9fb';
 
         this.SpaceClicked = 0;
         this.wasKnall = false;
@@ -79,7 +79,7 @@ class Urknall extends Phaser.State {
 
     }
     universum() {
-        this.game.stage.backgroundColor = '#000';
+        this.game.stage.backgroundColor = '#fff9fb';
         this.game.textbox.y = Math.round(window.innerHeight/7-20);
         this.game.textbox.changeText(this.game, this.game.translation.translate("last1"));
         this.game.textbox.addColor('#fff', 0);
@@ -101,7 +101,7 @@ class Urknall extends Phaser.State {
         //this.game.add.tween(this.game.textbox).to( { alpha: 0}, 800, Phaser.Easing.Cubic.InOut, true);
         this.game.time.events.add(Phaser.Timer.SECOND * 0.8, function() {
                 this.waitTxt.destroy();
-                this.game.state.start('PlanetEntstehung', false, false);
+                this.game.state.start('PlanetWachstum', false, false);
             }
             , this);
 

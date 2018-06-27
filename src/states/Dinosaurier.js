@@ -189,14 +189,14 @@ class Dinosaurs extends Phaser.State {
         this.game.textbox.changeText(this.game, this.game.translation.translate("first13"));
 
         //creates meteorite
-        this.meteorit = this.game.add.sprite(this.game.world.centerX*1.9, this.game.world.centerY*1.9, 'meteorit');
+        this.meteorit = this.game.add.sprite(this.game.world.centerX*1.9, this.game.world.centerY*1.9, 'meteorit1');
         this.meteorit.scale.x = 0.1; this.meteorit.scale.y = 0.1; this.meteorit.anchor.x = 0.5; this.meteorit.anchor.y = 0.5;
         this.game.physics.p2.enable(this.meteorit, false); //set physics
         this.meteorit.body.setCircle(40); // this is kinda the rigidbody of the object
 
         // mouse body
         // the mouse also needs a body for the mouse spring event
-        this.mouseBody = this.game.add.sprite(0, 0, 'meteorit'); this.mouseBody.alpha = 0; // its like a fake body (invisible)
+        this.mouseBody = this.game.add.sprite(0, 0, 'meteorit1'); this.mouseBody.alpha = 0; // its like a fake body (invisible)
         this.game.physics.p2.enable(this.mouseBody, false); //physics
         this.mouseBody.body.static = true; //static body (it would bounds around)
         this.mouseBody.body.setCircle(10); //rigidbody

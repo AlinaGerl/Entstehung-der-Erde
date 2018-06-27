@@ -18,19 +18,22 @@ class PlanetEntstehung extends Phaser.State {
         //this.game.time.events.add(Phaser.Timer.SECOND * 3, this.setText, this);
 
 
-        this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
-        this.earth.scale.x = 0.2; this.earth.scale.y = 0.2; this.earth.alpha = 0;
-        this.entstehung = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'entstehung');
+        //this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
+        //this.earth.scale.x = 0.2; this.earth.scale.y = 0.2; this.earth.alpha = 0;
+        /*this.entstehung = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'entstehung');
         this.entstehung.scale.x = 0.5;
         this.entstehung.scale.y = 0.5;
         this.entstehung.anchor.x = 0.5;
         this.entstehung.anchor.y = 0.5;
+        */
+        //this.walk = this.entstehung.animations.add('walk');
+        this.EventCounter = 0;
 
-        this.walk = this.entstehung.animations.add('walk');
-        //this.EventCounter = 0;
+        //this.walk.enableUpdate = true;
+        //this.play = false;
 
-        this.walk.enableUpdate = true;
-        this.play = false;
+        let spacebar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+        spacebar.onDown.add(this.changeFrame, this);
 
     }
 
@@ -43,41 +46,44 @@ class PlanetEntstehung extends Phaser.State {
     setText() {
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first2"));
         this.game.textbox.alpha = 0;
-        //this.game.time.events.add(Phaser.Timer.SECOND * 3, this.playAnim, this);
 
-       this.playAnim();
+        //this.game.time.events.add(Phaser.Timer.SECOND * 3, this.playAnim, this);
     }
 
     changeFrame(){
-        this.walk.frame++;
+        //console.log(this.walk.frame);
+       /*this.walk.frame++;
         this.play = true;
-
-        console.log(this.walk.frame);
-        //this.earth.alpha += 0.1;
-        //this.EventCounter++;
-        this.game.add.tween(this.game.textbox).to( { alpha: 0}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
-    }
-
-    playAnim() {
-        let spaceBar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-        spaceBar.onDown.add(this.changeFrame, this);
 
         if(this.play) {
             this.entstehung.animations.play('walk', 20, true);
-            this.play = true;
+            this.play = false;
+        }
+*/
+        //this.earth.alpha += 0.1;
+        console.log(this.EventCounter);
+        this.EventCounter++;
+        //this.game.add.tween(this.game.textbox).to( { alpha: 0}, 1000, Phaser.Easing.Cubic.InOut, true, 0);
+    }
+/*
+    playAnim() {
+        if(this.play) {
+            this.entstehung.animations.play('walk', 20, true);
+            this.play = false;
         }
     }
-
+*/
     update(){
-        if(this.walk.frame === 19) {
-           this.nextEvent();
-        }
+        //if(this.walk.frame === 19) {
+        //   this.nextEvent();
+        //}
 
-        //if (this.EventCounter === 10) this.nextEvent();
+        if (this.EventCounter === 10) this.nextEvent();
 
     }
 
     nextEvent() {
+        console.log('youdidit');
         this.earth.destroy();
         this.game.state.start('PlanetWachstum', false, false);
         //this.pointer.destroy();
