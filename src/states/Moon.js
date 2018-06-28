@@ -13,7 +13,7 @@ class Moon extends Phaser.State {
         // earth
         this.game.world.removeAll();
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
-        this.earth.scale.x = 1.2; this.earth.scale.y = 1.2;
+        this.earth.scale.x = 0.8; this.earth.scale.y = 0.8;
 
         //text
         this.game.textbox.changeText(this.game, this.game.translation.translate("first5"));

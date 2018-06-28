@@ -100,6 +100,7 @@ class People extends Phaser.State {
         this.game.add.tween(this.game.pointerText).to({alpha: 0}, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.add.tween(this.game.pointer).to({alpha: 0}, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.add.tween(this.game.textbox).to({alpha: 0}, 3000, Phaser.Easing.Linear.None, true, 0);
+        this.game.add.tween(this.game.moon).to({alpha: 0}, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.add.tween(this.earth).to({alpha: 0.1}, 3000, Phaser.Easing.Linear.None, true, 0);
         this.game.time.events.add(Phaser.Timer.SECOND * 3, this.nextEvent, this);
     }
