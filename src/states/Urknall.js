@@ -33,11 +33,6 @@ class Urknall extends Phaser.State {
         this.walk = this.urknall.animations.add('walk');
         this.play = false;
 
-        this.background = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background');
-        //this.background.alpha = 0;
-        this.background.anchor.x = 0.5; this.background.anchor.y = 0.5;
-        this.background.scale.x = 0.0; this.background.scale.y = 0.0;
-
         //sonne
         this.sonne = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'sonne');
         this.sonne.anchor.x = 0.5; this.sonne.anchor.y = 0.5; this.sonne.scale.x = 0.0; this.sonne.scale.y = 0.0;
@@ -106,7 +101,7 @@ class Urknall extends Phaser.State {
         this.game.add.tween(this.mini2.scale).to( { x: 0.3, y: 0.3}, 3900, Phaser.Easing.Cubic.InOut, true);
         this.game.add.tween(this.mini2).to( { x: 2000, y: 1000}, 3900, Phaser.Easing.Cubic.InOut, true);
 
-        this.game.add.tween(this.background.scale).to( { x: 0.8, y: 0.8}, 3000, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.game.bg.scale).to( { x: 0.8, y: 0.8}, 3000, Phaser.Easing.Cubic.InOut, true);
 
         this.waitTxt = new continueText(this.game);
 
@@ -127,7 +122,7 @@ class Urknall extends Phaser.State {
         this.game.add.tween(this.sonne.scale).to( { x: 1, y: 1}, 5000, Phaser.Easing.Cubic.InOut, true);
         this.game.add.tween(this.sonne).to( { x: -1000, y: 200}, 5000, Phaser.Easing.Cubic.InOut, true);
 
-        this.game.add.tween(this.background.scale).to( { x: 0.8, y: 0.8}, 4000, Phaser.Easing.Cubic.InOut, true);
+        this.game.add.tween(this.game.bg.scale).to( { x: 0.8, y: 0.8}, 4000, Phaser.Easing.Cubic.InOut, true);
         this.game.time.events.add(Phaser.Timer.SECOND * 2, this.nextEvent, this);
     }
 

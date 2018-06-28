@@ -9,17 +9,18 @@ class PlanetEntstehung extends Phaser.State {
 
     create() {
         //text
+        this.game.timeline.y = this.game.pointer.y = this.game.world.centerY*2+20;
         this.game.pointer.y = this.game.world.centerY*2+20;
         this.game.pointerText.y = this.game.world.centerY*2+65;
 
         //this.game.time.events.add(Phaser.Timer.SECOND * 3, this.setText, this);
-        this.moveTimeline();
+
         //this.setText();
 
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
         this.earth.scale.x = 0.3; this.earth.scale.y = 0.3; this.earth.alpha = 0;
         this.entstehung = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'entstehung');
-        this.entstehung.scale.x = 1; this.entstehung.scale.y = 1; this.entstehung.anchor.x = 0.5; this.entstehung.anchor.y = 0.5;
+        this.entstehung.anchor.x = 0.5; this.entstehung.anchor.y = 0.5;
 
         let earthG = this.game.add.group();
         let entstehungG = this.game.add.group();
@@ -36,6 +37,7 @@ class PlanetEntstehung extends Phaser.State {
         this.game.input.keyboard.start();
         let spacebar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         spacebar.onDown.add(this.changeFrame, this);
+        this.moveTimeline();
     }
 
     next(){
@@ -44,15 +46,14 @@ class PlanetEntstehung extends Phaser.State {
 
     moveTimeline() {
         this.game.add.tween(this.game.timeline).to( { y: this.game.world.centerY*2-80}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
-        this.game.add.tween(this.game.pointer).to( { y: this.game.world.centerY*2-80}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
-        this.game.add.tween(this.game.pointerText).to( { y: this.game.world.centerY*2-45}, 3000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this.game.pointer).to( { y: this.game.world.centerY*2-80}, 3000, Phaser.Easing.Cubic.InOut, true, 3000);
+        this.game.add.tween(this.game.pointerText).to( { y: this.game.world.centerY*2-45}, 3000, Phaser.Easing.Cubic.InOut, true, 3000);
 
-        this.game.time.events.add(Phaser.Timer.SECOND * 2, this.setText, this);
+        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.setText, this);
     }
 
     setText() {
         this.game.textbox.changeNewState(this.game, this.game.translation.translate("first2"));
-        this.game.textbox.alpha = 0;
     }
 
     update(){
@@ -84,7 +85,6 @@ class PlanetEntstehung extends Phaser.State {
         console.log('youdidit');
         this.earth.destroy();
         this.game.state.start('PlanetWachstum', false, false);
-        //this.pointer.destroy();
     }
 
 }
