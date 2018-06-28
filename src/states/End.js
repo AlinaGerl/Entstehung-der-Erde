@@ -11,6 +11,7 @@ class End extends Phaser.State {
     create() {
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'HeutePlanet', this.game.earthRotate);
         this.earth.alpha = 0.1;
+        this.game.moon.alpha = 0;
 
         //text
         this.game.textbox.changeEnd(this.game, this.game.translation.translate("end01"));

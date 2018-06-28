@@ -10,6 +10,7 @@ class timeline extends Phaser.Sprite {
         this.anchor.x = 0.5;
         this.anchor.y = 0.5;
         //this.scale.x = 0.8;
+        this.scale.x = 1.018;
         this.alpha = 0.9;
         this.game.stage.addChild(this);
 
