@@ -50,10 +50,13 @@ class DragndropPlants extends Phaser.State {
         let earthG = this.game.add.group();
         this.animalsG = this.game.add.group();
         this.items = this.game.add.group();
+        this.reptilsG = this.game.add.group();
+        this.reptilsG.angle = this.game.earthRotation;
 
     }
 
     update(){
+        this.reptilsG.angle -= 0.03;
         this.items.angle -= 0.03;
         this.greenWorld.angle -= 0.03;
         if (this.firstStage && this.game.input.activePointer.leftButton.isDown) {
@@ -197,15 +200,47 @@ class DragndropPlants extends Phaser.State {
     }
 
     lastText() {
+        this.makeReptils();
+
+
         this.game.textbox.changeText(this.game, this.game.translation.translate("last10"));
         this.game.add.tween(this.earth).to( { alpha: 0}, 4000, Phaser.Easing.Cubic.InOut, true, 0);
         this.game.add.tween(this.greenWorld).to( { alpha: 1}, 4000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.add.tween(this.reptilsG).to( { alpha: 1}, 4000, Phaser.Easing.Cubic.InOut, true, 0);
         this.game.add.tween(this.items).to( { alpha: 0}, 4000, Phaser.Easing.Cubic.InOut, true, 0);
+        this.game.time.events.add(Phaser.Timer.SECOND * 4, function() {
+            for (var i = 0; i < 6; i++){
+                this.game.add.tween(this.reptilsG.children[i]).to( { alpha: 1}, 2000, Phaser.Easing.Cubic.InOut, true, 1000*i);
+            }
+        }, this);
+
         this.game.time.events.add(Phaser.Timer.SECOND * 3.5, function() {this.game.input.onDown.addOnce(this.nextEvent, this)}, this);
             //this.game.time.events.add(Phaser.Timer.SECOND * 2, this.getPhysics(this.MeteroG.children[i]), this);
 
     }
 
+    makeReptils() {
+
+        this.reptilsG.z = 120;
+        this.reptilsG.x = this.game.world.centerX;
+        this.reptilsG.y = this.game.world.centerY;
+        for (var i = 0; i < 6; i++){
+
+            let x = Math.cos(((360/8)*i))*280;
+            let y = Math.sin(((360/8)*i))*280;
+            let people = this.game.add.sprite(x, y, 'reptil1');
+            people.scale.x = 0.2;
+            people.scale.y = 0.2;
+            people.angle = (360/6 * i)+120;
+            people.alpha = 0;
+            this.reptilsG.add(people);
+        }
+        this.reptilsG.children[1].loadTexture('reptil2', 0 , false);
+        this.reptilsG.children[2].loadTexture('reptil3', 0 , false);
+        this.reptilsG.children[3].loadTexture('reptil4', 0 , false);
+        this.reptilsG.children[4].loadTexture('reptil5', 0 , false);
+        this.reptilsG.children[5].loadTexture('reptil6', 0 , false);
+    }
     dropHandler(item, pointer) {
         this.isWrong = false;
         //this.game.physics.arcade.collide(this.items.children, item, this.stopCollision, null, this);
@@ -239,6 +274,7 @@ class DragndropPlants extends Phaser.State {
         this.items.destroy();
         this.earth.destroy();
         this.greenWorld.destroy();
+        this.reptilsG.destroy();
         this.game.state.start('Magma', false, false);
     }
 

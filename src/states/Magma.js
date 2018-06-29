@@ -41,6 +41,8 @@ class Magma extends Phaser.State {
         // groups for z depth
         let earthG = this.game.add.group();
         this.buttonG = this.game.add.group();
+        this.reptilsG = this.game.add.group();
+        this.reptilsG.angle = this.game.earthRotation;
         earthG.add(this.earth);
         // this.buttonG.add(this.button01);
         // this.buttonG.add(this.button02);
@@ -57,11 +59,30 @@ class Magma extends Phaser.State {
         this.earth.inputEnabled = true;
         this.earth.events.onInputDown.add(this.click, this);
 
+
+        this.reptilsG.z = 160;
+        this.reptilsG.x = this.game.world.centerX;
+        this.reptilsG.y = this.game.world.centerY;
+        for (var i = 0; i < 6; i++){
+
+            let x = Math.cos(((360/8)*i))*280;
+            let y = Math.sin(((360/8)*i))*280;
+            let people = this.game.add.sprite(x, y, 'reptil1');
+            people.scale.x = 0.2;
+            people.scale.y = 0.2;
+            people.angle = (360/6 * i)+120;
+            this.reptilsG.add(people);
+        }
+        this.reptilsG.children[1].loadTexture('reptil2', 0 , false);
+        this.reptilsG.children[2].loadTexture('reptil3', 0 , false);
+        this.reptilsG.children[3].loadTexture('reptil4', 0 , false);
+        this.reptilsG.children[4].loadTexture('reptil5', 0 , false);
+        this.reptilsG.children[5].loadTexture('reptil6', 0 , false);
     }
 
     update() {
         this.magma.angle -= 0.03;
-
+        this.reptilsG.angle -= 0.03;
         if (this.hadClicked == 5) this.nextEvent();
         // this.buttonG.angle -= 0.03;
         // if(this.button01Count && this.button02Count) {
@@ -97,6 +118,7 @@ class Magma extends Phaser.State {
 
     nextEvent() {
         this.earth.destroy();
+        this.reptilsG.destroy();
         // this.button01.destroy();
         // this.button02.destroy();
         this.magma.destroy();

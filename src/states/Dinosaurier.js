@@ -94,9 +94,9 @@ class Dinosaurs extends Phaser.State {
         this.dino1 = this.game.add.sprite((-90), (this.game.world.centerY - 100), 'dino1');
         this.dino2 = this.game.add.sprite((-90), (this.game.world.centerY - 100 + 150), 'dino2');
         this.dino3 = this.game.add.sprite((-90), (this.game.world.centerY - 100 + 150 * 2), 'dino3');
-        this.dino4 = this.game.add.sprite((this.game.world.width+90), (this.game.world.centerY - 100), 'dino1');
-        this.dino5 = this.game.add.sprite((this.game.world.width+90), (this.game.world.centerY - 100 + 150), 'dino2');
-        this.dino6 = this.game.add.sprite((this.game.world.width+90), (this.game.world.centerY - 100 + 150 * 2), 'dino3');
+        this.dino4 = this.game.add.sprite((this.game.world.width+90), (this.game.world.centerY - 100), 'dino4');
+        this.dino5 = this.game.add.sprite((this.game.world.width+90), (this.game.world.centerY - 100 + 150), 'dino5');
+        this.dino6 = this.game.add.sprite((this.game.world.width+90), (this.game.world.centerY - 100 + 150 * 2), 'dino6');
         this.dinos = [this.dino1, this.dino2, this.dino3, this.dino4, this.dino5, this.dino6];
 
         let item;

@@ -9,6 +9,8 @@ class Kollision extends Phaser.State {
 
 
     create() {
+
+        this.game.bg.scale.x = 0.8; this.game.bg.scale.y = 0.8;
         // earth
         let center = { x: this.game.world.centerX, y: this.game.world.centerY };
         this.earth = new Earth(this.game, center.x, center.y, 'fireball', this.game.earthRotate);
@@ -99,12 +101,13 @@ class Kollision extends Phaser.State {
     }
 
     nextEvent() {
+        this.game.moon.alpha = 1;
         this.earth.destroy();
         // this.text.destroy();
         // this.game.world.remove(this.textbox);
         this.button.destroy();
         //this.game.world.removeAll();
-        this.game.state.start('Moon', false, false);
+        this.game.state.start('Regenzeit', false, false);
     }
 }
 
