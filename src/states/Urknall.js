@@ -123,7 +123,7 @@ class Urknall extends Phaser.State {
         this.game.add.tween(this.sonne).to( { x: -1000, y: 200}, 5000, Phaser.Easing.Cubic.InOut, true);
 
         this.game.add.tween(this.game.bg.scale).to( { x: 0.8, y: 0.8}, 4000, Phaser.Easing.Cubic.InOut, true);
-        this.game.time.events.add(Phaser.Timer.SECOND * 2, this.nextEvent, this);
+        this.game.time.events.add(Phaser.Timer.SECOND * 3, this.nextEvent, this);
     }
 
     nextEvent() {

@@ -95,7 +95,7 @@ class PlanetWachstum extends Phaser.State {
         for (var i = 0; i < 3; i++)
         {
             // Directly create sprites from the group.
-            item = item = this.game.add.sprite(-90, 200 + 150 * i, this.meteoriten[i], i);
+            item = item = this.game.add.sprite(-90, 200 + 170 * i, this.meteoriten[i], i);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
             item.scale.x = 0.25;
@@ -108,7 +108,7 @@ class PlanetWachstum extends Phaser.State {
         for (var i = 3; i < 6; i++)
         {
             // Directly create sprites from the group.
-            item = this.game.add.sprite((this.game.world.centerX*2+90), (200 + 150 * (i-3)), this.meteoriten[i], i);
+            item = this.game.add.sprite((this.game.world.centerX*2+90), (200 + 170 * (i-3)), this.meteoriten[i], i);
             item.anchor.x = 0.5;
             item.anchor.y = 0.5;
             item.scale.x = 0.25;

@@ -26,8 +26,8 @@ class Volcanoes extends Phaser.State {
         this.volcanoG = this.game.add.group();
         this.landG.x = this.game.world.centerX;
         this.landG.y = this.game.world.centerY;
-        this.volcanoG.x = this.game.world.centerX+10;
-        this.volcanoG.y = this.game.world.centerY+4;
+        this.volcanoG.x = this.game.world.centerX;
+        this.volcanoG.y = this.game.world.centerY;
         for (var i = 0; i < 6; i++) {
             let x = (Math.cos((360/8)*(i+1))*200);
             let y = (Math.sin((360/8)*(i+1))*200);

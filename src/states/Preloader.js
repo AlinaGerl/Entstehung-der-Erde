@@ -46,11 +46,22 @@ class Preloader extends Phaser.State {
         this.game.load.image('people6', 'assets/People/mensch6.png');
         this.game.load.image('HeutePlanet', 'assets/People/TodayPlanet.png');
 
-        this.game.load.image('DinoEarth', 'assets/Dinos/DinoPlanet.png')
-        this.game.load.spritesheet('dino1', 'assets/Dinos/reptile1.png', 1280, 720, 20);
-        this.game.load.spritesheet('dino2', 'assets/Dinos/reptile2.png', 1280, 720, 20);
-        this.game.load.spritesheet('dino3', 'assets/Dinos/reptile3.png', 1280, 720, 20);
+        this.game.load.image('DinoEarth', 'assets/Dinos/DinoPlanet.png');
+        this.game.load.spritesheet('dino1', 'assets/Dinos/dino1.png', 500, 500, 20);
+        this.game.load.spritesheet('dino2', 'assets/Dinos/dino2.png', 500, 500, 20);
+        this.game.load.spritesheet('dino3', 'assets/Dinos/dino3.png', 500, 500, 20);
+        this.game.load.spritesheet('dino4', 'assets/Dinos/dino4.png', 500, 500, 20);
+        this.game.load.spritesheet('dino5', 'assets/Dinos/dino5.png', 500, 500, 20);
+        this.game.load.spritesheet('dino6', 'assets/Dinos/dino6.png', 500, 500, 20);
         this.game.load.spritesheet('explosion', 'assets/Dinos/explosion.png', 1920, 1080, 30);
+
+
+        this.game.load.spritesheet('reptil1', 'assets/Dinos/reptile1.png', 1280, 720, 20);
+        this.game.load.spritesheet('reptil2', 'assets/Dinos/reptile2.png', 1280, 720, 20);
+        this.game.load.spritesheet('reptil3', 'assets/Dinos/reptile3.png', 1280, 720, 20);
+        this.game.load.spritesheet('reptil4', 'assets/Dinos/reptile4.png', 1280, 720, 49);
+        this.game.load.spritesheet('reptil5', 'assets/Dinos/reptile5.png', 1280, 720, 49);
+        this.game.load.spritesheet('reptil6', 'assets/Dinos/reptile6.png', 1280, 720, 49);
 
         this.game.load.image('meteorit1', 'assets/Wachstum/Meteor_1.png');
         this.game.load.image('meteorit2', 'assets/Wachstum/Meteor_2.png');
