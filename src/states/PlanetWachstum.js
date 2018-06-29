@@ -10,6 +10,7 @@ import pointer from 'objects/Pointer';
 class PlanetWachstum extends Phaser.State {
 
     create() {
+        this.game.bg.scale.x = 0.8; this.game.bg.scale.y = 0.8;
         //physics for game
         this.game.physics.startSystem(Phaser.Physics.P2JS);
         this.game.physics.p2.setImpactEvents(true);

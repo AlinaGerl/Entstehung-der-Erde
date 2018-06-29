@@ -9,6 +9,7 @@ import MoonObject from 'objects/Moon';
 class Regenzeit extends Phaser.State {
 
     create() {
+        this.game.bg.scale.x = 0.8; this.game.bg.scale.y = 0.8;
         this.earth = new Earth(this.game, this.game.world.centerX, this.game.world.centerY, 'fireball', this.game.earthRotate);
         this.earth.scale.x = 0.8; this.earth.scale.y = 0.8;
         //text
